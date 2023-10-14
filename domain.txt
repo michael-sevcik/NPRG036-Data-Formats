@@ -1,0 +1,181 @@
+----- Kostra pre vlastnosť -----
+
+X.X.X [Názov vlastnosi (slovom)]
+Vlastnosť
+    [Názov z UML]
+Typ
+    ...
+Meno
+    ...
+Popis
+    ...
+Príklad
+    ...
+
+--------------------------------
+
+-------- Kostra pre väzbu --------
+
+X.X.X Väzba:[Názov väzby (slovom)]
+Väzba
+    [Názov väzby v UML]
+Typ
+    ...
+Meno
+    ...
+Popis
+    ...
+
+----------------------------------
+
+
+
+
+1. Prehľad
+    [slovný popis UML modelu]
+
+
+2.1 Town
+    Město se základními informacemi o něm.
+
+    2.1.1 Názov obce
+    Vlastnosť
+        name
+    Typ
+        Reťazec
+    Meno
+        Názov obce
+    Popis
+        Názov obce
+    Príklad
+        Svätý Jur
+
+    2.1.2 Vlajka obce
+    Vlastnosť
+        flag
+    Typ
+        Bool
+    Meno
+        Vlajka obce
+    Popis
+        Má obec vlajku
+    Príklad
+        True
+
+    2.1.3 Obecný rozhlas
+    Vlastnosť
+        broadcast
+    Typ
+        Bool
+    Meno
+        Rozhlas
+    Popis
+        Má obec rozhlas
+    Príklad
+        False
+
+    2.1.4 Väzba: Starosta obce
+    Väzba
+        mayor
+    Typ
+        Mayor
+    Meno
+        Starosta obce
+    Popis
+        Človek zvolený za starostu obce
+
+    2.1.5 Väzba: Ulica v obci
+    Väzba
+        located_in
+    Typ
+        Street
+    Meno
+        Ulica v obci
+    Popis
+        Ulica, nachádzajúca sa v obci
+
+    2.1.6 Väzba: Radnica obce
+    Väzba
+        townhall
+    Typ
+        House
+    Meno
+        Radnica obce
+    Popis
+        Dom, prehlásený za radnicu obce
+
+2.2 Person
+    Osoba se jménem.    
+
+    2.2.1 Jméno
+    Vlastnosť
+        name
+    Typ
+        string
+    Meno
+        Name
+    Popis
+        Křestní jméno
+    Príklad
+        František
+
+    2.2.2 Prostřední jméno
+    Vlastnosť
+        middlename
+    Typ
+        string[]
+    Meno
+        Prostřední jména
+    Popis
+        Prostřední jména osoby, osoba může mít 0..* prostředních jmen.
+    Príklad
+        Marie
+
+    2.2.3 Příjmení
+    Vlastnosť
+        surname
+    Typ
+        string[]
+    Meno
+        Příjmení
+    Popis
+        Příjmení osoby.
+    Príklad
+        Kmel
+
+2.3 Occupant
+    Obyvatel domu. Kromě níže specifikovaných vlastností a vazeb je možné u této třídy použít také vlastnosti a vazby třídy Person, která je specifikována v 2.2.
+
+    2.3.1 Datum od
+    Vlastnosť
+        date_from
+    Typ
+        dateTime
+    Meno
+        Datum počátku pobytu
+    Popis
+        Datum, kdy osoba započala svůj trvalý pobyt.
+    Príklad
+        2. 10. 2022
+
+    2.3.2 Datum do
+    Vlastnosť
+        date_to
+    Typ
+        dateTime
+    Meno
+        Datum konce pobytu
+    Popis
+        Datum, kdy osoba ukončila svůj trvalý pobyt.
+    Príklad
+        2. 10. 2023
+
+    2.3.3 Vazba: Obývá
+    Vlastnosť
+        lives_in
+    Typ
+        House
+    Meno
+        Obývá
+    Popis
+        Kde daná osoba má trvalý pobyt.
