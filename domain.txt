@@ -47,7 +47,7 @@
     Väzba
         mayor
     Typ
-        mayor
+        Mayor
     Meno
         Starosta obce
     Popis
