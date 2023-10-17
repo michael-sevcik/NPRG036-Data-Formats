@@ -65,7 +65,7 @@
 
     2.1.6 Väzba: Radnica obce
     Väzba
-        townhall
+        town_hall
     Typ
         House
     Meno
@@ -129,7 +129,7 @@
 
     2.3.2 Nezaplacené poplatky
     Vlastnosť
-        unpaid fees
+        unpaid_fees
     Typ
         bool
     Meno
@@ -217,7 +217,7 @@
 
     2.5.3 Väzba : Patriť ulici
     Vlastnosť
-        situated on
+        situated_on
     Typ
         House
     Meno
