@@ -208,7 +208,7 @@ Popis
         17. 10. 2023
 
 2.5 House
-    Fyzický dom so základními informáciami o ňom.
+    Fyzický dom so základnými informáciami o ňom.
     
     2.5.1 Číslo domu
     Vlastnosť
