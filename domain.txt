@@ -179,3 +179,79 @@ Popis
         Obývá
     Popis
         Kde daná osoba má trvalý pobyt.
+
+2.5 House
+    Fyzický dom so základními informáciami o ňom.
+    
+    2.5.1 Číslo domu
+    Vlastnosť
+        number        
+    Typ
+        int
+    Meno
+        Číslo domu
+    Popis
+        Číslo domu na ulici.
+    Príklad
+        466
+    
+    2.5.2 Farba
+    Vlastnosť
+        colour        
+    Typ
+        string
+    Meno
+        Farba
+    Popis
+        Farba domu.
+    Príklad
+        Zelená
+
+    2.5.3 Plocha
+    Vlastnosť
+        area      
+    Typ
+        double
+    Meno
+        Plocha
+    Popis
+        Zastavaná plocha domu v ároch.
+    Príklad
+        50.5
+
+    2.5.3 Väzba : Patriť ulici
+    Vlastnosť
+        situated on
+    Typ
+        House
+    Meno
+        Patrí ulici
+    Popis
+        [Dom] je na [ulici]. Dom môže byť pripísaný len jednej ulici.
+
+2.6 Street
+    Ulica patriaca obci a jej informácie.
+
+    2.6.1 Názov ulice
+    Vlastnosť
+        name
+    Typ
+        string
+    Meno
+        Názov ulice
+    Popis
+        Názov ulice.        
+    Príklad
+        Hlavná
+    
+    2.6.2 Chodník
+    Vlastnosť
+        sidewalk
+    Typ
+        bool
+    Meno
+        Chodník
+    Popis
+        Má ulica chodník?
+    Príklad
+        True
