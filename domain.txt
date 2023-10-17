@@ -158,17 +158,17 @@ Popis
     Príklad
         2. 10. 2022
 
-    2.3.2 Datum do
+    2.3.2 Nezaplacené poplatky
     Vlastnosť
-        date_to
+        unpaid fees
     Typ
-        dateTime
+        bool
     Meno
-        Datum konce pobytu
+        Nezaplacené poplatky
     Popis
-        Datum, kdy osoba ukončila svůj trvalý pobyt.
+        Indikuje, zda daná osoba má nějaké nezaplacené poplatky.
     Príklad
-        2. 10. 2023
+        true
 
     2.3.3 Vazba: Obývá
     Vlastnosť
