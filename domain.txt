@@ -1,36 +1,3 @@
------ Kostra pre vlastnosť -----
-
-X.X.X [Názov vlastnosi (slovom)]
-Vlastnosť
-    [Názov z UML]
-Typ
-    ...
-Meno
-    ...
-Popis
-    ...
-Príklad
-    ...
-
---------------------------------
-
--------- Kostra pre väzbu --------
-
-X.X.X Väzba:[Názov väzby (slovom)]
-Väzba
-    [Názov väzby v UML]
-Typ
-    ...
-Meno
-    ...
-Popis
-    ...
-
-----------------------------------
-
-
-
-
 1. Prehľad
     [slovný popis UML modelu]
 
