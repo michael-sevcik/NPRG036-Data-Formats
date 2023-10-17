@@ -11,7 +11,7 @@
     Vlastnosť
         name
     Typ
-        Reťazec
+        string
     Meno
         Názov obce
     Popis
@@ -23,7 +23,7 @@
     Vlastnosť
         flag
     Typ
-        Bool
+        bool
     Meno
         Vlajka obce
     Popis
@@ -35,7 +35,7 @@
     Vlastnosť
         broadcast
     Typ
-        Bool
+        bool
     Meno
         Rozhlas
     Popis
@@ -47,7 +47,7 @@
     Väzba
         mayor
     Typ
-        Mayor
+        mayor
     Meno
         Starosta obce
     Popis
