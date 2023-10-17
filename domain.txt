@@ -1,9 +1,11 @@
 1. Prehľad
-    [slovný popis UML modelu]
+    Obec, ako územnosprávna jednotka má pod dohľadom ulice a nehnuteľnosti nachádzajúce sa na nich.
+    Najviac jedna z nich môže byť vedená ako radnica. V nehnuteľnostiach bývajú obyvatelia obce.
+    Obec si takisto eviduje starostu, ktorý rovnako ako obyvatelia je človekom. 
 
 
 2.1 Town
-    Město se základními informacemi o něm.
+    Mesto so základnými informáciami o ňom.
 
     2.1.1 Názov obce
     Vlastnosť
