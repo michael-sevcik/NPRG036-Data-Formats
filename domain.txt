@@ -158,17 +158,17 @@ Popis
     Príklad
         2. 10. 2022
 
-    2.3.2 Datum do
+    2.3.2 Nezaplacené poplatky
     Vlastnosť
-        date_to
+        unpaid fees
     Typ
-        dateTime
+        bool
     Meno
-        Datum konce pobytu
+        Nezaplacené poplatky
     Popis
-        Datum, kdy osoba ukončila svůj trvalý pobyt.
+        Indikuje, zda daná osoba má nějaké nezaplacené poplatky.
     Príklad
-        2. 10. 2023
+        true
 
     2.3.3 Vazba: Obývá
     Vlastnosť
@@ -179,6 +179,33 @@ Popis
         Obývá
     Popis
         Kde daná osoba má trvalý pobyt.
+
+2.4 Mayor
+    Starosta mesta. Okrem nižšie špecifikovaných vlastností a väzieb je možné u tejto triedy použiť tiež vlastnosti a väzby triedy Person, ktorá je špecifikovaná v 2.2.
+
+    2.4.1 Dátum od
+    Vlastnosť
+        date_from
+    Typ
+        dateTime
+    Meno
+        Dátum počiatku mandátu
+    Popis
+        Dátum počiatku mandátu
+    Príklad
+        31. 7. 2002
+
+    2.4.2 Dátum do
+    Vlastnosť
+        until
+    Typ
+        dateTime
+    Meno
+        Dátum ukončenia mandátu
+    Popis
+        Dátum ukončenia mandátu
+    Príklad
+        17. 10. 2023
 
 2.5 House
     Fyzický dom so základními informáciami o ňom.
