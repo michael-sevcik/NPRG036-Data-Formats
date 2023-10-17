@@ -179,3 +179,30 @@ Popis
         Obývá
     Popis
         Kde daná osoba má trvalý pobyt.
+
+2.4 Mayor
+    Starosta mesta. Okrem nižšie špecifikovaných vlastností a väzieb je možné u tejto triedy použiť tiež vlastnosti a väzby triedy Person, ktorá je špecifikovaná v 2.2.
+
+    2.4.1 Dátum od
+    Vlastnosť
+        date_from
+    Typ
+        dateTime
+    Meno
+        Dátum počiatku mandátu
+    Popis
+        Dátum počiatku mandátu
+    Príklad
+        31. 7. 2002
+
+    2.4.2 Dátum do
+    Vlastnosť
+        until
+    Typ
+        dateTime
+    Meno
+        Dátum ukončenia mandátu
+    Popis
+        Dátum ukončenia mandátu
+    Príklad
+        17. 10. 2023
