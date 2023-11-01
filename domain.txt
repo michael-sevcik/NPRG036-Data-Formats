@@ -1,48 +1,17 @@
------ Kostra pre vlastnosť -----
-
-X.X.X [Názov vlastnosi (slovom)]
-Vlastnosť
-    [Názov z UML]
-Typ
-    ...
-Meno
-    ...
-Popis
-    ...
-Príklad
-    ...
-
---------------------------------
-
--------- Kostra pre väzbu --------
-
-X.X.X Väzba:[Názov väzby (slovom)]
-Väzba
-    [Názov väzby v UML]
-Typ
-    ...
-Meno
-    ...
-Popis
-    ...
-
-----------------------------------
-
-
-
-
 1. Prehľad
-    [slovný popis UML modelu]
+    Obec, ako územnosprávna jednotka má pod dohľadom ulice a nehnuteľnosti nachádzajúce sa na nich.
+    Najviac jedna z nich môže byť vedená ako radnica. V nehnuteľnostiach bývajú obyvatelia obce.
+    Obec si takisto eviduje starostu, ktorý rovnako ako obyvatelia je človekom. 
 
 
 2.1 Town
-    Město se základními informacemi o něm.
+    Mesto so základnými informáciami o ňom.
 
     2.1.1 Názov obce
     Vlastnosť
         name
     Typ
-        Reťazec
+        string
     Meno
         Názov obce
     Popis
@@ -54,7 +23,7 @@ Popis
     Vlastnosť
         flag
     Typ
-        Bool
+        bool
     Meno
         Vlajka obce
     Popis
@@ -66,7 +35,7 @@ Popis
     Vlastnosť
         broadcast
     Typ
-        Bool
+        bool
     Meno
         Rozhlas
     Popis
@@ -96,7 +65,7 @@ Popis
 
     2.1.6 Väzba: Radnica obce
     Väzba
-        townhall
+        town_hall
     Typ
         House
     Meno
@@ -160,7 +129,7 @@ Popis
 
     2.3.2 Nezaplacené poplatky
     Vlastnosť
-        unpaid fees
+        unpaid_fees
     Typ
         bool
     Meno
@@ -208,7 +177,7 @@ Popis
         17. 10. 2023
 
 2.5 House
-    Fyzický dom so základními informáciami o ňom.
+    Fyzický dom so základnými informáciami o ňom.
     
     2.5.1 Číslo domu
     Vlastnosť
@@ -248,7 +217,7 @@ Popis
 
     2.5.3 Väzba : Patriť ulici
     Vlastnosť
-        situated on
+        situated_on
     Typ
         House
     Meno
