@@ -1,6 +1,7 @@
 # prefixes
 
 @prefix foaf ...
+@prefix dbo : <https://dbpedia.org/ontology/>
 
 
 # Classes
@@ -9,12 +10,12 @@
 
 | Original term | IRI term |
 | -------- | -------- |
-| House | uri |
-| Street |  |
-| Town |  |
-| Mayor |  |
-| Person |  |
-| Occupant |  |
+| House | dbo:Building |
+| Street | dbo:Street |
+| Town | dbo:Town |
+| Mayor | dbo:Mayor |
+| Person | foaf:Person |
+| Occupant | ex:Occupant |
 
 
 # Attributes
