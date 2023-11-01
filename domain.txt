@@ -226,13 +226,13 @@ Popis
     Vlastnosť
         colour        
     Typ
-        string
+        hexadecimal RGB code
     Meno
         Farba
     Popis
         Farba domu.
     Príklad
-        Zelená
+        a1e1df
 
     2.5.3 Plocha
     Vlastnosť
