@@ -1,0 +1,51 @@
+#---------- Property schema ------------
+#__:____ a rdf:Property;
+#        rdfs:label "popis"@en;
+#        rdfs:domain domena ;
+#        rdfs:range no hej.
+
+#---------- Class schema -------------
+
+
+
+
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dbo: <http://dbpedia.org/resource/classes#>.
+
+@prefix ex2: <https://example.org/resource/....../>. #for instances
+
+dbo:Town a rdfs:Class.
+
+ex:townName a rdfs:Property;
+        rdfs:label "Name of Town"@en;
+        rdfs:domain dbo:Town;
+        rdfs:range rdf:langString.
+
+ex:hasFlag a rdf:Property;
+        rdfs:label "Does town have flag"@en;
+        rdfs:domain ex:Town;
+        rdfs:range xsd:boolean.
+
+ex:hasBroadcast a rdf:Property;
+        rdfs:label "Does town have broadcast"@en;
+        rdfs:domain ex:Town;
+        rdfs:range xsd:boolean.
+
+ex:locatedIn a rdf:Property;
+        rdfs:label "Located in"@en;
+        rdfs:domain dbo:Street;
+        rdfs:range dbo:Mayor.
+
+ex:mayor a rdf:Property;
+        rdfs:label "Mayor"@en;
+        rdfs:domain dbo:Town;
+        rdfs:range dbo:Mayor.
+
+ex:townHall a rdf:Property;
+        rdfs:label "Town Hall"@en;
+        rdfs:domain dbo:Town;
+        rdfs:range dbo:Building.
