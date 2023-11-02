@@ -29,7 +29,6 @@
 | surname | foaf:surname |
 | date_from | ex:dateFrom |
 | unpaid_fees | ex:unpaidFees |
-| lives_in | ex:livesIn |
 |  |  |
 |  |  |
 |  |  |
@@ -43,6 +42,7 @@
 | House | uri |
 | Street |  |
 | Town |  |
+| lives_in | ex:livesIn |
 
 # Other useful links
 
