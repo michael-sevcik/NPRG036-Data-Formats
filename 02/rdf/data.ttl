@@ -68,17 +68,8 @@ ex:houseNumber a rdf:Property ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:int.
 
-ex:houseColour a rdf:Property ;
-        rdfs:label "Farba budovy v RGB"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range xxxxxx:xxxxxx.  #find type
-
-ex:buildingArea a rdf:Property ;
-        rdfs:label "Rozloha budovy v m^2"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range dbo:area.
-
-# dbo:area a Property.
+# dbo:colour_hex_code a rdf:Property.
+# dbo:area a rdf:Property.
 
 #-----------------------------------------
 
