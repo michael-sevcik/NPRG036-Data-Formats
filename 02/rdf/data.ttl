@@ -91,3 +91,31 @@ ex:buildingArea a rdf:Property;
 # dbo:area a Property.
 
 #-----------------------------------------
+
+
+# Michael's comment part -- sligtly altered by Ori -------
+
+ex:middleNames a rdf:Property ;
+	rdfs:label "Stredné mená"@sk ;
+	rdfs:domain foaf:Person ;
+	rdfs:range rdf:langString.
+
+
+ex:Occupant rdfs:subClassOf foaf:Person ;
+	rdfs:label "Obyvateľ budovy"@sk ;
+	rdfs:comment "Osoba obývajúca budovu."@sk .
+
+ex:dateFrom a rdf:Property ;
+	rdfs:label "Dátum začiatku pobytu"@sk ;
+	rdfs:domain ex:Occupant ;
+	rdfs:range xsd:date.
+
+ex:unpaidFees a rdf:Property ;
+	rdfs:label "Nezaplatené poplatky"@sk;
+	rdfs:domain ex:Occupant ;
+	rdfs:range xsd:boolean.
+
+ex:livesIn a rdf:Property ;
+	rdfs:label "Obýva"@sk ;
+	rdfs:domain ex:Occupant ;
+	rdfs:range dbo:Building .
