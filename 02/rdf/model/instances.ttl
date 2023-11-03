@@ -35,19 +35,15 @@
 
 # Houses TODO
 <ex:MartinsHouse> a dbo:Building;
-    ex:houseNumber "123"^^xsd:int.
-    # TODO colour
-    # TODO are
+    ex:houseNumber "123"^^xsd:int;
+    ex:dbocolour_hex_code "db34eb". # <--- TODO not sure about this one
+    ex:area "50.5"^^xsd:int. # TODO no really sure about this one either
 
 <ex:MichalsHouse> a dbo:Building;
     ex:houseNumber "5656"^^xsd:int.
-    # TODO colour
-    # TODO are
 
 <ex:RastosHouse> a dbo:Building;
     ex:houseNumber "466"^^xsd:int.
-    # TODO colour
-    # TODO are
 
 
 # Streets
