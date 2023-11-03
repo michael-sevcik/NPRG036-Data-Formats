@@ -1,0 +1,29 @@
+@prefix ex: <http://example.org/vocabulary/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> . 
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix dbo: <http://dbpedia.org/resource/classes#>.
+
+
+# At least 3 instances of each class. In case of inheritance hierarchies, one of each children is enough.
+
+<ex:Rovinka> a dbo:Town;
+    ex:townName "Rovinka"@sk;
+    ex:hasFlag "true"^^xsd:boolean;
+    ex:hasBroadcast "true"^^xsd:boolean.
+
+<ex:Michal> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "false"^^xsd:boolean.
+
+
+<ex:BlueHouse> a dbo:Building;
+    ex:houseNumber "466"^^xsd:int;
+    ex:hasSidewalk "true"^^xsd:boolean.
+    # TODO colour
+
+
+
+
+
