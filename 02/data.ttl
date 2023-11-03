@@ -1,6 +1,6 @@
 #---------- Property schema ------------
 #__:____ a rdf:Property;
-#        rdfs:label "popis"@en;
+#        rdfs:label "popis"@sk;
 #        rdfs:domain domena ;
 #        rdfs:range no hej.
 
@@ -18,34 +18,76 @@
 
 @prefix ex2: <https://example.org/resource/....../>. #for instances
 
+
+# Ori - converted what he did in domain.txt
 dbo:Town a rdfs:Class.
 
 ex:townName a rdfs:Property;
-        rdfs:label "Name of Town"@en;
+        rdfs:label "Názov obce"@sk;
         rdfs:domain dbo:Town;
         rdfs:range rdf:langString.
 
 ex:hasFlag a rdf:Property;
-        rdfs:label "Does town have flag"@en;
+        rdfs:label "Má obec vlajku"@sk;
         rdfs:domain ex:Town;
         rdfs:range xsd:boolean.
 
 ex:hasBroadcast a rdf:Property;
-        rdfs:label "Does town have broadcast"@en;
+        rdfs:label "Má obec rozhlas"@sk;
         rdfs:domain ex:Town;
         rdfs:range xsd:boolean.
 
 ex:locatedIn a rdf:Property;
-        rdfs:label "Located in"@en;
+        rdfs:label "Ulica sa nachádza v obci"@sk;
         rdfs:domain dbo:Street;
-        rdfs:range dbo:Mayor.
+        rdfs:range dbo:Town.
 
 ex:mayor a rdf:Property;
-        rdfs:label "Mayor"@en;
+        rdfs:label "Starosta obce"@sk;
         rdfs:domain dbo:Town;
         rdfs:range dbo:Mayor.
 
 ex:townHall a rdf:Property;
-        rdfs:label "Town Hall"@en;
+        rdfs:label "Radnica obce"@sk;
         rdfs:domain dbo:Town;
         rdfs:range dbo:Building.
+# ----------------------------------------
+
+# Patrik's part of domain.txt
+dbo:Street a rdfs:Class.
+
+ex:streetName a rdf:Property;
+        rdfs:label "Názov ulice"@sk;
+        rdfs:domain dbo:Street;
+        rdfs:range rdf:langString.
+
+ex:hasSidewalk a rdf:Property;
+        rdfs:label "Má ulica chodník"@sk;
+        rdfs:domain dbo:Street;
+        rdfs:range xsd:boolean.
+
+dbo:Building a rdfs:Class.
+
+ex:situatedOn a rds:Property;
+        rdfs:label "Budova na ulici"@sk;
+        rdfs:domain dbo:Building;
+        rdfs:range dbo:Street.
+
+ex:houseNumber a rdf:Property;
+        rdfs:label "Číslo domu"@sk;
+        rdfs:domain dbo:Building;
+        rdfs:range xsd:int.
+
+ex:houseColour a rdf:Property;
+        rdfs:label "Farba budovy v RGB"@sk;
+        rdfs:domain dbo:Building;
+        rdfs:range xxxxxx:xxxxxx.  #find type
+
+ex:buildingArea a rdf:Property;
+        rdfs:label "Rozloha budovy v m^2"@sk;
+        rdfs:domain dbo:Building;
+        rdfs:range dbo:area.
+
+# dbo:area a Property.
+
+#-----------------------------------------
