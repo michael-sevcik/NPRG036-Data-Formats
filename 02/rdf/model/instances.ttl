@@ -6,6 +6,13 @@
 @prefix dbo: <http://dbpedia.org/resource/classes#>.
 
 
+
+# S P O I L E R
+# content of this file will be moved into data.ttl
+# this file exists for visual purposes only
+
+
+
 # C L A S S E S
 
 
@@ -28,19 +35,19 @@
 
 # Houses TODO
 <ex:MartinsHouse> a dbo:Building;
-    ex:houseNumber "466"^^xsd:int;
-    ex:hasSidewalk "true"^^xsd:boolean.
+    ex:houseNumber "123"^^xsd:int.
     # TODO colour
+    # TODO are
 
 <ex:MichalsHouse> a dbo:Building;
-    ex:houseNumber "466"^^xsd:int;
-    ex:hasSidewalk "true"^^xsd:boolean.
+    ex:houseNumber "5656"^^xsd:int.
     # TODO colour
+    # TODO are
 
 <ex:RastosHouse> a dbo:Building;
-    ex:houseNumber "466"^^xsd:int;
-    ex:hasSidewalk "true"^^xsd:boolean.
+    ex:houseNumber "466"^^xsd:int.
     # TODO colour
+    # TODO are
 
 
 # Streets

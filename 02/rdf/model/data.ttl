@@ -81,7 +81,6 @@ ex:middleNames a rdf:Property ;
 	rdfs:domain foaf:Person ;
 	rdfs:range rdf:langString.
 
-
 ex:Occupant rdfs:subClassOf foaf:Person ;
 	rdfs:label "Obyvateľ budovy"@sk ;
 	rdfs:comment "Osoba obývajúca budovu."@sk .
