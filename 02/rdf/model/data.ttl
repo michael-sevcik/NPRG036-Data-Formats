@@ -68,8 +68,22 @@ ex:houseNumber a rdf:Property ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:int.
 
-# dbo:colour_hex_code a rdf:Property.
-# dbo:area a rdf:Property.
+# |||                                |||
+# vvv Patinos work please check TODO vvv
+
+dbo:colour_hex_code a dbo:colourHexCode;
+        rdfs:label "Farba budovy"@sk ;
+        rdfs:domain dbo:Building ;
+        rdfs:range xsd:string.
+
+dbo:area a rdf:Property.
+        rdfs:label "Rozloha budovy"@sk ;
+        rdfs:domain dbo:Building ;
+        rdfs:range xsd:float.
+
+# ^^^                                ^^^
+# ||| Patinos work please check TODO |||
+
 
 #-----------------------------------------
 
@@ -80,7 +94,6 @@ ex:middleNames a rdf:Property ;
 	rdfs:label "Stredné mená"@sk ;
 	rdfs:domain foaf:Person ;
 	rdfs:range rdf:langString.
-
 
 ex:Occupant rdfs:subClassOf foaf:Person ;
 	rdfs:label "Obyvateľ budovy"@sk ;
