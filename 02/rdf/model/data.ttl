@@ -76,7 +76,7 @@ dbo:colour_hex_code a dbo:colourHexCode;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:string.
 
-dbo:area a rdf:Property.
+dbo:area a rdf:Property;
         rdfs:label "Rozloha budovy"@sk ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:float.
