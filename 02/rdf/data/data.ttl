@@ -121,12 +121,12 @@ ex:livesIn a rdf:Property ;
 ex:Mayor rdfs:subClassOf foaf:Person;
     rdfs:label "Starosta"@sk.
 
-ex:dateFrom a rdf:Property ;
+ex:termStart a rdf:Property ;
 	rdfs:label "Dátum počiatku mandátu"@sk ;
 	rdfs:domain ex:Mayor ;
 	rdfs:range xsd:date.
 
-ex:until a rdf:Property ;
+ex:termEnd a rdf:Property ;
 	rdfs:label "Dátum ukončenia mandátu"@sk ;
 	rdfs:domain ex:Mayor ;
 	rdfs:range xsd:date.
