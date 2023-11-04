@@ -68,22 +68,14 @@ ex:houseNumber a rdf:Property ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:int.
 
-# |||                                |||
-# vvv Patinos work please check TODO vvv
-
-dbo:colour_hex_code a dbo:colourHexCode;
+dbo:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range xsd:string.
+        rdfs:domain dbo:Building .
 
 dbo:area a rdf:Property.
         rdfs:label "Rozloha budovy"@sk ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:float.
-
-# ^^^                                ^^^
-# ||| Patinos work please check TODO |||
-
 
 #-----------------------------------------
 
