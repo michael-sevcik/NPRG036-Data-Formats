@@ -239,7 +239,7 @@ ex:mayor a rdf:Property ;
 
 <exP:Michal> ex:livesIn <exH:MichalsHouse>.
 
-# town_hall
+# townHall
 <exT:SvatyJur> ex:townHall <exH:MartinsHouse>.
 
 <exT:Rovinka> ex:townHall <exH:RastosHouse>.
