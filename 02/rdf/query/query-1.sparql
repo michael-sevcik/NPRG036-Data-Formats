@@ -8,11 +8,11 @@ PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
 # get town where michal lives
 
-
 SELECT ?town
 WHERE{
-    ?occupant ex:livesIn ?house;
-        foaf:name "Michal".
+    ?occupant a ex:Occupant;
+        ex:lives_in ?house;
+        foaf:name "Michal"@cs.
     ?house ex:situatedOn ?street.
-    ?street ex:locatedIn ?town.    
+    ?street ex:locatedIn ?town.  
 }

@@ -81,6 +81,13 @@
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
+<ex:Rasto> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "false"^^xsd:boolean.
+
+<ex:Martin> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "true"^^xsd:boolean.
 
 # Mayors
 <ex:Rasto> a ex:Mayor;

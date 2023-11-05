@@ -1,10 +1,18 @@
 PREFIX ex: <http://example.org/vocabulary/>
 PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
-# select houses where some mayor lives  
+# select mayors and their addresses  
 
-SELECT ?house
+SELECT ?mayor ?tn ?sn ?hn
 WHERE {
-  ?mayor a ex:Mayor .
-  ?mayor ex:livesIn ?house .
+  ?mayor a ex:Mayor ;
+    ex:livesIn ?house .
+
+  ?house ex:houseNumber ?hn .
+  ?house ex:situatedOn ?street .
+  
+  ?street ex:streetName ?sn .
+  ?street ex:locatedIn ?town .
+
+  ?town ex:townName ?tn .
 }
