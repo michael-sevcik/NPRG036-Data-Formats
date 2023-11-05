@@ -32,11 +32,6 @@ ex:locatedIn a rdf:Property ;
         rdfs:domain dbo:Street ;
         rdfs:range dbo:Town.
 
-ex:mayor a rdf:Property ;
-        rdfs:label "Starosta obce"@sk ;
-        rdfs:domain dbo:Town ;
-        rdfs:range dbo:Mayor.
-
 ex:townHall a rdf:Property ;
         rdfs:label "Radnica obce"@sk ;
         rdfs:domain dbo:Town ;
@@ -133,7 +128,7 @@ ex:termEnd a rdf:Property ;
 
 ex:mayor a rdf:Property ;
 	rdfs:label "Starosta obce"@sk ;
-	rdfs:domain ex:Mayor ;
-	rdfs:range dbo:Town .
+	rdfs:domain dbo:Town ;
+	rdfs:range ex:Mayor .
 
 #------------------------------------
