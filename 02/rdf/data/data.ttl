@@ -32,11 +32,6 @@ ex:locatedIn a rdf:Property ;
         rdfs:domain dbo:Street ;
         rdfs:range dbo:Town.
 
-ex:mayor a rdf:Property ;
-        rdfs:label "Starosta obce"@sk ;
-        rdfs:domain dbo:Town ;
-        rdfs:range dbo:Mayor.
-
 ex:townHall a rdf:Property ;
         rdfs:label "Radnica obce"@sk ;
         rdfs:domain dbo:Town ;
@@ -113,19 +108,19 @@ ex:livesIn a rdf:Property ;
 ex:Mayor rdfs:subClassOf foaf:Person;
     rdfs:label "Starosta"@sk.
 
-ex:dateFrom a rdf:Property ;
+ex:termStart a rdf:Property ;
 	rdfs:label "Dátum počiatku mandátu"@sk ;
 	rdfs:domain ex:Mayor ;
 	rdfs:range xsd:date.
 
-ex:until a rdf:Property ;
+ex:termEnd a rdf:Property ;
 	rdfs:label "Dátum ukončenia mandátu"@sk ;
 	rdfs:domain ex:Mayor ;
 	rdfs:range xsd:date.
 
 ex:mayor a rdf:Property ;
 	rdfs:label "Starosta obce"@sk ;
-	rdfs:domain ex:Mayor ;
-	rdfs:range dbo:Town .
+	rdfs:domain dbo:Town ;
+	rdfs:range ex:Mayor .
 
 #------------------------------------
