@@ -10,7 +10,7 @@
 
 
 # Ori - converted what he did in domain.txt
-dbo:Town a rdfs:Class.
+# dbo:Town a rdfs:Class.
 
 ex:townName a rdfs:Property;
         rdfs:label "Názov obce"@sk ;
@@ -39,7 +39,7 @@ ex:townHall a rdf:Property ;
 # ----------------------------------------
 
 # Patrik's part of domain.txt
-dbo:Street a rdfs:Class.
+# dbo:Street a rdfs:Class.
 
 ex:streetName a rdf:Property ;
         rdfs:label "Názov ulice"@sk ;
@@ -51,7 +51,7 @@ ex:hasSidewalk a rdf:Property ;
         rdfs:domain dbo:Street ;
         rdfs:range xsd:boolean.
 
-dbo:Building a rdfs:Class.
+# dbo:Building a rdfs:Class.
 
 ex:situatedOn a rds:Property ;
         rdfs:label "Budova na ulici"@sk ;
@@ -63,22 +63,14 @@ ex:houseNumber a rdf:Property ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:int.
 
-# |||                                |||
-# vvv Patinos work please check TODO vvv
-
-dbo:colour_hex_code a dbo:colourHexCode;
+ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range xsd:string.
+        rdfs:domain dbo:Building .
 
-dbo:area a rdf:Property;
+ex:area a rdf:Property.
         rdfs:label "Rozloha budovy"@sk ;
         rdfs:domain dbo:Building ;
         rdfs:range xsd:float.
-
-# ^^^                                ^^^
-# ||| Patinos work please check TODO |||
-
 
 #-----------------------------------------
 
