@@ -142,3 +142,24 @@
 
 <exH:MartinsHouse> ex:situatedOn <ex:Sportova>.
 
+# TEST INSTANCES
+
+<exP:OrihoTatko> a foaf:Person;
+    foaf:firstName "Martin"@cs;
+    foaf:surname "Oravec"@cs;
+    ex:middleNames (
+        "Harry"@en
+        "Maguire"@en
+    ).
+
+<exP:OrihoMamka> a foaf:Person;
+    foaf:firstName "Henrieta"@cs;
+    foaf:surname "Oravcova"@cs.
+
+<exP:Rebeka> a foaf:Person;
+    foaf:firstName "Rebeka"@cs;
+    foaf:surname "Oravcova"@cs.
+
+<exP:OrihoTatko> ex:lives_in <exH:MichalsHouse>.
+<exP:OrihoMamka> ex:lives_in <exH:MichalsHouse>.
+<exP:Rebeka> ex:lives_in <exH:MichalsHouse>.
