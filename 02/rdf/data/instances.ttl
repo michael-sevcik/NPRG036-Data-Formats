@@ -67,7 +67,7 @@
 
 # People
 <exp:Michal> a foaf:Person;
-    foaf:name "Michal"@cs;
+    foaf:firstName "Michal"@cs;
     foaf:surname "Ševčík"@cs;
     ex:middleNames (
         "Dobrodej"@sk
@@ -75,10 +75,10 @@
     ).
 
 <exP:Rasto> a foaf:Person;
-    foaf:name "Rastislav"@sk.
+    foaf:firstName "Rastislav"@sk.
 
 <exP:Martin> a foaf:Person;
-    foaf:name "Martin"@sk.
+    foaf:firstName "Martin"@sk.
 
 
 # Occupants
@@ -141,3 +141,5 @@
 <exP:RastosHouse> ex:situatedOn <ex:Hlavna>.
 
 <exH:MartinsHouse> ex:situatedOn <ex:Sportova>.
+
+# text
