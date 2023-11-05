@@ -2,31 +2,32 @@
 # Zlin -> MichalsHouse -> Mramorova -> Michal(mayor aj occupant)
 # SvatyJur -> MartinsHouse -> Sportova -> Martin(mayor aj occupant)
 
-CREATE (:Town {townName: "Rovinka", hasFlag: true, hasBroadcast: true})
-CREATE (:Town {townName: "Svätý Jur", hasFlag: false, hasBroadcast: false})
-CREATE (:Town {townName: "Zlín", hasFlag: false, hasBroadcast: true})
+// Create Towns
+CREATE (Rovinka:Town {townName: "Rovinka", hasFlag: true, hasBroadcast: true})
+CREATE (SvatyJur:Town {townName: "Svätý Jur", hasFlag: false, hasBroadcast: false})
+CREATE (Zlin:Town {townName: "Zlín", hasFlag: false, hasBroadcast: true})
 
-CREATE (:Building {houseNumber: 123, colour_hex_code: "db34eb", area: 50.5})
-CREATE (:Building {houseNumber: 5656})
-CREATE (:Building {houseNumber: 466})
+// Create Buildings
+CREATE (MartinsHouse:Building {houseNumber: 123, colour_hex_code: "db34eb", area: 50.5})
+CREATE (MichalsHouse:Building {houseNumber: 5656})
+CREATE (RastosHouse:Building {houseNumber: 466})
 
-CREATE (:Street {streetName: "Hlavná", hasSidewalk: true})
-CREATE (:Street {streetName: "Športová", hasSidewalk: false})
-CREATE (:Street {streetName: "Mramorová", hasSidewalk: true})
+// Create Streets
+CREATE (Hlavna:Street {streetName: "Hlavná", hasSidewalk: true})
+CREATE (Sportova:Street {streetName: "Športová", hasSidewalk: false})
+CREATE (Mramorova:Street {streetName: "Mramorová", hasSidewalk: true})
 
-CREATE (:Person {firstName: "Michal", surname: "Ševčík"})
-CREATE (:Person {firstName: "Rastislav"})
-CREATE (:Person {firstName: "Martin"})
+// Create persons
+CREATE (Michal:Person {firstName: "Michal", surname: "Ševčík"})
+CREATE (Rasto:Person {firstName: "Rastislav"})
+CREATE (Martin:Person {firstName: "Martin"})
 
-MATCH (t:Town {townName: "Rovinka"}), (p:Person {firstName: "Rastislav"})
-CREATE (t)-[:mayor {dateFrom: date('2018-08-01'), termEnd: date('2022-08-01')}]->(p)
+// Assign Mayors
+CREATE (Rovinka)-[:mayor {dateFrom: date('2018-08-01'), termEnd: date('2022-08-01')}]->(Rastislav)
+CREATE (SvatyJur)-[:mayor]->(Martin)
+CREATE (Zlin)-[:mayor]->(Michal)
 
-MATCH (t:Town {townName: "Svätý Jur"}), (p:Person {firstName: "Martin"})
-CREATE (t)-[:mayor]->(p)
-
-MATCH (t:Town {townName: "Zlín"}), (p:Person {firstName: "Michal"})
-CREATE (t)-[:mayor]->(p)
-
+// Assign House
 MATCH (p:Person {firstName: "Martin"}), (b:Building {houseNumber: 123})
 CREATE (p)-[:livesIn {dateFrom: date('2018-09-01'), unpaidFees: true}]->(b)
 
