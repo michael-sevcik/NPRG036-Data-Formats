@@ -4,7 +4,7 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
-# Select 3 occupants of the town hall of Svätý Jur that live there living there longest
+# Select 3 occupants of the town hall of Svätý Jur that are living there the longest
 
 SELECT ?name ?date
 WHERE {
