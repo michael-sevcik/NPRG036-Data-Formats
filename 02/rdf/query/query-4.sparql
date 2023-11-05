@@ -16,8 +16,6 @@ WHERE {
     OPTIONAL {
         ?occupant a ex:Occupant ;
             ex:livesIn ?building .
-        ?person a foaf:Person ;
-            ex:livesIn ?building .
     }
 }
 GROUP BY ?street ?streetName
