@@ -6,7 +6,7 @@ PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
 # get streets with sidewalk and count the number of occupants living on each of those streets
 
-SELECT ?street ?streetName (COUNT(?person) AS ?count)
+SELECT ?street ?streetName (COUNT(?occupant) AS ?occupantCount)
 WHERE {
     ?street a dbo:Street ;
         ex:streetName ?streetName ;
