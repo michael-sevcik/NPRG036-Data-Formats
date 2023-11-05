@@ -21,4 +21,4 @@ WHERE {
     }
 }
 GROUP BY ?street ?streetName
-HAVING (?personCount > 0)
+HAVING (?count > 0)
