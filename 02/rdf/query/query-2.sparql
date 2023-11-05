@@ -4,20 +4,20 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
-# Select 3 occupants of the town hall of Svätý Jur that are living there the longest
+# Select 2 occupants of the town hall of Svätý Jur that are living there the longest
 
-SELECT ?name ?date
-WHERE {
-    ?town a dbo:Town;
-        ex:townName ?tn.
-    
-    ?occ a ex:Occupant;
-        foaf:firstName ?name;
-        ex:dateFrom ?date.
+    SELECT ?name ?date
+    WHERE {
+        ?town a dbo:Town;
+            ex:townName ?tn.
+        
+        ?occ a ex:Occupant;
+            foaf:firstName ?name;
+            ex:dateFrom ?date.
 
-    ?town ex:townHall ?building.
-    ?occ ex:livesIn ?building.
-FILTER (STR(?tn) = "Svätý Jur")
-} 
-ORDER BY ?date
-LIMIT 3
+        ?town ex:townHall ?building.
+        ?occ ex:livesIn ?building.
+    FILTER (STR(?tn) = "Svätý Jur")
+    } 
+    ORDER BY ?date
+    LIMIT 2

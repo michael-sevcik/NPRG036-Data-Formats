@@ -11,7 +11,7 @@ PREFIX dbo: <http://dbpedia.org/resource/classes#>
 SELECT ?town
 WHERE{
     ?occupant a ex:Occupant;
-        ex:lives_in ?house;
+        ex:livesIn ?house;
         foaf:name "Michal"@cs.
     ?house ex:situatedOn ?street.
     ?street ex:locatedIn ?town.  
