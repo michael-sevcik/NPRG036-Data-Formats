@@ -114,12 +114,12 @@
 
 <exT:Zlin> ex:mayor <exP:Michal>.
 
-# lives_in
-<exP:Martin> ex:lives_in <exH:MartinsHouse>.
+# livesIn
+<exP:Martin> ex:livesIn <exH:MartinsHouse>.
 
-<exP:Rasto> ex:lives_in <exH:RastosHouse>.
+<exP:Rasto> ex:livesIn <exH:RastosHouse>.
 
-<exP:Michal> ex:lives_in <exH:MichalsHouse>.
+<exP:Michal> ex:livesIn <exH:MichalsHouse>.
 
 # town_hall
 <exH:MartinsHouse> ex:town_hall <exT:SvatyJur>.
@@ -160,6 +160,6 @@
     foaf:firstName "Rebeka"@cs;
     foaf:surname "Oravcova"@cs.
 
-<exP:OrihoTatko> ex:lives_in <exH:MichalsHouse>.
-<exP:OrihoMamka> ex:lives_in <exH:MichalsHouse>.
-<exP:Rebeka> ex:lives_in <exH:MichalsHouse>.
+<exP:OrihoTatko> ex:livesIn <exH:MichalsHouse>.
+<exP:OrihoMamka> ex:livesIn <exH:MichalsHouse>.
+<exP:Rebeka> ex:livesIn <exH:MichalsHouse>.
