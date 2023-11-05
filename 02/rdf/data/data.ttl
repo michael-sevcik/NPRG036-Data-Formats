@@ -67,10 +67,10 @@ ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
         rdfs:domain dbo:Building .
 
-ex:area a rdf:Property.
+ex:area a rdf:Property ;
         rdfs:label "Rozloha budovy"@sk ;
         rdfs:domain dbo:Building ;
-        rdfs:range xsd:float.
+        rdfs:range xsd:float .
 
 #-----------------------------------------
 

@@ -34,10 +34,10 @@
 
 
 # Houses TODO
-<ex:MartinsHouse> a dbo:Building;
-    ex:houseNumber "123"^^xsd:int;
-    ex:dbocolour_hex_code "db34eb". # <--- TODO not sure about this one
-    ex:area "50.5"^^xsd:int. # TODO no really sure about this one either
+<ex:MartinsHouse> a dbo:Building ;
+    ex:houseNumber "123"^^xsd:int ;
+    ex:dbocolour_hex_code "db34eb" ; # <--- TODO not sure about this one
+    ex:area "50.5"^^xsd:int . # TODO no really sure about this one either
 
 <ex:MichalsHouse> a dbo:Building;
     ex:houseNumber "5656"^^xsd:int.
@@ -64,10 +64,10 @@
 <ex:Michal> a foaf:Person;
     foaf:name "Michal"@cs;
     foaf:surname "Ševčík"@cs;
-    ex:middleNames {
+    ex:middleNames (
         "Dobrodej"@sk
         "Alexander"@sk
-    }.
+    ).
 
 <ex:Rasto> a foaf:Person;
     foaf:name "Rastislav"@sk.
