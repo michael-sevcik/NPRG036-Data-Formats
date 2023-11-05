@@ -5,6 +5,11 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dbo: <http://dbpedia.org/resource/classes#>.
 
+@prefix exH: <http://example.org/houses/> .
+@prefix exP: <http://example.org/people/> .
+@prefix exS: <http://example.org/streets/> .
+@prefix exT: <http://example.org/towns/> .
+
 
 
 # S P O I L E R
@@ -17,51 +22,51 @@
 
 
 # Towns
-<ex:Rovinka> a dbo:Town;
+<exT:Rovinka> a dbo:Town;
     ex:townName "Rovinka"@sk;
     ex:hasFlag "true"^^xsd:boolean;
     ex:hasBroadcast "true"^^xsd:boolean.
 
-<ex:SvatyJur> a dbo:Town;
+<exT:SvatyJur> a dbo:Town;
     ex:townName "Svätý Jur"@sk;
     ex:hasFlag "false"^^xsd:boolean;
     ex:hasBroadcast "false"^^xsd:boolean.
 
-<ex:Zlin> a dbo:Town;
+<exT:Zlin> a dbo:Town;
     ex:townName "Zlín"@cs;
     ex:hasFlag "false"^^xsd:boolean;
     ex:hasBroadcast "true"^^xsd:boolean.
 
 
 # Houses TODO
-<ex:MartinsHouse> a dbo:Building ;
+<exH:MartinsHouse> a dbo:Building ;
     ex:houseNumber "123"^^xsd:int ;
     ex:dbocolour_hex_code "db34eb" ; # <--- TODO not sure about this one
     ex:area "50.5"^^xsd:int . # TODO no really sure about this one either
 
-<ex:MichalsHouse> a dbo:Building;
+<exH:MichalsHouse> a dbo:Building;
     ex:houseNumber "5656"^^xsd:int.
 
-<ex:RastosHouse> a dbo:Building;
+<exH:RastosHouse> a dbo:Building;
     ex:houseNumber "466"^^xsd:int.
 
 
 # Streets
-<ex:Hlavna> a dbo:Street;
+<exS:Hlavna> a dbo:Street;
     ex:streetName "Hlavná"@sk;
     ex:hasSidewalk "true"^^xsd:boolean.
 
-<ex:Sportova> a dbo:Street;
+<exS:Sportova> a dbo:Street;
     ex:streetName "Športová"@sk;
     ex:hasSidewalk "false"^^xsd:boolean.
 
-<ex:Mramorova> a dbo:Street;
+<exS:Mramorova> a dbo:Street;
     ex:streetName "Mramorová"@sk;
     ex:hasSidewalk "true"^^xsd:boolean.
 
 
 # People
-<ex:Michal> a foaf:Person;
+<exp:Michal> a foaf:Person;
     foaf:name "Michal"@cs;
     foaf:surname "Ševčík"@cs;
     ex:middleNames (
@@ -69,70 +74,70 @@
         "Alexander"@sk
     ).
 
-<ex:Rasto> a foaf:Person;
+<exP:Rasto> a foaf:Person;
     foaf:name "Rastislav"@sk.
 
-<ex:Martin> a foaf:Person;
+<exP:Martin> a foaf:Person;
     foaf:name "Martin"@sk.
 
 
 # Occupants
-<ex:Michal> a ex:Occupant;
+<exP:Michal> a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
-<ex:Rasto> a ex:Occupant;
+<exP:Rasto> a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
-<ex:Martin> a ex:Occupant;
+<eP:Martin> a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "true"^^xsd:boolean.
 
 # Mayors
-<ex:Rasto> a ex:Mayor;
+<exP:Rasto> a ex:Mayor;
     ex:dateFrom "2018-08-01"^^xsd:date;
     ex:until "2022-08-01"^^xsd:date.
 
-<ex:Martin> a ex:Mayor.
+<exP:Martin> a ex:Mayor.
 
-<ex:Michal> a ex:Mayor.
+<exP:Michal> a ex:Mayor.
 
 
 # A S S O C I A T I O N S
 
 
 # mayor
-<ex:Rovinka> ex:mayor <ex:Rasto>.
+<exT:Rovinka> ex:mayor <exP:Rasto>.
 
-<ex:SvatyJur> ex:mayor <ex:Martin>.
+<exT:SvatyJur> ex:mayor <exP:Martin>.
 
-<ex:Zlin> ex:mayor <ex:Michal>.
+<exT:Zlin> ex:mayor <exP:Michal>.
 
 # lives_in
-<ex:Martin> ex:lives_in <ex:MartinsHouse>.
+<exP:Martin> ex:lives_in <exH:MartinsHouse>.
 
-<ex:Rasto> ex:lives_in <ex:RastosHouse>.
+<exP:Rasto> ex:lives_in <exH:RastosHouse>.
 
-<ex:Michal> ex:lives_in <ex:MichalsHouse>.
+<exP:Michal> ex:lives_in <exH:MichalsHouse>.
 
 # town_hall
-<ex:MartinsHouse> ex:town_hall <ex:SvatyJur>.
+<exH:MartinsHouse> ex:town_hall <exT:SvatyJur>.
 
-<ex:RastosHouse> ex:town_hall <ex:Rovinka>.
+<exP:RastosHouse> ex:town_hall <exT:Rovinka>.
 
-<ex:MichalsHouse> ex:town_hall <ex:Zlin>.
+<ex:MichalsHouse> ex:town_hall <exT:Zlin>.
 
 # locatedIn
-<ex:Hlavna> ex:locatedIn <ex:Rovinka>.
+<ex:Hlavna> ex:locatedIn <exT:Rovinka>.
 
-<ex:Sportova> ex:locatedIn <ex:SvatyJur>.
+<ex:Sportova> ex:locatedIn <exT:SvatyJur>.
 
-<ex:Mramorova> ex:locatedIn <ex:Zlin>.
+<ex:Mramorova> ex:locatedIn <exT:Zlin>.
 
 # situatedoN
 <ex:MichalsHouse> ex:situatedOn <ex:Mramorova>.
 
-<ex:RastosHouse> ex:situatedOn <ex:Hlavna>.
+<exP:RastosHouse> ex:situatedOn <ex:Hlavna>.
 
-<ex:MartinsHouse> ex:situatedOn <ex:Sportova>.
+<exH:MartinsHouse> ex:situatedOn <ex:Sportova>.
