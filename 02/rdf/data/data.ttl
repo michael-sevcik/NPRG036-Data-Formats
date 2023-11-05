@@ -53,7 +53,7 @@ ex:hasSidewalk a rdf:Property ;
 
 # dbo:Building a rdfs:Class.
 
-ex:situatedOn a rds:Property ;
+ex:situatedOn a rdf:Property ;
         rdfs:label "Budova na ulici"@sk ;
         rdfs:domain dbo:Building ;
         rdfs:range dbo:Street.
