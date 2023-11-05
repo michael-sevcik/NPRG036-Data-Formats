@@ -208,7 +208,7 @@ ex:mayor a rdf:Property ;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
-<eP:Martin> a ex:Occupant;
+<exP:Martin> a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "true"^^xsd:boolean.
 
@@ -240,29 +240,31 @@ ex:mayor a rdf:Property ;
 <exP:Michal> ex:livesIn <exH:MichalsHouse>.
 
 # town_hall
-<exH:MartinsHouse> ex:town_hall <exT:SvatyJur>.
+<exT:SvatyJur> ex:townHall <exH:MartinsHouse>.
 
-<exP:RastosHouse> ex:town_hall <exT:Rovinka>.
+<exT:Rovinka> ex:townHall <exH:RastosHouse>.
 
-<ex:MichalsHouse> ex:town_hall <exT:Zlin>.
+<exT:Zlin> ex:townHall <exH:MichalsHouse>.
 
 # locatedIn
-<ex:Hlavna> ex:locatedIn <exT:Rovinka>.
+<exS:Hlavna> ex:locatedIn <exT:Rovinka>.
 
-<ex:Sportova> ex:locatedIn <exT:SvatyJur>.
+<exS:Sportova> ex:locatedIn <exT:SvatyJur>.
 
-<ex:Mramorova> ex:locatedIn <exT:Zlin>.
+<exS:Mramorova> ex:locatedIn <exT:Zlin>.
 
 # situatedoN
-<ex:MichalsHouse> ex:situatedOn <ex:Mramorova>.
+<exH:MichalsHouse> ex:situatedOn <exS:Mramorova>.
 
-<exP:RastosHouse> ex:situatedOn <ex:Hlavna>.
+<exH:RastosHouse> ex:situatedOn <exS:Hlavna>.
 
-<exH:MartinsHouse> ex:situatedOn <ex:Sportova>.
+<exH:MartinsHouse> ex:situatedOn <exS:Sportova>.
 
 # TEST INSTANCES
 
-<exP:OrihoTatko> a foaf:Person;
+<exP:OrihoTatko> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "false"^^xsd:boolean;
     foaf:firstName "Martin"@cs;
     foaf:surname "Oravec"@cs;
     ex:middleNames (
@@ -270,14 +272,19 @@ ex:mayor a rdf:Property ;
         "Maguire"@en
     ).
 
-<exP:OrihoMamka> a foaf:Person;
+<exP:OrihoMamka> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "false"^^xsd:boolean;
     foaf:firstName "Henrieta"@cs;
     foaf:surname "Oravcova"@cs.
 
-<exP:Rebeka> a foaf:Person;
+<exP:Rebeka> a ex:Occupant;
+    ex:dateFrom "2018-09-01"^^xsd:date;
+    ex:unpaidFees "false"^^xsd:boolean;
     foaf:firstName "Rebeka"@cs;
     foaf:surname "Oravcova"@cs.
 
 <exP:OrihoTatko> ex:livesIn <exH:MichalsHouse>.
 <exP:OrihoMamka> ex:livesIn <exH:MichalsHouse>.
 <exP:Rebeka> ex:livesIn <exH:MichalsHouse>.
+

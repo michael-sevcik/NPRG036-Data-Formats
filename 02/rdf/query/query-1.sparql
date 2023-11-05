@@ -12,7 +12,7 @@ SELECT ?town
 WHERE{
     ?occupant a ex:Occupant;
         ex:livesIn ?house;
-        foaf:name "Michal"@cs.
+        foaf:firstName "Michal"@cs.
     ?house ex:situatedOn ?street.
     ?street ex:locatedIn ?town.  
 }
