@@ -3,16 +3,16 @@ PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
 # select mayors and their addresses  
 
-SELECT ?mayor ?tn ?sn ?hn
+SELECT ?mayor ?townName ?streetName ?houseNumber
 WHERE {
   ?mayor a ex:Mayor ;
     ex:livesIn ?house .
 
-  ?house ex:houseNumber ?hn .
+  ?house ex:houseNumber ?houseNumber .
   ?house ex:situatedOn ?street .
   
-  ?street ex:streetName ?sn .
+  ?street ex:streetName ?streetName .
   ?street ex:locatedIn ?town .
 
-  ?town ex:townName ?tn .
+  ?town ex:townName ?townName .
 }
