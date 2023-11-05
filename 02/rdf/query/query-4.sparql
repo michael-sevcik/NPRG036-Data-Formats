@@ -1,0 +1,22 @@
+PREFIX ex: <http://example.org/vocabulary/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
+PREFIX dbo: <http://dbpedia.org/resource/classes#>
+
+
+
+# get streets with sidewalk and count the number of occupants living on each of those streets
+
+SELECT ?street ?streetName (COUNT(?occupant) AS ?occupantCount)
+WHERE {
+    ?street a dbo:Street ;
+        ex:streetName ?streetName ;
+        ex:hasSidewalk true .
+    ?building a dbo:Building ;
+        ex:situatedOn ?street .
+    OPTIONAL {
+        ?occupant a ex:Occupant ;
+            ex:livesIn ?building .
+    }
+}
+GROUP BY ?street ?streetName
+HAVING (?count > 0)
