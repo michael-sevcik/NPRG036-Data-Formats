@@ -66,7 +66,7 @@
 
 
 # People
-<exp:Michal> a foaf:Person;
+<exP:Michal> a foaf:Person;
     foaf:firstName "Michal"@cs;
     foaf:surname "Ševčík"@cs;
     ex:middleNames (
@@ -142,4 +142,3 @@
 
 <exH:MartinsHouse> ex:situatedOn <ex:Sportova>.
 
-# text
