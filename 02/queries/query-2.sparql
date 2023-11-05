@@ -10,11 +10,9 @@ SELECT ?name ?date
 WHERE {
     ?town a dbo:Town;
         ex:townName ?tn.
-
-    ?building a dbo:Building. # does this need to be here
     
     ?occ a ex:Occupant;
-        foaf:firstName ?name; #is this OK when Occupant is subclass of Person??
+        foaf:firstName ?name;
         ex:dateFrom ?date.
 
     ?town ex:townHall ?building.
