@@ -25,7 +25,7 @@ CREATE (Martin:Person {firstName: "Martin"})
 
 //-- EDGES --//
 // Assign Mayors
-CREATE (Rovinka)-[:mayor {dateFrom: date('2018-08-01'), termEnd: date('2022-08-01')}]->(Rastislav)
+CREATE (Rovinka)-[:mayor {dateFrom: date('2018-08-01'), termEnd: date('2022-08-01')}]->(Rasto)
 CREATE (SvatyJur)-[:mayor]->(Martin)
 CREATE (Zlin)-[:mayor]->(Michal)
 
