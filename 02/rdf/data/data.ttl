@@ -1,21 +1,15 @@
-@prefix ex: <http://example.org/vocabulary/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> . 
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 @prefix dbo: <http://dbpedia.org/resource/classes#>.
 
-@prefix ex2: <https://example.org/resource/....../>. #for instances
-# do not know if there need sto be IRI hierarchy, if not, then 1 example source is OK imo
-
+@prefix ex: <http://example.org/vocabulary/> .
 @prefix exH: <http://example.org/houses/> .
 @prefix exP: <http://example.org/people/> .
 @prefix exS: <http://example.org/streets/> .
 @prefix exT: <http://example.org/towns/> .
 
-
-# Ori - converted what he did in domain.txt
-# dbo:Town a rdfs:Class.
 
 ex:townName a rdfs:Property;
         rdfs:label "Názov obce"@sk ;
@@ -41,10 +35,6 @@ ex:townHall a rdf:Property ;
         rdfs:label "Radnica obce"@sk ;
         rdfs:domain dbo:Town ;
         rdfs:range dbo:Building.
-# ----------------------------------------
-
-# Patrik's part of domain.txt
-# dbo:Street a rdfs:Class.
 
 ex:streetName a rdf:Property ;
         rdfs:label "Názov ulice"@sk ;
@@ -55,8 +45,6 @@ ex:hasSidewalk a rdf:Property ;
         rdfs:label "Má ulica chodník"@sk ;
         rdfs:domain dbo:Street ;
         rdfs:range xsd:boolean.
-
-# dbo:Building a rdfs:Class.
 
 ex:situatedOn a rdf:Property ;
         rdfs:label "Budova na ulici"@sk ;
@@ -71,16 +59,6 @@ ex:houseNumber a rdf:Property ;
 ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
         rdfs:domain dbo:Building .
-
-ex:area a rdf:Property ;
-        rdfs:label "Rozloha budovy"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range xsd:float .
-
-#-----------------------------------------
-
-
-# Michael's comment part -- sligtly altered by Ori -------
 
 ex:middleNames a rdf:Property ;
 	rdfs:label "Stredné mená"@sk ;
@@ -106,10 +84,6 @@ ex:livesIn a rdf:Property ;
 	rdfs:domain ex:Occupant ;
 	rdfs:range dbo:Building .
 
-#-----------------------------------------------
-
-# Rasto's part -------------------
-
 ex:Mayor rdfs:subClassOf foaf:Person;
     rdfs:label "Starosta"@sk.
 
@@ -128,16 +102,10 @@ ex:mayor a rdf:Property ;
 	rdfs:domain dbo:Town ;
 	rdfs:range ex:Mayor .
 
-#------------------------------------
 
-# S P O I L E R
-# content of this file will be moved into data.ttl
-# this file exists for visual purposes only
-
-
+######## INSTANCES ########
 
 # C L A S S E S
-
 
 # Towns
 <exT:Rovinka> a dbo:Town;
@@ -159,8 +127,8 @@ ex:mayor a rdf:Property ;
 # Houses TODO
 <exH:MartinsHouse> a dbo:Building ;
     ex:houseNumber "123"^^xsd:int ;
-    ex:dbocolour_hex_code "db34eb" ; # <--- TODO not sure about this one
-    ex:area "50.5"^^xsd:int . # TODO no really sure about this one either
+    ex:dbocolour_hex_code "db34eb" ;
+    dbo:area "150.5"^^xsd:float . 
 
 <exH:MichalsHouse> a dbo:Building;
     ex:houseNumber "5656"^^xsd:int.
@@ -224,7 +192,6 @@ ex:mayor a rdf:Property ;
 
 # A S S O C I A T I O N S
 
-
 # mayor
 <exT:Rovinka> ex:mayor <exP:Rasto>.
 
@@ -253,7 +220,7 @@ ex:mayor a rdf:Property ;
 
 <exS:Mramorova> ex:locatedIn <exT:Zlin>.
 
-# situatedoN
+# situatedOn
 <exH:MichalsHouse> ex:situatedOn <exS:Mramorova>.
 
 <exH:RastosHouse> ex:situatedOn <exS:Hlavna>.
