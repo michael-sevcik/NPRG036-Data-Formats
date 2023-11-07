@@ -1,8 +1,5 @@
 PREFIX ex: <http://example.org/vocabulary/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/> 
 PREFIX dbo: <http://dbpedia.org/resource/classes#>
-
-
 
 # get streets with sidewalk and count the number of occupants living on each of those streets
 

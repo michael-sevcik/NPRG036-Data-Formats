@@ -1,5 +1,4 @@
 PREFIX ex: <http://example.org/vocabulary/>
-PREFIX dbo: <http://dbpedia.org/resource/classes#>
 
 # select mayors and their addresses  
 
