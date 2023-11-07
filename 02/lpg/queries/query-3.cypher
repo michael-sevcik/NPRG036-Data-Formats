@@ -1,5 +1,3 @@
-MATCH (mayor:Person)-[:livesIn]->(house)
-MATCH (:Town )
-MATCH (house)-[:situatedOn]->(street)
-MATCH (street)-[:locatedIn]->(town)
-RETURN mayor, town.townName AS townName, street.streetName AS streetName, house.houseNumber AS houseNumber
+MATCH 
+    (town:Town)<-[:locatedIn]-(street:Street)<-[:situatedOn]-(house:Building)<-[:livesIn]-(person:Person)<-[:mayor]-(:Town)
+RETURN person.firstName AS MayorName, [street.streetName, house.houseNumber, town.townName] AS Adress 
