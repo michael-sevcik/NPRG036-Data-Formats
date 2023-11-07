@@ -2,6 +2,8 @@
 // get town where michal lives
 
 MATCH
-    (Person)-[:livesIn]->(House)-[:situatedOn]->(Street)-[:locatedIn]->(t:Town)
-RETURN 
-    t
+    (p:Person)-[:livesIn]->(House)-[:situatedOn]->(Street)-[:locatedIn]->(t:Town)
+WHERE
+    p.firstName = 'Michal"
+RETURN
+    t.townName
