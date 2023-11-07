@@ -3,6 +3,6 @@
 MATCH
     (p:Person)-[:livesIn]->(:Building)-[:situatedOn]->(:Street)-[:locatedIn]->(t:Town)
 WHERE
-    p.firstName = 'Michal"
+    p.firstName = "Michal"
 RETURN
     t.townName
