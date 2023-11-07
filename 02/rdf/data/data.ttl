@@ -260,31 +260,4 @@ ex:mayor a rdf:Property ;
 
 <exH:MartinsHouse> ex:situatedOn <exS:Sportova>.
 
-# TEST INSTANCES
-
-<exP:OrihoTatko> a ex:Occupant;
-    ex:dateFrom "2018-09-01"^^xsd:date;
-    ex:unpaidFees "false"^^xsd:boolean;
-    foaf:firstName "Martin"@cs;
-    foaf:surname "Oravec"@cs;
-    ex:middleNames (
-        "Harry"@en
-        "Maguire"@en
-    ).
-
-<exP:OrihoMamka> a ex:Occupant;
-    ex:dateFrom "2018-09-01"^^xsd:date;
-    ex:unpaidFees "false"^^xsd:boolean;
-    foaf:firstName "Henrieta"@cs;
-    foaf:surname "Oravcova"@cs.
-
-<exP:Rebeka> a ex:Occupant;
-    ex:dateFrom "2018-09-01"^^xsd:date;
-    ex:unpaidFees "false"^^xsd:boolean;
-    foaf:firstName "Rebeka"@cs;
-    foaf:surname "Oravcova"@cs.
-
-<exP:OrihoTatko> ex:livesIn <exH:MichalsHouse>.
-<exP:OrihoMamka> ex:livesIn <exH:MichalsHouse>.
-<exP:Rebeka> ex:livesIn <exH:MichalsHouse>.
 
