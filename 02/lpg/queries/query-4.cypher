@@ -1,5 +1,5 @@
 
-# get streets with sidewalk and count the number of occupants living on each of those streets
+// get streets with sidewalk and count the number of occupants living on each of those streets
 
 MATCH (building:Building)-[:situatedOn]->(street:Street)
 WHERE street.hasSidewalk = true
