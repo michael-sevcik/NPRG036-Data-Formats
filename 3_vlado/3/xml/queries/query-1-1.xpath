@@ -1,0 +1,3 @@
+(:First name of second year students that live in dormitories that don't have cafeterias:)
+
+//Dormitory[cafeterias/count(Cafeteria) = 0]/tenants/Student[studyYear = 2]/givenName/text()

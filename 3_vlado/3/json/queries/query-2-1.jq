@@ -1,0 +1,1 @@
+.[].faculties[].teachers[] | if .title.cs then .familyName[] else .givenName[] end

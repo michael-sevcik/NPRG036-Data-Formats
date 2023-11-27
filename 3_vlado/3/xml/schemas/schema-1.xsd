@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+
+
+
+<xs:element name="Dormitory">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="name"/>
+            <xs:element ref="address"/>
+            <xs:element ref="tenants"/>
+            <xs:element ref="cafeterias"/>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Student">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="givenName"/>
+            <xs:element ref="familyName"/>
+            <xs:element name="studyYear" type="xs:integer"/>
+            <xs:element ref="nicknames"/>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Cafeteria">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="name"/>
+            <xs:element ref="address"></xs:element>
+        </xs:sequence>
+        <xs:attribute name="id" use="required"/>
+    </xs:complexType>
+</xs:element>
+
+
+
+<xs:element name="dormitories">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Dormitory" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="tenants">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Student" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="cafeterias">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Cafeteria" minOccurs="0" maxOccurs="1"></xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="nicknames">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="nickname" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+
+<xs:element name="name">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="address">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="givenName">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="familyName">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="nickname">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
+
+</xs:schema>

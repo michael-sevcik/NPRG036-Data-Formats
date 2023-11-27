@@ -1,0 +1,54 @@
+@prefix dbo: <http://dbpedia.org/ontology/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:frantikf1 a <http://linkedscience.org/teach/ns#Student> ;
+    dbo:tenant ns1:frantuvPokoj ;
+    ns1:studyYear 6 ;
+    foaf:familyName "Frantik"@cs ;
+    foaf:givenName "Ferda"@cs .
+
+ns1:rameshs a <http://linkedscience.org/teach/ns#Student> ;
+    dbo:tenant ns1:trojaKolej ;
+    ns1:studyYear 3 ;
+    foaf:familyName "Ramesh"@en ;
+    foaf:givenName "Samyukta"@en .
+
+ns1:trojaMenza a <http://issemantic.net/Cafeteria> ;
+    ns1:address "Pátkova 3, 180 00 Praha 3, Česko"@cs ;
+    ns1:mealProvider ns1:trojaKolej ;
+    ns1:name "Menza 17. Listopadu"@cs .
+
+ns1:uFranty a <http://issemantic.net/Cafeteria> ;
+    ns1:address "pod Lípou 17, 000 15 Frantovo, Česko"@cs ;
+    ns1:mealProvider ns1:frantuvPokoj ;
+    ns1:name "Hostinec u Franty"@cs .
+
+ns1:umudrenak a <http://linkedscience.org/teach/ns#Student> ;
+    dbo:tenant ns1:skutocnanka ;
+    ns1:studyYear 2 ;
+    foaf:familyName "Umúdrená"@cs ;
+    foaf:givenName "Katka"@cs .
+
+ns1:vozarv a <http://linkedscience.org/teach/ns#Student> ;
+    dbo:tenant ns1:svehlovka ;
+    ns1:studyYear 2 ;
+    foaf:familyName "Vozár"@cs ;
+    foaf:givenName "Vladimír"@cs .
+
+ns1:skutocnanka a ns1:Dormitory ;
+    ns1:address "Ulicová 7, 821 01 Bratislava, Slovensko"@sk ;
+    ns1:name "Skutočný Internát"@sk .
+
+ns1:svehlovka a ns1:Dormitory ;
+    ns1:address "Slavíkova 22, 120 00 Praha 3, Česko"@cs ;
+    ns1:name "Kolej Švehlova"@cs .
+
+ns1:frantuvPokoj a ns1:Dormitory ;
+    ns1:address "Pátečná 8, 000 15 Frantovo, Česko"@cs ;
+    ns1:name "Frantův Pokoj"@cs .
+
+ns1:trojaKolej a ns1:Dormitory ;
+    ns1:address "Pátkova 3, 180 00 Praha 3, Česko"@cs ;
+    ns1:name "Kolej 17. Listopadu"@cs .

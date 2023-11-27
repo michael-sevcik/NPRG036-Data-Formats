@@ -1,0 +1,151 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix ns1: <http://example.org/vocabulary/> .
+@prefix ns2: <https://sparql.cwrc.ca/ontologies/cwrc#> .
+@prefix schema: <http://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ns1:frantikf a <http://linkedscience.org/teach/ns#Teacher> ;
+    schema:employee ns1:fff ;
+    foaf:familyName "Frantik"@cs ;
+    foaf:givenName "Franta"@cs ;
+    foaf:title "Bc"@cs .
+
+ns1:frantikf1 a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 6 ;
+    foaf:familyName "Frantik"@en ;
+    foaf:givenName "Freda"@en ;
+    ns2:attends ns1:fff .
+
+ns1:frantuvPokoj a ns1:Dormitory ;
+    ns1:accommodationProvider ns1:funi ;
+    ns1:address "Pátečná 8, 000 15 Frantovo, Česko"@cs ;
+    ns1:name "Frantův Pokoj"@cs .
+
+ns1:klimekj a <http://linkedscience.org/teach/ns#Teacher> ;
+    schema:employee ns1:mff ;
+    foaf:familyName "Klimek"@cs ;
+    foaf:givenName "Jakub"@cs ;
+    foaf:title "RNDr"@cs .
+
+ns1:ponovskav a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 3 ;
+    foaf:familyName "Panovska"@en ;
+    foaf:givenName "Viktorija"@en ;
+    ns2:attends ns1:mff .
+
+ns1:pravnickaMenza a ns1:Cafeteria ;
+    ns1:address "nám. Curieových 901, 110 00 Staré Město Praha, Česko"@cs ;
+    ns1:mealProvider ns1:cuni ;
+    ns1:name "Menza Právnická"@cs .
+
+ns1:pravnyj a <http://linkedscience.org/teach/ns#Teacher> ;
+    schema:employee ns1:flaw ;
+    foaf:familyName "Právny"@cs ;
+    foaf:givenName "Jozef"@cs ;
+    foaf:title "JUDr"@cs .
+
+ns1:rameshs a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 3 ;
+    foaf:familyName "Ramesh"@en ;
+    foaf:givenName "Samyukta"@en ;
+    ns2:attends ns1:mff .
+
+ns1:skutecnanka a ns1:Cafeteria ;
+    ns1:address "Nikde 0, 180 00 Praha, Česko"@cs ;
+    ns1:mealProvider ns1:cuni ;
+    ns1:name "Menza Skutečná"@cs .
+
+ns1:skutecnys a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 1 ;
+    foaf:familyName "Skutečný"@cs ;
+    foaf:givenName "Student"@cs ;
+    ns2:attends ns1:prf .
+
+ns1:skutocnanka a ns1:Dormitory ;
+    ns1:accommodationProvider ns1:uniba ;
+    ns1:address "Ulicová 7, 821 01 Bratislava, Slovensko"@sk ;
+    ns1:name "Skutočný Internát"@sk .
+
+ns1:surnamef a <http://linkedscience.org/teach/ns#Teacher> ;
+    schema:employee ns1:mff ;
+    foaf:familyName "Surname"@en ;
+    foaf:givenName "Firstname"@en ;
+    foaf:title "Dr"@en .
+
+ns1:svehlovka a ns1:Dormitory ;
+    ns1:accommodationProvider ns1:cuni ;
+    ns1:address "Slavíkova 22, 120 00 Praha 3, Česko"@cs ;
+    ns1:name "Kolej Švehlova"@cs .
+
+ns1:trojaKolej a ns1:Dormitory ;
+    ns1:accommodationProvider ns1:cuni ;
+    ns1:address "Pátkova 3, 180 00 Praha 3, Česko"@cs ;
+    ns1:name "Kolej 17. Listopadu"@cs .
+
+ns1:trojaMenza a ns1:Cafeteria ;
+    ns1:address "Pátkova 3, 180 00 Praha 3, Česko"@cs ;
+    ns1:mealProvider ns1:cuni ;
+    ns1:name "Menza 17. Listopadu"@cs .
+
+ns1:uFranty a ns1:Cafeteria ;
+    ns1:address "pod Lípou 17, 000 15 Frantovo, Česko"@cs ;
+    ns1:mealProvider ns1:funi ;
+    ns1:name "Hostinec u Franty"@cs .
+
+ns1:ucitels a <http://linkedscience.org/teach/ns#Teacher> ;
+    schema:employee ns1:prf ;
+    foaf:familyName "Skutečný"@cs ;
+    foaf:givenName "Učitel"@cs ;
+    foaf:title "PhD"@cs .
+
+ns1:umudrenak a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 2 ;
+    foaf:familyName "Umúdrená"@cs ;
+    foaf:givenName "Katka"@cs ;
+    ns2:attends ns1:flaw .
+
+ns1:vozarv a <http://linkedscience.org/teach/ns#Student> ;
+    ns1:studyYear 2 ;
+    foaf:familyName "Vozár"@cs ;
+    foaf:givenName "Vladimír"@cs ;
+    ns2:attends ns1:mff .
+
+ns1:uniba a ns1:University ;
+    ns1:address "Šafárikovo námestie 6, 811 02 Bratislava, Slovensko"@sk ;
+    ns1:name "Univerzita Komenského"@sk ;
+    ns1:organizedIn ns1:flaw ;
+    dcterms:date "1919-01-01" .
+
+ns1:funi a ns1:University ;
+    ns1:address "Frantova 15, 000 15 Frantovo, Česko"@cs ;
+    ns1:name "Frantova Univerzita"@cs ;
+    ns1:organizedIn ns1:fff ;
+    dcterms:date "2022-11-20" .
+
+ns1:fff a ns1:Faculty ;
+    ns1:address "Ke Frantovi 5, 000 15 Frantovo, Česko"@cs ;
+    ns1:name "First Franta Faculty"@en ;
+    dcterms:date "2022-11-20" .
+
+ns1:flaw a ns1:Faculty ;
+    ns1:address "Šafárikovo námestie 6, 811 02 Bratislava, Slovensko"@cs ;
+    ns1:name "Právnická Fakulta Univerzity Komenského v Bratislave"@sk ;
+    dcterms:date "1919-06-27" .
+
+ns1:prf a ns1:Faculty ;
+    ns1:address "nám. Curieových 901/7, 116 40 Praha 1, Česko"@cs ;
+    ns1:name "Právnická Fakulta Univerzity Karlova"@cs ;
+    dcterms:date "1348-01-01" .
+
+ns1:cuni a ns1:University ;
+    ns1:address "Opletalova 38, 110 00 Staré Město Praha, Česko"@cs ;
+    ns1:name "Charles University"@en ;
+    ns1:organizedIn ns1:mff,
+        ns1:prf ;
+    dcterms:date "1348-04-07" .
+
+ns1:mff a ns1:Faculty ;
+    ns1:address "Ke Karlovu 2027/3, 121 16 Nové Město Praha, Česko"@cs ;
+    ns1:name "Faculty of Mathematics and Physics"@en ;
+    dcterms:date "1952-09-01" .
