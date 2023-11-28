@@ -1,1 +1,0 @@
-.[].faculties[] | {(.name[]) : [ .students[] | [.givenName[], .studyYear ]]}

@@ -1,4 +1,0 @@
-(:First names and surnames of students that attend universities that have both dormitories and cafeterias:)
-
-for $student in //University[count(cafeterias/Cafeteria) > 0 and count(dormitories/Dormitory) > 0]/faculties/Faculty/students/Student return 
-concat($student/givenName, " ", $student/familyName)
