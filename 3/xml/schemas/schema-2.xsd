@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:element name="House">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="number" type="xs:int"/>
+            <xs:element ref="colour"/>
+            <xs:element ref="area"/>
+            <xs:element ref="towns"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Town">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="townName"/>
+            <xs:element ref="hasFlag"/>
+            <xs:element ref="hasBroadcast"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:element name="hasFlag">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="hasBroadcast">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="towns">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Town" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:element name="area">
+    <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+<xs:element name="colour">    
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9A-Fa-f]+"/>
+            <xs:length value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="townName">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+</xs:schema>
