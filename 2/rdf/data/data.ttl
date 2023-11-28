@@ -18,12 +18,12 @@ ex:townName a rdfs:Property;
 
 ex:hasFlag a rdf:Property;
         rdfs:label "Má obec vlajku"@sk ;
-        rdfs:domain ex:Town;
+        rdfs:domain dbo:Town;
         rdfs:range xsd:boolean.
 
 ex:hasBroadcast a rdf:Property;
         rdfs:label "Má obec rozhlas"@sk ;
-        rdfs:domain ex:Town ;
+        rdfs:domain dbo:Town ;
         rdfs:range xsd:boolean.
 
 ex:locatedIn a rdf:Property ;
