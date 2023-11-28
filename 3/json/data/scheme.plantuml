@@ -1,0 +1,20 @@
+@startuml
+
+class "Town" as Town {
+  townName: langString
+  hasFlag: boolean
+  hasBroadcast: boolean
+  townHall: Building
+}
+
+class "Street" as Street {
+  locatedIn: Town
+}
+
+class "Building" as Building {
+}
+
+Town "1" -- "N" Street : locatedIn
+Town "1asdasd" -- "1" Building : townHall
+
+@enduml
