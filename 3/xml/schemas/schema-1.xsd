@@ -2,6 +2,8 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+<xs:import namespace="http://www.w3.org/XML/1998/namespace"
+        schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
 
 <!-- C L A S S E S  -->
 
@@ -15,6 +17,7 @@
             <xs:element ref="streets"/>
             <xs:element ref="mayors"/>
         </xs:sequence>
+        <xs:attribute name="id" use="required"/>
     </xs:complexType>
 </xs:element>
 
@@ -25,6 +28,7 @@
             <xs:element ref="sidewalk"/>
             <xs:element ref="houses"/>
         </xs:sequence>
+        <xs:attribute name="id" use="required"/>
     </xs:complexType>
 </xs:element>
 
@@ -36,6 +40,7 @@
             <xs:element ref="area"/>
             <xs:element ref="occupants"/>
         </xs:sequence>
+        <xs:attribute name="id" use="required"/>
     </xs:complexType>
 </xs:element>
 
@@ -46,6 +51,7 @@
         <xs:element ref="surname"/>
         <xs:element ref="middlenames"/>
     </xs:sequence>
+    <xs:attribute name="id" use="required"/>
 </xs:complexType>
 
 
@@ -78,6 +84,13 @@
 
 <!-- V A Z B Y  -->
 
+<xs:element name="towns">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Town" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
 
 <xs:element name="streets">
     <xs:complexType>
@@ -124,32 +137,46 @@
 
 
 <xs:element name="townName">
-    <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:element>
 
+
 <xs:element name="name">
-    <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:element>
 
 <xs:element name="middlename">
-    <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:element>
 
 <xs:element name="surname">
-    <xs:simpleType>
-        <xs:restriction base="xs:string">
-        </xs:restriction>
-    </xs:simpleType>
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
 </xs:element>
+
 
 <xs:element name="colour">    
     <xs:simpleType>
