@@ -2,10 +2,14 @@
 
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
+
+<!-- C L A S S E S  -->
+
+
 <xs:element name="House">
     <xs:complexType>
         <xs:sequence>
-            <xs:element name="number" type="xs:int"/>
+            <xs:element name="number" type="xs:positiveInteger"/>
             <xs:element ref="colour"/>
             <xs:element ref="area"/>
             <xs:element ref="towns"/>
@@ -24,6 +28,21 @@
 </xs:element>
 
 
+<!-- V A Z B Y  -->
+
+
+<xs:element name="towns">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Town" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<!-- B O O L E A N  -->
+
+
 <xs:element name="hasFlag">
     <xs:simpleType>
         <xs:restriction base="xs:boolean">
@@ -38,13 +57,8 @@
     </xs:simpleType>
 </xs:element>
 
-<xs:element name="towns">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="Town" minOccurs="0" maxOccurs="1"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
+
+<!-- N U M B E R S  -->
 
 
 <xs:element name="area">
@@ -54,6 +68,9 @@
         </xs:restriction>
     </xs:simpleType>
 </xs:element>
+
+
+<!-- S T R I N G S  -->
 
 
 <xs:element name="colour">    

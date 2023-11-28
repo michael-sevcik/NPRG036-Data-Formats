@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+
+<!-- C L A S S E S  -->
+
+
+<xs:element name="Town">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="townName"/>
+            <xs:element ref="hasFlag"/>
+            <xs:element ref="hasBroadcast"/>
+            <xs:element ref="streets"/>
+            <xs:element ref="mayors"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="Street">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="name"/>
+            <xs:element ref="sidewalk"/>
+            <xs:element ref="houses"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="House">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element name="number" type="xs:positiveInteger"/>
+            <xs:element ref="colour"/>
+            <xs:element ref="area"/>
+            <xs:element ref="occupants"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<xs:complexType name="Person">
+    <xs:sequence>
+        <xs:element ref="name"/>
+        <xs:element ref="surname"/>
+        <xs:element ref="middlenames"/>
+    </xs:sequence>
+</xs:complexType>
+
+
+<xs:complexType name="Occupant">
+    <xs:complexContent>
+        <xs:extension base="Person">
+            <xs:sequence>
+                <xs:element name="date_from" type="xs:date"/>
+                <xs:element ref="unpaid_fees"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="Occupant" type="Occupant"></xs:element>
+
+<xs:complexType name="Mayor">
+    <xs:complexContent>
+        <xs:extension base="Person">
+            <xs:sequence>
+                <xs:element name="dateFrom" type="xs:date"/>
+                <xs:element name="until" type="xs:date"/>
+            </xs:sequence>
+        </xs:extension>
+    </xs:complexContent>
+</xs:complexType>
+
+<xs:element name="Mayor" type="Mayor"></xs:element>
+
+
+<!-- V A Z B Y  -->
+
+
+<xs:element name="streets">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Street" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="mayors">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Mayor" minOccurs="1" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="occupants">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="Occupant" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="houses">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="House" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+<xs:element name="middlenames">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="middlename" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
+
+<!-- S T R I N G S  -->
+
+
+<xs:element name="townName">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="name">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="middlename">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="surname">
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="colour">    
+    <xs:simpleType>
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9A-Fa-f]+"/>
+            <xs:length value="6"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+<!-- B O O L E A N  -->
+
+
+<xs:element name="hasFlag">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="hasBroadcast">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="sidewalk">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="unpaid_fees">
+    <xs:simpleType>
+        <xs:restriction base="xs:boolean">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+<!-- N U M B E R S  -->
+
+
+<xs:element name="area">
+    <xs:simpleType>
+        <xs:restriction base="xs:decimal">
+            <xs:minExclusive value="0"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+<xs:element name="date">
+    <xs:simpleType>
+        <xs:restriction base="xs:date">
+        </xs:restriction>
+    </xs:simpleType>
+</xs:element>
+
+
+</xs:schema>
