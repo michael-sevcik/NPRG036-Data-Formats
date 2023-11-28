@@ -1,0 +1,25 @@
+@startuml
+
+hide circle
+
+
+class "Town" as Town {
+  --
+  townName
+  hasFlag
+  hasBroadcast
+}
+
+
+class "House" as House{
+  --
+  number
+  colour
+  area
+}
+
+
+Town "0..1" -r-> "0..1" House : "                 "
+
+
+@enduml
