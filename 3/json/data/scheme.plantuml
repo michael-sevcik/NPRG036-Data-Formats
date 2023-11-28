@@ -1,20 +1,51 @@
 @startuml
 
 class "Town" as Town {
-  townName: langString
-  hasFlag: boolean
-  hasBroadcast: boolean
-  townHall: Building
+  --
+  townName
+  hasFlag
+  hasBroadcast
 }
 
 class "Street" as Street {
-  locatedIn: Town
+  --
+  name
+  sidewalk
 }
 
-class "Building" as Building {
+class "House" as House{
+  --
+  number
+  colour
+  area
 }
 
-Town "1" -- "N" Street : locatedIn
-Town "1" -- "1" Building : townHall
+class "Occupant" as Occupant{
+  --
+  date_from
+  unpaid_fees
+}
+
+class "Person" as Person{
+  --
+  name
+  middlename [0..*]
+  surname
+}
+
+class "Mayor" as Mayor{
+  --
+  date_from
+  until
+}
+
+Town "1..1" -u-> "0..*" Street : locatedIn
+Street "1..1" -d-> "0..*" House : situated_on
+Town "0..1" -r-> "0..1" House : town_hall
+Town "1..1" -d-> "1..1" Mayor : mayor
+House "1..*" -d-> "0..*" Occupant : lives_in
+Occupant -l-|> Person : " "
+Mayor -r-|> Person : " "
+
 
 @enduml
