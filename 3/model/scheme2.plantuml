@@ -19,7 +19,7 @@ class "House" as House{
 }
 
 
-Town "0..1" -r-> "0..1" House : "                 "
+Town "0..1" <-l- "1..1" House : "                 "
 
 
 @enduml
