@@ -15,6 +15,6 @@ class "Building" as Building {
 }
 
 Town "1" -- "N" Street : locatedIn
-Town "1asdasd" -- "1" Building : townHall
+Town "1" -- "1" Building : townHall
 
 @enduml

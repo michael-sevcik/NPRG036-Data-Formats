@@ -1,0 +1,83 @@
+University
+    Attributes:
+        1) Name: represents the university's name
+            Data type: String
+        2) Date of Establishment: represents the date the university was created
+            Data type: date
+        3) Address: represents the location of the university
+            Data type: String
+    Relations:
+        1) Meal Provider: University get meals provided by Cafeteria.
+            Cardinality: 0..* University can have no or multiple cafeterias
+        2) Accomodation Provider: University has dormitories for accomodation
+            Cardinality: 0..* University can have no or multiple dormitories
+        3) Organizational Division: University can be organized into faculties
+            Cardinality: 0..* University can have multiple faculties but must have atleast one
+    
+Cafeteria
+    Attributes:
+        1) Name: represents the cafeteria's name
+            Data type: String
+        2) Address: represents the cafeteria's location
+            Data type: String
+    Relations:
+        1) Meal Provider: cafeteria provides meals for university
+            Cardinality: 1..1 Cafeteria must provide meals to one and only one university
+        2) Meal Provider: cafeteria provides meals to dormitories
+            Cardinality: 0..1 cafeteria can provide meals to no dormitories or to one dormitory
+        
+Dormitory
+    Attributes:
+        1) Name: represents the dormitory's name
+            Data type: String
+        2) Address: represents the dormitory's location
+            Data type: String
+    Relations:
+        1) Meal Provider: dormitory gets meals from cafeteria
+            Cardinality: 0..1 Dormitory can have no or one cafeteria
+        2) Accomodation Provider: dormitory can provide accomodation associated to one university
+            Cardinality: 1..1 Dormitory must be associated with one and only one university
+        3) Tenant: dormitory has students who live there
+            Cardinality: 0..* Dormitory can be empty or can be said to accommodate any number of students
+        
+Faculty
+    Attributes:
+        1) Name: represents the faculty's name
+            Data type: String
+        2) Date of Establishment: represents the date the faculty was created
+            Data type: date 
+	3) Specialization: represents the field of study the faculty is focused on
+	    Cardinality: 0..*
+    Relations:
+        1) Organizational Division: Faculty can belong to a university
+            Cardinality: 1..1 A faculty must belong to one and only one university
+        2) Employee: Faculty employs teachers
+            Cardinality: 0..* A faculty can have zero or mltiple employees
+        3) Full-time Student: A faculty has full-time students who study there
+            Cardinality: 0..* A faculty can have zero or multiple students
+
+Teacher
+    Attributes:
+        1) First name: represents teacher's first name
+            Data type: String
+        2) Surname: represents teacher's Surname
+            Data type: String
+        3) Title: represents teacher's title
+            Data type: String
+    Relations:
+        1) Employee: A teacher is employed by a faculty
+            Cardinality: 1..* a teacher must be employed by atleast one faculty but can be employed by multiple faculties
+
+Student
+    Attributes:
+        1) First name: represents student's first name
+            Data type: String
+        2) Surname: represents student's Surname
+            Data type: String
+        3) Study Year: represents the year of the student's study
+            Data type: Integer
+    Relations:
+        1) Full-time Student: A student studies full-time at a faculty
+            Cardinality: 1..1 A student can study at one and only one faculty
+        2) Tenant: Student lives at a dormitory
+            Cardinality: 0..1 A student can live in zero or one dormitories
