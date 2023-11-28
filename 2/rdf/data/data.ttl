@@ -54,7 +54,7 @@ ex:situatedOn a rdf:Property ;
 ex:houseNumber a rdf:Property ;
         rdfs:label "Číslo domu"@sk ;
         rdfs:domain dbo:Building ;
-        rdfs:range xsd:int.
+        rdfs:range xsd:integer.
 
 ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
@@ -64,6 +64,8 @@ ex:middleNames a rdf:Property ;
 	rdfs:label "Stredné mená"@sk ;
 	rdfs:domain foaf:Person ;
 	rdfs:range rdf:langString.
+
+ex:Occupant a rdfs:Class.
 
 ex:Occupant rdfs:subClassOf foaf:Person ;
 	rdfs:label "Obyvateľ budovy"@sk ;
@@ -83,6 +85,8 @@ ex:livesIn a rdf:Property ;
 	rdfs:label "Obýva"@sk ;
 	rdfs:domain ex:Occupant ;
 	rdfs:range dbo:Building .
+
+ex:Mayor a rdfs:Class.
 
 ex:Mayor rdfs:subClassOf foaf:Person;
     rdfs:label "Starosta"@sk.
@@ -108,51 +112,51 @@ ex:mayor a rdf:Property ;
 # C L A S S E S
 
 # Towns
-<exT:Rovinka> a dbo:Town;
+exT:Rovinka a dbo:Town;
     ex:townName "Rovinka"@sk;
     ex:hasFlag "true"^^xsd:boolean;
     ex:hasBroadcast "true"^^xsd:boolean.
 
-<exT:SvatyJur> a dbo:Town;
+exT:SvatyJur a dbo:Town;
     ex:townName "Svätý Jur"@sk;
     ex:hasFlag "false"^^xsd:boolean;
     ex:hasBroadcast "false"^^xsd:boolean.
 
-<exT:Zlin> a dbo:Town;
+exT:Zlin a dbo:Town;
     ex:townName "Zlín"@cs;
     ex:hasFlag "false"^^xsd:boolean;
     ex:hasBroadcast "true"^^xsd:boolean.
 
 
 # Houses TODO
-<exH:MartinsHouse> a dbo:Building ;
-    ex:houseNumber "123"^^xsd:int ;
+exH:MartinsHouse a dbo:Building ;
+    ex:houseNumber "123"^^xsd:integer ;
     ex:dbocolour_hex_code "db34eb" ;
     dbo:area "150.5"^^xsd:float . 
 
-<exH:MichalsHouse> a dbo:Building;
-    ex:houseNumber "5656"^^xsd:int.
+exH:MichalsHouse a dbo:Building;
+    ex:houseNumber "5656"^^xsd:integer.
 
-<exH:RastosHouse> a dbo:Building;
-    ex:houseNumber "466"^^xsd:int.
+exH:RastosHouse a dbo:Building;
+    ex:houseNumber "466"^^xsd:integer.
 
 
 # Streets
-<exS:Hlavna> a dbo:Street;
+exS:Hlavna a dbo:Street;
     ex:streetName "Hlavná"@sk;
     ex:hasSidewalk "true"^^xsd:boolean.
 
-<exS:Sportova> a dbo:Street;
+exS:Sportova a dbo:Street;
     ex:streetName "Športová"@sk;
     ex:hasSidewalk "false"^^xsd:boolean.
 
-<exS:Mramorova> a dbo:Street;
+exS:Mramorova a dbo:Street;
     ex:streetName "Mramorová"@sk;
     ex:hasSidewalk "true"^^xsd:boolean.
 
 
 # People
-<exP:Michal> a foaf:Person;
+exP:Michal a foaf:Person;
     foaf:firstName "Michal"@cs;
     foaf:surname "Ševčík"@cs;
     ex:middleNames (
@@ -160,71 +164,71 @@ ex:mayor a rdf:Property ;
         "Alexander"@sk
     ).
 
-<exP:Rasto> a foaf:Person;
+exP:Rasto a foaf:Person;
     foaf:firstName "Rastislav"@sk.
 
-<exP:Martin> a foaf:Person;
+exP:Martin a foaf:Person;
     foaf:firstName "Martin"@sk.
 
 
 # Occupants
-<exP:Michal> a ex:Occupant;
+exP:Michal a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
-<exP:Rasto> a ex:Occupant;
+exP:Rasto a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "false"^^xsd:boolean.
 
-<exP:Martin> a ex:Occupant;
+exP:Martin a ex:Occupant;
     ex:dateFrom "2018-09-01"^^xsd:date;
     ex:unpaidFees "true"^^xsd:boolean.
 
 # Mayors
-<exP:Rasto> a ex:Mayor;
+exP:Rasto a ex:Mayor;
     ex:dateFrom "2018-08-01"^^xsd:date;
     ex:until "2022-08-01"^^xsd:date.
 
-<exP:Martin> a ex:Mayor.
+exP:Martin a ex:Mayor.
 
-<exP:Michal> a ex:Mayor.
+exP:Michal a ex:Mayor.
 
 
 # A S S O C I A T I O N S
 
 # mayor
-<exT:Rovinka> ex:mayor <exP:Rasto>.
+exT:Rovinka ex:mayor exP:Rasto.
 
-<exT:SvatyJur> ex:mayor <exP:Martin>.
+exT:SvatyJur ex:mayor exP:Martin.
 
-<exT:Zlin> ex:mayor <exP:Michal>.
+exT:Zlin ex:mayor exP:Michal.
 
 # livesIn
-<exP:Martin> ex:livesIn <exH:MartinsHouse>.
+exP:Martin ex:livesIn exH:MartinsHouse.
 
-<exP:Rasto> ex:livesIn <exH:RastosHouse>.
+exP:Rasto ex:livesIn exH:RastosHouse.
 
-<exP:Michal> ex:livesIn <exH:MichalsHouse>.
+exP:Michal ex:livesIn exH:MichalsHouse.
 
 # townHall
-<exT:SvatyJur> ex:townHall <exH:MartinsHouse>.
+exT:SvatyJur ex:townHall exH:MartinsHouse.
 
-<exT:Rovinka> ex:townHall <exH:RastosHouse>.
+exT:Rovinka ex:townHall exH:RastosHouse.
 
-<exT:Zlin> ex:townHall <exH:MichalsHouse>.
+exT:Zlin ex:townHall exH:MichalsHouse.
 
 # locatedIn
-<exS:Hlavna> ex:locatedIn <exT:Rovinka>.
+exS:Hlavna ex:locatedIn exT:Rovinka.
 
-<exS:Sportova> ex:locatedIn <exT:SvatyJur>.
+exS:Sportova ex:locatedIn exT:SvatyJur.
 
-<exS:Mramorova> ex:locatedIn <exT:Zlin>.
+exS:Mramorova ex:locatedIn exT:Zlin.
 
 # situatedOn
-<exH:MichalsHouse> ex:situatedOn <exS:Mramorova>.
+exH:MichalsHouse ex:situatedOn exS:Mramorova.
 
-<exH:RastosHouse> ex:situatedOn <exS:Hlavna>.
+exH:RastosHouse ex:situatedOn exS:Hlavna.
 
-<exH:MartinsHouse> ex:situatedOn <exS:Sportova>.
+exH:MartinsHouse ex:situatedOn exS:Sportova.
 
 
