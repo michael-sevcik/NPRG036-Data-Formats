@@ -12,58 +12,60 @@
 
 
 ex:townName a rdfs:Property;
-        rdfs:label "Názov obce"@sk ;
-        rdfs:domain dbo:Town;
-        rdfs:range rdf:langString.
+    rdfs:label "Názov obce"@sk ;
+    rdfs:domain dbo:Town;
+    rdfs:range rdf:langString.
 
 ex:hasFlag a rdf:Property;
-        rdfs:label "Má obec vlajku"@sk ;
-        rdfs:domain ex:Town;
-        rdfs:range xsd:boolean.
+    rdfs:label "Má obec vlajku"@sk ;
+    rdfs:domain ex:Town;
+    rdfs:range xsd:boolean.
 
 ex:hasBroadcast a rdf:Property;
-        rdfs:label "Má obec rozhlas"@sk ;
-        rdfs:domain ex:Town ;
-        rdfs:range xsd:boolean.
+    rdfs:label "Má obec rozhlas"@sk ;
+    rdfs:domain ex:Town ;
+    rdfs:range xsd:boolean.
 
 ex:locatedIn a rdf:Property ;
-        rdfs:label "Ulica sa nachádza v obci"@sk ;
-        rdfs:domain dbo:Street ;
-        rdfs:range dbo:Town.
+    rdfs:label "Ulica sa nachádza v obci"@sk ;
+    rdfs:domain dbo:Street ;
+    rdfs:range dbo:Town.
 
 ex:townHall a rdf:Property ;
-        rdfs:label "Radnica obce"@sk ;
-        rdfs:domain dbo:Town ;
-        rdfs:range dbo:Building.
+    rdfs:label "Radnica obce"@sk ;
+    rdfs:domain dbo:Town ;
+    rdfs:range dbo:Building.
 
 ex:streetName a rdf:Property ;
-        rdfs:label "Názov ulice"@sk ;
-        rdfs:domain dbo:Street;
-        rdfs:range rdf:langString.
+    rdfs:label "Názov ulice"@sk ;
+    rdfs:domain dbo:Street;
+    rdfs:range rdf:langString.
 
 ex:hasSidewalk a rdf:Property ;
-        rdfs:label "Má ulica chodník"@sk ;
-        rdfs:domain dbo:Street ;
-        rdfs:range xsd:boolean.
+    rdfs:label "Má ulica chodník"@sk ;
+    rdfs:domain dbo:Street ;
+    rdfs:range xsd:boolean.
 
 ex:situatedOn a rdf:Property ;
-        rdfs:label "Budova na ulici"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range dbo:Street.
+    rdfs:label "Budova na ulici"@sk ;
+    rdfs:domain dbo:Building ;
+    rdfs:range dbo:Street.
 
 ex:houseNumber a rdf:Property ;
-        rdfs:label "Číslo domu"@sk ;
-        rdfs:domain dbo:Building ;
-        rdfs:range xsd:integer.
+    rdfs:label "Číslo domu"@sk ;
+    rdfs:domain dbo:Building ;
+    rdfs:range xsd:integer.
 
 ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
-        rdfs:label "Farba budovy"@sk ;
-        rdfs:domain dbo:Building .
+    rdfs:label "Farba budovy"@sk ;
+    rdfs:domain dbo:Building .
 
 ex:middleNames a rdf:Property ;
 	rdfs:label "Stredné mená"@sk ;
 	rdfs:domain foaf:Person ;
 	rdfs:range rdf:langString.
+
+ex:Occupant a rdfs:Class.
 
 ex:Occupant rdfs:subClassOf foaf:Person ;
 	rdfs:label "Obyvateľ budovy"@sk ;
@@ -83,6 +85,8 @@ ex:livesIn a rdf:Property ;
 	rdfs:label "Obýva"@sk ;
 	rdfs:domain ex:Occupant ;
 	rdfs:range dbo:Building .
+
+ex:Mayor a rdfs:Class.
 
 ex:Mayor rdfs:subClassOf foaf:Person;
     rdfs:label "Starosta"@sk.
