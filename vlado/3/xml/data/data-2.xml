@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<universities xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./../schemas/schema-2.xsd">
+
+    <University id="cuni">
+        <name xml:lang="en">Charles University</name>
+        <date>1348-04-07</date>
+        <address xml:lang="cs">Opletalova 38, 110 00 Staré Město Praha, Česko</address>
+        <faculties>
+            <Faculty id="mff">
+                <name xml:lang="en">Faculty of Mathematics and Physics</name>
+                <date>1952-09-01</date>
+                <address xml:lang="cs">Ke Karlovu 2027/3, 121 16 Nové Město Praha, Česko</address>
+            
+                <students>
+                    <Student id="rameshs">
+                        <givenName xml:lang="en">Samyuktha</givenName>
+                        <familyName xml:lang="en">Ramesh</familyName>
+                        <studyYear>3</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="en">Samy</nickname>
+                        </nicknames>
+                    </Student>
+
+                    <Student id="vozarv">
+                        <givenName xml:lang="cs">Vladimír</givenName>
+                        <familyName xml:lang="cs">Vozár</familyName>
+                        <studyYear>2</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="sk">hhehe</nickname>
+                            <nickname xml:lang="en">hoho</nickname>                        </nicknames>
+                    </Student>
+
+                    <Student id="panovskav">
+                        <givenName xml:lang="en">Viktorija</givenName>
+                        <familyName xml:lang="en">Panovska</familyName>
+                        <studyYear>3</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="en">Vik</nickname>
+                            <nickname xml:lang="en">Pana</nickname>
+                        </nicknames>
+                    </Student>
+
+                </students>
+
+                <teachers>
+                    <Teacher id="klimekj">
+                        <givenName xml:lang="cs">Jakub</givenName>
+                        <familyName xml:lang="cs">Klimek</familyName>
+                        <title xml:lang="cs">RNDr</title>
+                    </Teacher>
+
+                    <Teacher id="surnamef">
+                        <givenName xml:lang="en">Firstname</givenName>
+                        <familyName xml:lang="en">Surname</familyName>
+                        <title xml:lang="en">Dr</title>
+                    </Teacher>
+                </teachers>
+            </Faculty>
+            <Faculty id="prf">
+                <name xml:lang="cs">Právnická Fakulta Univerzity Karlova</name>
+                <date>1348-01-01</date>
+                <address xml:lang="cs">nám. Curieových 901/7, 116 40 Praha 1, Česko</address>
+            
+                <students>
+                    <Student id="skutecnys">
+                        <givenName xml:lang="cs">Student</givenName>
+                        <familyName xml:lang="cs">Skutečný</familyName>
+                        <studyYear>1</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="cs">existuju</nickname>
+                            <nickname xml:lang="cs">vážně</nickname>
+                        </nicknames>
+                    </Student>
+                </students>
+
+                <teachers>
+                    <Teacher id="skutecnyu">
+                        <givenName xml:lang="cs">Učitel</givenName>
+                        <familyName xml:lang="cs">Skutečný</familyName>
+                        <title xml:lang="cs">PhD</title>
+                    </Teacher>
+                </teachers>
+            </Faculty>
+        </faculties>
+        <cafeterias>
+            <Cafeteria id="trojaMenza">
+                <name xml:lang="cs">Menza 17. Listopadu</name>
+                <address xml:lang="cs">Pátkova 3, 180 00 Praha 3, Česko</address>
+            </Cafeteria>
+            <Cafeteria id="pravnickaMenza">
+                <name xml:lang="cs">Menza Právnická</name>
+                <address xml:lang="cs">nám. Curieových 901, 110 00 Staré Město Praha, Česko</address>
+            </Cafeteria>
+            <Cafeteria id="skutecnanka">
+                <name xml:lang="cs">Menza Skutečná</name>
+                <address xml:lang="cs">Nikde 0, 180 00 Praha, Česko</address>
+            </Cafeteria>
+        </cafeterias>
+        <dormitories>
+            <Dormitory id="trojaKolej">
+                <name xml:lang="cs">Kolej 17. Listopadu</name>
+                <address xml:lang="cs">Pátkova 3, 180 00 Praha 3, Česko</address>
+            </Dormitory>
+            <Dormitory id="svehlovka">
+                <name xml:lang="cs">Kolej Švehlova</name>
+                <address xml:lang="cs">Slavíkova 22, 120 00 Praha 3, Česko</address>
+            </Dormitory>
+        </dormitories>
+    </University>
+
+    <University id="funi">
+        <name xml:lang="cs">Frantova Univerzita</name>
+        <date>2022-11-20</date>
+        <address xml:lang="cs">Frantova 15, 000 15 Frantovo, Česko</address>
+        <faculties>
+            <Faculty id="fff">
+                <name xml:lang="en">First Franta Faculty</name>
+                <date>2022-11-20</date>
+                <address xml:lang="cs">Ke Frantovi 5, 000 15 Frantovo, Česko</address>
+                <students>
+                    <Student id="frantikf1">
+                        <givenName xml:lang="cs">Freda</givenName>
+                        <familyName xml:lang="cs">Frantik</familyName>
+                        <studyYear>6</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="cs">Franta</nickname>
+                        </nicknames>
+                    </Student>
+                </students>
+                <teachers>
+                    <Teacher id="frantikf">
+                        <givenName xml:lang="cs">Franta</givenName>
+                        <familyName xml:lang="cs">Frantik</familyName>
+                        <title xml:lang="cs">Bc</title>
+                    </Teacher>
+                </teachers>
+            </Faculty>
+        </faculties>
+        <cafeterias>
+            <Cafeteria id="uFranty">
+                <name xml:lang="cs">Hostinec u Franty</name>
+                <address xml:lang="cs">pod Lípou 17, 000 15 Frantovo, Česko</address>
+            </Cafeteria>
+        </cafeterias>
+        <dormitories>
+            <Dormitory id="frantuvPokoj">
+                <name xml:lang="cs">Frantův Pokoj</name>
+                <address xml:lang="cs">Pátečná 8, 000 15 Frantovo, Česko</address>
+            </Dormitory>
+        </dormitories>
+    </University>
+    
+    <University id="uniba">
+        <name xml:lang="sk">Univerzita Komenského</name>
+        <date>1919-01-01</date>
+        <address xml:lang="sk">Šafárikovo námestie 6, 811 02 Bratislava, Slovensko</address>
+        <faculties>
+            <Faculty id="flaw">
+                <name xml:lang="sk">Právnická Fakulta Univerzity Komenského v Bratislave</name>
+                <date>1919-06-27</date>
+                <address xml:lang="cs">Šafárikovo námestie 6, 811 02 Bratislava, Slovensko</address>
+                <students>
+                    <Student id="umudrenak">
+                        <givenName xml:lang="cs">Katka</givenName>
+                        <familyName xml:lang="cs">Umúdrená</familyName>
+                        <studyYear>2</studyYear>
+                        <nicknames>
+                            <nickname xml:lang="sk">Kata</nickname>
+                        </nicknames>
+                    </Student>
+                </students>
+                <teachers>
+                    <Teacher id="pravnyj">
+                        <givenName xml:lang="cs">Jozef</givenName>
+                        <familyName xml:lang="cs">Právny</familyName>
+                        <title xml:lang="cs">JUDr</title>
+                    </Teacher>
+                </teachers>
+            </Faculty>
+        </faculties>
+        <cafeterias/>
+        <dormitories>
+            <Dormitory id="skutocnanka">
+                <name xml:lang="sk">Skutočný Internát</name>
+                <address xml:lang="sk">Ulicová 7, 821 01 Bratislava, Slovensko</address>
+            </Dormitory>
+        </dormitories>
+    </University>
+
+</universities>

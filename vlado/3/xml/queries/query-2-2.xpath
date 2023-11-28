@@ -1,0 +1,3 @@
+(:Names of faculties that have less students than teachers:)
+
+//Faculty[count(students/Student) < count(teachers/Teacher)]/name/text()

@@ -1,0 +1,526 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://example.org/universities.schema.json",
+
+    "$defs": {
+        "Cafeteria": {
+            "type": "object",
+            "required": ["name", "address"],
+            "properties": {
+                "name": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "address": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "Dormitory": {
+            "type": "object",
+            "required": ["name", "address"],
+            "properties": {
+                "name": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "address": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        },
+        "Faculty": {
+            "type": "object",
+            "required": ["name", "date"],
+            "properties": {
+                "name": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "date": {
+                    "type": "string",
+                    "format": "date"
+                }
+            }
+        },
+        "Student": {
+            "type": "object",
+            "required": ["givenName", "familyName", "studyYear"],
+            "properties": {
+                "givenName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "familyName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "studyYear": {
+                    "type": "integer"
+                },
+                "nicknames": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                }
+            }
+        },
+        "Teacher": {
+            "type": "object",
+            "required": ["givenName","familyName","title"] ,
+            "properties": {
+                "givenName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "familyName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "title": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "type": "array",
+    "title": "universities",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "title": "University",
+        "required": ["name", "date", "address"],
+        "properties": {
+            "name": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "required": [
+                            "cs"
+                        ],
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "en"
+                        ],
+                        "properties": {
+                            "en": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "sk"
+                        ],
+                        "properties": {
+                            "sk": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            },
+            "date": {
+                "type": "string",
+                "format": "date"
+            },
+            "address": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "required": [
+                            "cs"
+                        ],
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "en"
+                        ],
+                        "properties": {
+                            "en": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "sk"
+                        ],
+                        "properties": {
+                            "sk": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            },
+            "faculties": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/Faculty"
+                }
+            },
+            "dormitories": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/Dormitory"
+                }
+            },
+            "cafeterias": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/Cafeteria"
+                }
+            }
+        }
+    }
+}

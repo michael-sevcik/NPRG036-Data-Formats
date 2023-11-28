@@ -1,0 +1,307 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "https://example.org/dormitories.schema.json",
+    "$defs": {
+        "Student": {
+            "type": "object",
+            "required": ["givenName", "familyName", "studyYear"],
+            "properties": {
+                "givenName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "familyName": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "studyYear": {
+                    "type": "integer"
+                },
+                "nicknames": {
+                    "type": "array",
+                    "items": {
+                        "nickname": {
+                            "anyOf": [
+                                {
+                                    "type": "object",
+                                    "required": [
+                                        "cs"
+                                    ],
+                                    "properties": {
+                                        "cs": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "required": [
+                                        "en"
+                                    ],
+                                    "properties": {
+                                        "en": {
+                                            "type": "string"
+                                        }
+                                    }
+                                },
+                                {
+                                    "type": "object",
+                                    "required": [
+                                        "sk"
+                                    ],
+                                    "properties": {
+                                        "sk": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "Cafeteria": {
+            "type": "object",
+            "required": ["name", "address"],
+            "properties": {
+                "name": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                },
+                "address": {
+                    "anyOf": [
+                        {
+                            "type": "object",
+                            "required": [
+                                "cs"
+                            ],
+                            "properties": {
+                                "cs": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "en"
+                            ],
+                            "properties": {
+                                "en": {
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        {
+                            "type": "object",
+                            "required": [
+                                "sk"
+                            ],
+                            "properties": {
+                                "sk": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    },
+    "type": "array",
+    "title": "dormitories",
+    "minItems": 1,
+    "items": {
+        "type": "object",
+        "title": "Dormitory",
+        "required": ["name", "address"],
+        "properties": {
+            "name": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "required": [
+                            "cs"
+                        ],
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "en"
+                        ],
+                        "properties": {
+                            "en": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "sk"
+                        ],
+                        "properties": {
+                            "sk": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            },
+            "address": {
+                "anyOf": [
+                    {
+                        "type": "object",
+                        "required": [
+                            "cs"
+                        ],
+                        "properties": {
+                            "cs": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "en"
+                        ],
+                        "properties": {
+                            "en": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    {
+                        "type": "object",
+                        "required": [
+                            "sk"
+                        ],
+                        "properties": {
+                            "sk": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                ]
+            },
+            "tenants": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/Student"
+                }
+            },
+            "cafeterias": {
+                "type": "array",
+                "items": {
+                    "$ref": "#/$defs/Cafeteria"
+                }
+            }
+        }
+    }
+}
