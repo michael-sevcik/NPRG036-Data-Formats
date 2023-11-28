@@ -1,1 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<towns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
+
+<Town>
+    <townName xml:lang="cs" >Zlín</townName>
+    <hasFlag>true</hasFlag>
+    <hasBroadcast>true</hasBroadcast>
+    <streets>
+        <Street>
+            <name xml:lang="cs">Mramorová</name>
+            <sidewalk>true</sidewalk>
+            <houses>
+                <House>
+                    <number>5656</number>
+                    <colour>FF00FF</colour>
+                    <area>50.5</area>
+                    <occupants>
+                        <Occupant>
+                            <name xml:lang="cs">Michael</name>
+                            <surname xml:lang="cs">Ševčík</surname>
+                            <middlenames>
+                                <middlename xml:lang="cs">Dobrodej</middlename>
+                                <middlename xml:lang="cs">Alexander</middlename>
+                            </middlenames>
+                                <date_from>2022-01-02</date_from>
+                                <unpaid_fees>true</unpaid_fees>
+                            </Occupant>
+                    </occupants>
+                </House>
+            </houses>
+        </Street>        
+    </streets>
+    <mayors>
+        <Mayor>
+            
+        </Mayor>
+
+    </mayors>
+</Town>
+
+</towns>
