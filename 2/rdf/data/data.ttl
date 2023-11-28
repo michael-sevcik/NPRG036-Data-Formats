@@ -54,7 +54,7 @@ ex:situatedOn a rdf:Property ;
 ex:houseNumber a rdf:Property ;
         rdfs:label "Číslo domu"@sk ;
         rdfs:domain dbo:Building ;
-        rdfs:range xsd:int.
+        rdfs:range xsd:integer.
 
 ex:colour_hex_code rdfs:subPropertyOf dbo:colourHexCode;
         rdfs:label "Farba budovy"@sk ;
@@ -126,15 +126,15 @@ ex:mayor a rdf:Property ;
 
 # Houses TODO
 <exH:MartinsHouse> a dbo:Building ;
-    ex:houseNumber "123"^^xsd:int ;
+    ex:houseNumber "123"^^xsd:integer ;
     ex:dbocolour_hex_code "db34eb" ;
     dbo:area "150.5"^^xsd:float . 
 
 <exH:MichalsHouse> a dbo:Building;
-    ex:houseNumber "5656"^^xsd:int.
+    ex:houseNumber "5656"^^xsd:integer.
 
 <exH:RastosHouse> a dbo:Building;
-    ex:houseNumber "466"^^xsd:int.
+    ex:houseNumber "466"^^xsd:integer.
 
 
 # Streets
