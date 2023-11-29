@@ -1,67 +1,123 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
     "definitions": {
-        "Person": {
+      "Person": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "surname": { "type": "string" },
+          "middlenames": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name", "surname", "middlenames"],
+        "additionalProperties": false
+      },
+      "Occupant": {
+        "allOf": [
+          { "$ref": "#/definitions/Person" },
+          {
             "type": "object",
             "properties": {
-                "name": { "type": "string" },
-                "surname": { "type": "string" },
-                "middlenames": { "type": "array", "items": { "type": "string" } },
-                "id": { "type": "string" }
+              "date_from": { "type": "string", "format": "date" },
+              "unpaid_fees": { "type": "boolean" }
             },
-            "required": ["name", "surname", "id"]
-        },
-        "Occupant": {
-            "allOf": [
-                { "$ref": "#/definitions/Person" },
-                {
-                    "type": "object",
-                    "properties": {
-                        "date_from": { "type": "string", "format": "date" },
-                        "unpaid_fees": { "type": "boolean" }
-                    },
-                    "required": ["date_from", "unpaid_fees"]
-                }
-            ]
-        },
-        "Mayor": {
-            "allOf": [
-                { "$ref": "#/definitions/Person" },
-                {
-                    "type": "object",
-                    "properties": {
-                        "dateFrom": { "type": "string", "format": "date" },
-                        "until": { "type": "string", "format": "date" }
-                    }
-                }
-            ]
-        },
-        "House": {
+            "required": ["date_from", "unpaid_fees"],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "Mayor": {
+        "allOf": [
+          { "$ref": "#/definitions/Person" },
+          {
             "type": "object",
             "properties": {
-                "number": { "type": "integer", "minimum": 1 },
-                "colour": { "type": "string", "pattern": "^[0-9A-Fa-f]{6}$" },
-                "area": { "type": "number", "minimum": 0 },
-                "occupants": { "type": "array", "items": { "$ref": "#/definitions/Occupant" } },
-                "id": { "type": "string" }
+              "dateFrom": { "type": "string", "format": "date" },
+              "until": { "type": "string", "format": "date" }
             },
-            "required": ["number", "colour", "area", "id"]
+            "required": [],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "Street": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "sidewalk": { "type": "boolean" },
+          "houses": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/House" }
+          }
         },
-        "Street": {
-            "type": "object",
-            "properties": {
-                "name": { "type": "string" },
-                "sidewalk": { "type": "boolean" },
-                "houses": { "type": "array", "items": { "$ref": "#/definitions/House" } },
-                "id": { "type": "string" }
-            },
-            "required": ["name", "sidewalk", "id"]
+        "required": ["name", "sidewalk", "houses"],
+        "additionalProperties": false
+      },
+      "House": {
+        "type": "object",
+        "properties": {
+          "number": { "type": "integer", "minimum": 1 },
+          "colour": {
+            "type": "string",
+            "pattern": "^[0-9A-Fa-f]{6}$"
+          },
+          "area": { "type": "number", "exclusiveMinimum": 0 },
+          "occupants": {
+            "type": "array",
+            "items": { "$ref": "#/definitions/Occupant" }
+          }
         },
-        "Town": {
-            "type": "object",
-            "properties": {
-                "townName": { "type": "string" },
+        "required": ["number", "colour", "area", "occupants"],
+        "additionalProperties": false
+      }
+    },
+    "type": "object",
+    "properties": {
+      "towns": {
+        "type": "object",
+        "properties": {
+          "Town": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "townName": {
+                  "type": "object",
+                  "properties": {
+                    "$value": { "type": "string" },
+                    "lang": { "type": "string" }
+                  },
+                  "required": ["$value", "lang"],
+                  "additionalProperties": false
+                },
                 "hasFlag": { "type": "boolean" },
                 "hasBroadcast": { "type": "boolean" },
-                "streets": { "type": "array", "items": { "$ref": "#/definitions/Street" } },
-                "mayors": { "type": "array", "items": { "$ref": "#/
+                "streets": {
+                  "type": "array",
+                  "items": { "$ref": "#/definitions/Street" }
+                },
+                "mayors": {
+                  "type": "array",
+                  "items": { "$ref": "#/definitions/Mayor" }
+                },
+                "townhall": {
+                  "type": "object",
+                  "properties": {
+                    "House": { "$ref": "#/definitions/House" }
+                  }
+                }
+              },
+              "required": ["townName", "hasFlag", "hasBroadcast", "streets", "mayors", "townhall"],
+              "additionalProperties": false
+            }
+          }
+        },
+        "required": ["Town"],
+        "additionalProperties": false
+      }
+    },
+    "additionalProperties": false
+  }
+  
