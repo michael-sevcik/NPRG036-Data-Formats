@@ -16,6 +16,7 @@
             <xs:element ref="hasBroadcast"/>
             <xs:element ref="streets"/>
             <xs:element ref="mayors"/>
+            <xs:element ref="townhall"/>
         </xs:sequence>
         <xs:attribute name="id" use="required"/>
     </xs:complexType>
@@ -91,6 +92,15 @@
         </xs:sequence>
     </xs:complexType>
 </xs:element>
+
+<xs:element name="townhall">
+    <xs:complexType>
+        <xs:sequence>
+            <xs:element ref="House" minOccurs="0" maxOccurs="1"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:element>
+
 
 <xs:element name="streets">
     <xs:complexType>
