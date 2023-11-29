@@ -4,41 +4,149 @@
 <towns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
 
-<Town>
+<Town id="zlín">
     <townName xml:lang="cs" >Zlín</townName>
     <hasFlag>true</hasFlag>
     <hasBroadcast>true</hasBroadcast>
     <streets>
-        <Street>
+        <Street id="mramorova">
             <name xml:lang="cs">Mramorová</name>
             <sidewalk>true</sidewalk>
             <houses>
-                <House>
+                <House id="michaelsHouse">
                     <number>5656</number>
                     <colour>FF00FF</colour>
                     <area>50.5</area>
-                    <occupants>
-                        <Occupant>
+                    <occupants>                    
+                        <Occupant id="michael">
                             <name xml:lang="cs">Michael</name>
                             <surname xml:lang="cs">Ševčík</surname>
                             <middlenames>
                                 <middlename xml:lang="cs">Dobrodej</middlename>
                                 <middlename xml:lang="cs">Alexander</middlename>
                             </middlenames>
-                                <date_from>2022-01-02</date_from>
-                                <unpaid_fees>true</unpaid_fees>
-                            </Occupant>
+                            <date_from>2018-09-01</date_from>
+                            <unpaid_fees>false</unpaid_fees>
+                        </Occupant> 
                     </occupants>
                 </House>
             </houses>
         </Street>        
     </streets>
     <mayors>
-        <Mayor>
-            
+        <Mayor id="michael">            
+            <name xml:lang="cs">Michael</name>
+            <surname xml:lang="cs">Ševčík</surname>
+            <middlenames>
+                <middlename xml:lang="cs">Dobrodej</middlename>
+                <middlename xml:lang="cs">Alexander</middlename>
+            </middlenames>
         </Mayor>
-
     </mayors>
+    <townhall>
+        <House id="michaelsHouse">
+            <number>5656</number>
+            <colour>FF00FF</colour>
+            <area>50.5</area>
+            <occupants>
+            </occupants>
+        </House>
+    </townhall>
 </Town>
 
+<Town id="svatyJur">
+    <townName xml:lang="sk" >Svätý Jur</townName>
+    <hasFlag>false</hasFlag>
+    <hasBroadcast>false</hasBroadcast>
+    <streets>
+        <Street id="sportova">
+            <name xml:lang="sk">Športová</name>
+            <sidewalk>false</sidewalk>
+            <houses>
+                <House id="martinsHouse">
+                    <number>123</number>
+                    <colour>db34eb</colour>
+                    <area>150.5</area>
+                    <occupants>                    
+                        <Occupant id="martin">
+                            <name xml:lang="cs">Martin</name>
+                            <surname xml:lang="cs"></surname>
+                            <middlenames>
+                            </middlenames>
+                            <date_from>2018-09-01</date_from>
+                            <unpaid_fees>true</unpaid_fees>
+                        </Occupant> 
+                    </occupants>
+                </House>
+            </houses>
+        </Street>        
+    </streets>
+    <mayors>
+        <Mayor id="martin">            
+            <name xml:lang="cs">Martin</name>
+            <surname xml:lang="cs"></surname>
+            <middlenames>
+            </middlenames>
+            <dateFrom>2022-01-02</dateFrom>
+            <until>2026-01-02</until>
+        </Mayor>
+    </mayors>
+    <townhall>
+        <House id="martinsHouse">
+            <number>123</number>
+            <colour>db34eb</colour>
+            <area>150.5</area>
+            <occupants>
+            </occupants>
+        </House>
+    </townhall>
+</Town>
+
+<Town id="rovinka">
+    <townName xml:lang="sk">Rovinka</townName>
+    <hasFlag>true</hasFlag>
+    <hasBroadcast>true</hasBroadcast>
+    <streets>
+        <Street id="hlavna">
+            <name xml:lang="sk">Hlavná</name>
+            <sidewalk>true</sidewalk>
+            <houses>
+                <House id="rastosHouse">
+                    <number>466</number>
+                    <colour>000000</colour>
+                    <area>200.8</area>
+                    <occupants>                    
+                        <Occupant id="rasto">
+                            <name xml:lang="cs">Rasto</name>
+                            <surname xml:lang="cs"></surname>
+                            <middlenames>
+                            </middlenames>
+                            <date_from>2018-09-01</date_from>
+                            <unpaid_fees>false</unpaid_fees>
+                        </Occupant> 
+                    </occupants>
+                </House>
+            </houses>
+        </Street>        
+    </streets>
+    <mayors>
+        <Mayor id="rasto">            
+            <name xml:lang="cs">Rasto</name>
+            <surname xml:lang="cs"></surname>
+            <middlenames>
+            </middlenames>
+            <dateFrom>2018-08-01</dateFrom>
+            <until>2022-08-01</until>
+        </Mayor>
+    </mayors>
+    <townhall>
+        <House id="rastosHouse">
+            <number>466</number>
+            <colour>000000</colour>
+            <area>200.8</area>
+            <occupants>
+            </occupants>
+        </House>
+    </townhall>
+</Town>
 </towns>

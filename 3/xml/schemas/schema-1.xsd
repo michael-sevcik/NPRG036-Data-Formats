@@ -73,8 +73,8 @@
     <xs:complexContent>
         <xs:extension base="Person">
             <xs:sequence>
-                <xs:element name="dateFrom" type="xs:date"/>
-                <xs:element name="until" type="xs:date"/>
+                <xs:element name="dateFrom" type="xs:date" minOccurs="0"/>
+                <xs:element name="until" type="xs:date" minOccurs="0"/>
             </xs:sequence>
         </xs:extension>
     </xs:complexContent>
