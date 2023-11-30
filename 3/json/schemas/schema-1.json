@@ -328,7 +328,6 @@
             "townName",
             "hasFlag",
             "hasBroadcast",
-            "streets",
             "mayors"
         ],
         "additionalProperties": false
