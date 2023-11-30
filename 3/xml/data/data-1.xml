@@ -71,8 +71,6 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                         <Occupant id="Martin">
                             <name xml:lang="cs">Martin</name>
                             <surname xml:lang="cs"></surname>
-                            <middlenames>
-                            </middlenames>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>true</unpaid_fees>
                         </Occupant> 
@@ -84,8 +82,6 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <Mayor id="Martin">            
         <name xml:lang="cs">Martin</name>
         <surname xml:lang="cs"></surname>
-        <middlenames>
-        </middlenames>
         <dateFrom>2022-01-02</dateFrom>
         <until>2026-01-02</until>
     </Mayor>
@@ -117,8 +113,6 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                         <Occupant id="Rasto">
                             <name xml:lang="cs">Rasto</name>
                             <surname xml:lang="cs"></surname>
-                            <middlenames>
-                            </middlenames>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>false</unpaid_fees>
                         </Occupant> 
@@ -130,8 +124,6 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <Mayor id="Rasto">            
         <name xml:lang="cs">Rasto</name>
         <surname xml:lang="cs"></surname>
-        <middlenames>
-        </middlenames>
         <dateFrom>2018-08-01</dateFrom>
         <until>2022-08-01</until>
     </Mayor>

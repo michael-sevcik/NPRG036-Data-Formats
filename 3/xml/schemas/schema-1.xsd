@@ -50,7 +50,7 @@
     <xs:sequence>
         <xs:element ref="name"/>
         <xs:element ref="surname"/>
-        <xs:element ref="middlenames"/>
+        <xs:element ref="middlenames" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
     <xs:attribute name="id" use="required"/>
 </xs:complexType>
