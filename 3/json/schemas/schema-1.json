@@ -129,7 +129,7 @@
         "occupant": {
             "allOf": [
                 {
-                    "$ref": "#/definitions/person"
+                    "$ref": "#/defs/person"
                 },
                 {
                     "type": "object",
@@ -152,7 +152,7 @@
         "mayor": {
             "allOf": [
                 {
-                    "$ref": "#/definitions/person"
+                    "$ref": "#/defs/person" 
                 },
                 {
                     "type": "object",
@@ -165,11 +165,7 @@
                             "type": "string",
                             "format": "date"
                         }
-                    },
-                    "required": [
-                        "dateFrom",
-                        "until"
-                    ]
+                    }
                 }
             ]
         },
@@ -219,7 +215,7 @@
                 "houses": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/house"
+                        "$ref": "#/defs/house"
                     }
                 }
             },
@@ -248,7 +244,7 @@
                 "occupants": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/definitions/occupant"
+                        "$ref": "#/defs/occupant"
                     }
                 }
             },
@@ -314,14 +310,14 @@
             "streets": {
                 "type": "array",
                 "items": {
-                    "$ref": "#/definitions/street"
+                    "$ref": "#/defs/street"
                 }
             },
             "mayor": {
-                "$ref": "#/definitions/mayor"
+                "$ref": "#/defs/mayor"
             },
             "townhall": {
-                "$ref": "#/definitions/house"
+                "$ref": "#/defs/house"
             }
         },
         "required": [
