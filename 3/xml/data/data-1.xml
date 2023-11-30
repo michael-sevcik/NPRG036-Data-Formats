@@ -4,21 +4,21 @@
 <towns xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
 
-<Town id="zlín">
+<Town id="Zlin">
     <townName xml:lang="cs" >Zlín</townName>
     <hasFlag>true</hasFlag>
     <hasBroadcast>true</hasBroadcast>
     <streets>
-        <Street id="mramorova">
+        <Street id="Mramorova">
             <name xml:lang="cs">Mramorová</name>
             <sidewalk>true</sidewalk>
             <houses>
-                <House id="michaelsHouse">
+                <House id="MichaelsHouse">
                     <number>5656</number>
                     <colour>FF00FF</colour>
                     <area>50.5</area>
                     <occupants>                    
-                        <Occupant id="michael">
+                        <Occupant id="Michael">
                             <name xml:lang="cs">Michael</name>
                             <surname xml:lang="cs">Ševčík</surname>
                             <middlenames>
@@ -33,18 +33,18 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="michael">            
-            <name xml:lang="cs">Michael</name>
-            <surname xml:lang="cs">Ševčík</surname>
-            <middlenames>
-                <middlename xml:lang="cs">Dobrodej</middlename>
-                <middlename xml:lang="cs">Alexander</middlename>
-            </middlenames>
-        </Mayor>
-    </mayors>
+    <Mayor id="Michael">
+        <name xml:lang="cs">Michael</name>
+        <surname xml:lang="cs">Ševčík</surname>
+        <middlenames>
+            <middlename xml:lang="cs">Dobrodej</middlename>
+            <middlename xml:lang="cs">Alexander</middlename>
+        </middlenames>
+        <dateFrom>2018-09-01</dateFrom>
+        <until>2025-09-01</until>
+    </Mayor>
     <townhall>
-        <House id="michaelsHouse">
+        <House id="MichaelsHouse">
             <number>5656</number>
             <colour>FF00FF</colour>
             <area>50.5</area>
@@ -54,21 +54,21 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     </townhall>
 </Town>
 
-<Town id="svatyJur">
+<Town id="SvatyJur">
     <townName xml:lang="sk" >Svätý Jur</townName>
     <hasFlag>false</hasFlag>
     <hasBroadcast>false</hasBroadcast>
     <streets>
-        <Street id="sportova">
+        <Street id="Sportova">
             <name xml:lang="sk">Športová</name>
             <sidewalk>false</sidewalk>
             <houses>
-                <House id="martinsHouse">
+                <House id="MartinsHouse">
                     <number>123</number>
                     <colour>db34eb</colour>
                     <area>150.5</area>
                     <occupants>                    
-                        <Occupant id="martin">
+                        <Occupant id="Martin">
                             <name xml:lang="cs">Martin</name>
                             <surname xml:lang="cs"></surname>
                             <middlenames>
@@ -81,18 +81,16 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="martin">            
-            <name xml:lang="cs">Martin</name>
-            <surname xml:lang="cs"></surname>
-            <middlenames>
-            </middlenames>
-            <dateFrom>2022-01-02</dateFrom>
-            <until>2026-01-02</until>
-        </Mayor>
-    </mayors>
+    <Mayor id="Martin">            
+        <name xml:lang="cs">Martin</name>
+        <surname xml:lang="cs"></surname>
+        <middlenames>
+        </middlenames>
+        <dateFrom>2022-01-02</dateFrom>
+        <until>2026-01-02</until>
+    </Mayor>
     <townhall>
-        <House id="martinsHouse">
+        <House id="MartinsHouse">
             <number>123</number>
             <colour>db34eb</colour>
             <area>150.5</area>
@@ -102,21 +100,21 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     </townhall>
 </Town>
 
-<Town id="rovinka">
+<Town id="Rovinka">
     <townName xml:lang="sk">Rovinka</townName>
     <hasFlag>true</hasFlag>
     <hasBroadcast>true</hasBroadcast>
     <streets>
-        <Street id="hlavna">
+        <Street id="Hlavna">
             <name xml:lang="sk">Hlavná</name>
             <sidewalk>true</sidewalk>
             <houses>
-                <House id="rastosHouse">
+                <House id="RastosHouse">
                     <number>466</number>
                     <colour>000000</colour>
                     <area>200.8</area>
                     <occupants>                    
-                        <Occupant id="rasto">
+                        <Occupant id="Rasto">
                             <name xml:lang="cs">Rasto</name>
                             <surname xml:lang="cs"></surname>
                             <middlenames>
@@ -129,18 +127,16 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="rasto">            
-            <name xml:lang="cs">Rasto</name>
-            <surname xml:lang="cs"></surname>
-            <middlenames>
-            </middlenames>
-            <dateFrom>2018-08-01</dateFrom>
-            <until>2022-08-01</until>
-        </Mayor>
-    </mayors>
+    <Mayor id="Rasto">            
+        <name xml:lang="cs">Rasto</name>
+        <surname xml:lang="cs"></surname>
+        <middlenames>
+        </middlenames>
+        <dateFrom>2018-08-01</dateFrom>
+        <until>2022-08-01</until>
+    </Mayor>
     <townhall>
-        <House id="rastosHouse">
+        <House id="RastosHouse">
             <number>466</number>
             <colour>000000</colour>
             <area>200.8</area>

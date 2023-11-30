@@ -15,7 +15,7 @@
             <xs:element ref="hasFlag"/>
             <xs:element ref="hasBroadcast"/>
             <xs:element ref="streets"/>
-            <xs:element ref="mayors"/>
+            <xs:element ref="Mayor"/>
             <xs:element ref="townhall"/>
         </xs:sequence>
         <xs:attribute name="id" use="required"/>
@@ -73,8 +73,8 @@
     <xs:complexContent>
         <xs:extension base="Person">
             <xs:sequence>
-                <xs:element name="dateFrom" type="xs:date" minOccurs="0"/>
-                <xs:element name="until" type="xs:date" minOccurs="0"/>
+                <xs:element name="dateFrom" type="xs:date" minOccurs="1"/>
+                <xs:element name="until" type="xs:date" minOccurs="1"/>
             </xs:sequence>
         </xs:extension>
     </xs:complexContent>
@@ -106,14 +106,6 @@
     <xs:complexType>
         <xs:sequence>
             <xs:element ref="Street" minOccurs="0" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
-</xs:element>
-
-<xs:element name="mayors">
-    <xs:complexType>
-        <xs:sequence>
-            <xs:element ref="Mayor" minOccurs="1" maxOccurs="1"/>
         </xs:sequence>
     </xs:complexType>
 </xs:element>
