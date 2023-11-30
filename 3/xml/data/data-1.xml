@@ -33,16 +33,16 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="michael">            
-            <name xml:lang="cs">Michael</name>
-            <surname xml:lang="cs">Ševčík</surname>
-            <middlenames>
-                <middlename xml:lang="cs">Dobrodej</middlename>
-                <middlename xml:lang="cs">Alexander</middlename>
-            </middlenames>
-        </Mayor>
-    </mayors>
+    <Mayor id="michael">
+        <name xml:lang="cs">Michael</name>
+        <surname xml:lang="cs">Ševčík</surname>
+        <middlenames>
+            <middlename xml:lang="cs">Dobrodej</middlename>
+            <middlename xml:lang="cs">Alexander</middlename>
+        </middlenames>
+        <dateFrom>2018-09-01</dateFrom>
+        <until>2025-09-01</until>
+    </Mayor>
     <townhall>
         <House id="michaelsHouse">
             <number>5656</number>
@@ -81,16 +81,14 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="martin">            
-            <name xml:lang="cs">Martin</name>
-            <surname xml:lang="cs"></surname>
-            <middlenames>
-            </middlenames>
-            <dateFrom>2022-01-02</dateFrom>
-            <until>2026-01-02</until>
-        </Mayor>
-    </mayors>
+    <Mayor id="martin">            
+        <name xml:lang="cs">Martin</name>
+        <surname xml:lang="cs"></surname>
+        <middlenames>
+        </middlenames>
+        <dateFrom>2022-01-02</dateFrom>
+        <until>2026-01-02</until>
+    </Mayor>
     <townhall>
         <House id="martinsHouse">
             <number>123</number>
@@ -129,16 +127,14 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <mayors>
-        <Mayor id="rasto">            
-            <name xml:lang="cs">Rasto</name>
-            <surname xml:lang="cs"></surname>
-            <middlenames>
-            </middlenames>
-            <dateFrom>2018-08-01</dateFrom>
-            <until>2022-08-01</until>
-        </Mayor>
-    </mayors>
+    <Mayor id="rasto">            
+        <name xml:lang="cs">Rasto</name>
+        <surname xml:lang="cs"></surname>
+        <middlenames>
+        </middlenames>
+        <dateFrom>2018-08-01</dateFrom>
+        <until>2022-08-01</until>
+    </Mayor>
     <townhall>
         <House id="rastosHouse">
             <number>466</number>
