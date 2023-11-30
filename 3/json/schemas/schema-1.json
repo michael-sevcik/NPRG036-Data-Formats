@@ -12,8 +12,7 @@
           "items": { "type": "string" }
         }
       },
-      "required": ["name", "surname", "middlenames"],
-      "additionalProperties": false
+      "required": ["name", "surname", "middlenames"]
     },
     "occupant": {
       "allOf": [
@@ -21,11 +20,13 @@
         {
           "type": "object",
           "properties": {
-            "date_from": { "type": "string", "format": "date" },
+            "date_from": {
+              "type": "string",
+              "format": "date"
+            },
             "unpaid_fees": { "type": "boolean" }
           },
-          "required": ["date_from", "unpaid_fees"],
-          "additionalProperties": false
+          "required": ["date_from", "unpaid_fees"]
         }
       ]
     },
@@ -35,11 +36,16 @@
         {
           "type": "object",
           "properties": {
-            "dateFrom": { "type": "string", "format": "date" },
-            "until": { "type": "string", "format": "date" }
+            "dateFrom": {
+              "type": "string",
+              "format": "date"
+            },
+            "until": {
+              "type": "string",
+              "format": "date"
+            }
           },
-          "required": [],
-          "additionalProperties": false
+          "required": ["dateFrom", "until"]
         }
       ]
     },
