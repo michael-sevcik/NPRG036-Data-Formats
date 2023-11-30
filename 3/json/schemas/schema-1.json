@@ -152,7 +152,7 @@
         "mayor": {
             "allOf": [
                 {
-                    "$ref": "#/defs/person" 
+                    "$ref": "#/$defs/person" 
                 },
                 {
                     "type": "object",
@@ -219,7 +219,7 @@
                 "houses": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/defs/house"
+                        "$ref": "#/$defs/house"
                     }
                 }
             },
@@ -248,7 +248,7 @@
                 "occupants": {
                     "type": "array",
                     "items": {
-                        "$ref": "#/defs/occupant"
+                        "$ref": "#/$defs/occupant"
                     }
                 }
             },
@@ -314,14 +314,14 @@
             "streets": {
                 "type": "array",
                 "items": {
-                    "$ref": "#/defs/street"
+                    "$ref": "#/$defs/street"
                 }
             },
             "mayor": {
-                "$ref": "#/defs/mayor"
+                "$ref": "#/$defs/mayor"
             },
             "townhall": {
-                "$ref": "#/defs/house"
+                "$ref": "#/$defs/house"
             }
         },
         "required": [
