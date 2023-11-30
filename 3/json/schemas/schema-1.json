@@ -129,7 +129,7 @@
         "occupant": {
             "allOf": [
                 {
-                    "$ref": "#/defs/person"
+                    "$ref": "#/$defs/person"
                 },
                 {
                     "type": "object",
