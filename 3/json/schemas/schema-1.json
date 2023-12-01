@@ -5,7 +5,7 @@
         "person": {
             "type": "object",
             "properties": {
-                "name": {
+                "firstName": {
                     "anyOf": [
                         {
                             "type": "object",
@@ -79,7 +79,7 @@
                         }
                     ]
                 },
-                "middlenames": {
+                "middleNames": {
                     "type": "array",
                     "items": {
                         "anyOf": [
@@ -121,9 +121,9 @@
                 }
             },
             "required": [
-                "name",
+                "firstName",
                 "surname",
-                "middlenames"
+                "middleNames"
             ]
         },
         "occupant": {
@@ -134,17 +134,17 @@
                 {
                     "type": "object",
                     "properties": {
-                        "date_from": {
+                        "dateFrom": {
                             "type": "string",
                             "format": "date"
                         },
-                        "unpaid_fees": {
+                        "unpaidFees": {
                             "type": "boolean"
                         }
                     },
                     "required": [
-                        "date_from",
-                        "unpaid_fees"
+                        "dateFrom",
+                        "unpaidFees"
                     ]
                 }
             ]
@@ -157,18 +157,18 @@
                 {
                     "type": "object",
                     "properties": {
-                        "dateFrom": {
+                        "startTerm": {
                             "type": "string",
                             "format": "date"
                         },
-                        "until": {
+                        "endTerm": {
                             "type": "string",
                             "format": "date"
                         }
                     },
                     "required": [
-                        "dateFrom",
-                        "until"
+                        "startTerm",
+                        "endTerm"
                     ]
                 }
             ]
@@ -176,7 +176,7 @@
         "street": {
             "type": "object",
             "properties": {
-                "name": {
+                "streetName": {
                     "anyOf": [
                         {
                             "type": "object",
@@ -213,7 +213,7 @@
                         }
                     ]
                 },
-                "sidewalk": {
+                "hasSidewalk": {
                     "type": "boolean"
                 },
                 "houses": {
@@ -224,8 +224,8 @@
                 }
             },
             "required": [
-                "name",
-                "sidewalk",
+                "streetName",
+                "hasSidewalk",
                 "houses"
             ],
         },
@@ -326,7 +326,7 @@
             "townName",
             "hasFlag",
             "hasBroadcast",
-            "mayors"
+            "mayor"
         ],
     }
 }
