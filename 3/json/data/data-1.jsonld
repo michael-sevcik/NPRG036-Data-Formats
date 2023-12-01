@@ -12,11 +12,18 @@
             
             "type": "@type",
             "Town": "dbo:Town",
+            "Street": "dbo:Street",
+            "House": "dbo:Building",
+            "Occupant": "ex:Occupant",
+            "Mayor": "ex:Mayor",
             
             "Towns": "@nest",
 
 
-            "townName": "ex:townName",
+            "townName": {
+                "@id": "ex:townName",
+                "@container": "@language"
+            },
             "hasFlag": {
                 "@id": "ex:hasFlag",
                 "@type": "xsd:boolean"
@@ -90,7 +97,7 @@
                 "@container":"@language"
             },
             "surname": {
-                "@id": "foaf:firstName",
+                "@id": "foaf:surname",
                 "@container":"@language"
             }
         },
@@ -107,6 +114,7 @@
         "streets": [
             {
                 "@id": "exS:Mramorova",
+                "type" : "Street",
                 "streetName": {
                     "cs": "Mramorová"
                 },
@@ -114,12 +122,14 @@
                 "houses": [
                     {
                         "@id": "exH:MichaelsHouse",
+                        "type": "House",
                         "number": 5656,
                         "colour": "FF00FF",
                         "area": 50.5,
                         "occupants": [
                             {
                                 "@id": "exP:Michael",
+                                "type" : "Occupant",
                                 "firstName": {
                                     "cs": "Michael"
                                 },
@@ -132,9 +142,7 @@
                                     }
                                 ],
                                 "dateFrom": "2018-09-01",
-                                "unpaidFees": false,
-                                "startTerm": "2018-09-01",
-                                "endTerm": "2025-09-01"
+                                "unpaidFees": false
                             }
                         ]
                     }
@@ -143,6 +151,7 @@
         ],
         "mayor": {
             "@id": "exP:Michael",
+            "type" : "Mayor",
             "firstName": {
                 "cs": "Michael"
             },
@@ -154,8 +163,8 @@
                     "cs": "TODO"
                 }
             ],
-            "startTerm": "2018-09-01",
-            "endTerm": "2025-09-01"
+            "termStart": "2018-09-01",
+            "termEnd": "2025-09-01"
         },
         "townhall": {
             "@id": "exH:MichaelsHouse",
@@ -179,11 +188,18 @@
             
             "type": "@type",
             "Town": "dbo:Town",
-            
+            "Street": "dbo:Street",
+            "House": "dbo:Building",
+            "Occupant": "ex:Occupant",
+            "Mayor": "ex:Mayor",
+
             "Towns": "@nest",
 
 
-            "townName": "ex:townName",
+            "townName": {
+                "@id": "ex:townName",
+                "@container": "@language"
+            },
             "hasFlag": {
                 "@id": "ex:hasFlag",
                 "@type": "xsd:boolean"
@@ -257,7 +273,7 @@
                 "@container":"@language"
             },
             "surname": {
-                "@id": "foaf:firstName",
+                "@id": "foaf:surname",
                 "@container":"@language"
             }
         },
@@ -272,6 +288,7 @@
         "streets": [
             {
                 "@id": "exS:Sportova",
+                "type" : "Street",
                 "streetName": {
                     "sk": "Športová"
                 },
@@ -279,12 +296,14 @@
                 "houses": [
                     {
                         "@id": "exH:MartinsHouse",
+                        "type": "House",
                         "number": 123,
                         "colour": "db34eb",
                         "area": 150.5,
                         "occupants": [
                             {
                                 "@id": "exP:Martin",
+                                "type" : "Occupant",
                                 "firstName": {
                                     "cs": "Martin"
                                 },
@@ -306,6 +325,7 @@
         ],
         "mayor": {
             "@id": "exP:Martin",
+            "type" : "Mayor",
             "firstName": {
                 "cs": "Martin"
             },
@@ -317,8 +337,8 @@
                     "cs": "TODO"
                 }
             ],
-            "startTerm": "2022-01-02",
-            "endTerm": "2026-01-02"
+            "termStart": "2022-01-02",
+            "termEnd": "2026-01-02"
         },
         "townhall": {
             "@id": "exH:MartinsHouse",
@@ -342,11 +362,18 @@
             
             "type": "@type",
             "Town": "dbo:Town",
+            "Street": "dbo:Street",
+            "House": "dbo:Building",
+            "Occupant": "ex:Occupant",
+            "Mayor": "ex:Mayor",
             
             "Towns": "@nest",
 
 
-            "townName": "ex:townName",
+            "townName": {
+                "@id": "ex:townName",
+                "@container": "@language"
+            },
             "hasFlag": {
                 "@id": "ex:hasFlag",
                 "@type": "xsd:boolean"
@@ -420,7 +447,7 @@
                 "@container":"@language"
             },
             "surname": {
-                "@id": "foaf:firstName",
+                "@id": "foaf:surname",
                 "@container":"@language"
             }
         },
@@ -435,6 +462,7 @@
         "streets": [
             {
                 "@id": "exS:Hlavna",
+                "type" : "Street",
                 "streetName": {
                     "sk": "Hlavná"
                 },
@@ -442,12 +470,14 @@
                 "houses": [
                     {
                         "@id": "exH:RastosHouse",
+                        "type": "House",
                         "number": 466,
                         "colour": "000000",
                         "area": 200.8,
                         "occupants": [
                             {
                                 "@id": "exP:Rasto",
+                                "type" : "Occupant",
                                 "firstName": {
                                     "cs": "Rasto"
                                 },
@@ -469,6 +499,7 @@
         ],
         "mayor": {
             "@id": "exP:Rasto",
+            "type" : "Mayor",
             "firstName": {
                 "cs": "Rasto"
             },
@@ -480,8 +511,8 @@
                     "cs": "TODO"
                 }
             ],
-            "startTerm": "2018-08-01",
-            "endTerm": "2022-08-01"
+            "termStart": "2018-08-01",
+            "termEnd": "2022-08-01"
         },
         "townhall": {
             "@id": "exH:RastosHouse",
