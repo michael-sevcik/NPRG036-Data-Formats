@@ -1,0 +1,485 @@
+[
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "exH": "http://example.org/houses/",
+            "exP": "http://example.org/people/",
+            "exS": "http://example.org/streets/",
+            "exT": "http://example.org/towns/",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "dbo": "http://dbpedia.org/resource/classes/",
+            
+            "type": "@type",
+            "Town": "dbo:Town",
+            
+            "Towns": "@nest",
+
+
+            "townName": "ex:townName",
+            "hasFlag": {
+                "@id": "ex:hasFlag",
+                "@type": "xsd:boolean"
+            },
+
+            "hasBroadcast": {
+                "@id": "ex:hasBroadcast",
+                "@type": "xsd:boolean"
+            },
+
+            "streets": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "townHall": "ex:townHall",
+
+            "streetName": {
+                "@id": "ex:streetName",
+                "@container": "@language"
+            },
+
+            "hasSidewalk": {
+                "@id": "ex:hasSidewalk",
+                "@type": "xsd:boolean"
+            },
+
+            "houses": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "houseNumber": {
+                "@id": "ex:houseNumber",
+                "@type": "xsd:integer"
+            },
+
+            "colour_hex_code": {
+                "@id": "ex:colour_hex_code",
+                "@type": "xsd:string"
+            },
+
+
+
+            "dateFrom": {
+                "@id": "ex:dateFrom",
+                "@type": "xsd:date"
+            },
+
+            "upaidFees": {
+                "@id": "ex:upaidFees",
+                "@type": "xsd:boolean"
+            },
+
+            "occupants": {
+                "@reverse": "ex:livesIn"
+            },
+
+            "termStart": {
+                "@id": "ex:termStart",
+                "@type": "xsd:date"
+            },
+
+            "termEnd": {
+                "@id": "ex:termEnd",
+                "@type": "xsd:date"
+            },
+
+            "mayor": "ex:mayor",
+
+            "firstName": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            },
+            "surname": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            }
+        },
+
+
+
+        "type": "Town",
+        "@id": "exT:Zlin",
+        "townName": {
+            "cs": "Zlín"
+        },
+        "hasFlag": true,
+        "hasBroadcast": true,
+        "streets": [
+            {
+                "@id": "exS:Mramorova",
+                "streetName": {
+                    "cs": "Mramorová"
+                },
+                "hasSidewalk": true,
+                "houses": [
+                    {
+                        "@id": "exH:MichaelsHouse",
+                        "number": 5656,
+                        "colour": "FF00FF",
+                        "area": 50.5,
+                        "occupants": [
+                            {
+                                "@id": "exP:Michael",
+                                "firstName": {
+                                    "cs": "Michael"
+                                },
+                                "surname": {
+                                    "cs": "Ševčík"
+                                },
+                                "middleNames": [
+                                    {
+                                        "cs": "TODO"
+                                    }
+                                ],
+                                "dateFrom": "2018-09-01",
+                                "unpaid_fees": false,
+                                "startTerm": "2018-09-01",
+                                "endTerm": "2025-09-01"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "mayor": {
+            "@id": "exP:Michael",
+            "firstName": {
+                "cs": "Michael"
+            },
+            "surname": {
+                "cs": "Ševčík"
+            },
+            "middleNames": [
+                {
+                    "cs": "TODO"
+                }
+            ],
+            "startTerm": "2018-09-01",
+            "endTerm": "2025-09-01"
+        },
+        "townhall": {
+            "@id": "exH:MichaelsHouse",
+            "TODO": "TODO"
+        }
+    },
+
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "exH": "http://example.org/houses/",
+            "exP": "http://example.org/people/",
+            "exS": "http://example.org/streets/",
+            "exT": "http://example.org/towns/",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "dbo": "http://dbpedia.org/resource/classes/",
+            
+            "type": "@type",
+            "Town": "dbo:Town",
+            
+            "Towns": "@nest",
+
+
+            "townName": "ex:townName",
+            "hasFlag": {
+                "@id": "ex:hasFlag",
+                "@type": "xsd:boolean"
+            },
+
+            "hasBroadcast": {
+                "@id": "ex:hasBroadcast",
+                "@type": "xsd:boolean"
+            },
+
+            "streets": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "townHall": "ex:townHall",
+
+            "streetName": {
+                "@id": "ex:streetName",
+                "@container": "@language"
+            },
+
+            "hasSidewalk": {
+                "@id": "ex:hasSidewalk",
+                "@type": "xsd:boolean"
+            },
+
+            "houses": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "houseNumber": {
+                "@id": "ex:houseNumber",
+                "@type": "xsd:integer"
+            },
+
+            "colour_hex_code": {
+                "@id": "ex:colour_hex_code",
+                "@type": "xsd:string"
+            },
+
+
+
+            "dateFrom": {
+                "@id": "ex:dateFrom",
+                "@type": "xsd:date"
+            },
+
+            "upaidFees": {
+                "@id": "ex:upaidFees",
+                "@type": "xsd:boolean"
+            },
+
+            "occupants": {
+                "@reverse": "ex:livesIn"
+            },
+
+            "termStart": {
+                "@id": "ex:termStart",
+                "@type": "xsd:date"
+            },
+
+            "termEnd": {
+                "@id": "ex:termEnd",
+                "@type": "xsd:date"
+            },
+
+            "mayor": "ex:mayor",
+
+            "firstName": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            },
+            "surname": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            }
+        },
+
+        "type": "Town",
+        "@id": "exT:SvatyJur",
+        "townName": {
+            "sk": "Svätý Jur"
+        },
+        "hasFlag": false,
+        "hasBroadcast": false,
+        "streets": [
+            {
+                "@id": "exS:Sportova",
+                "streetName": {
+                    "sk": "Športová"
+                },
+                "hasSidewalk": false,
+                "houses": [
+                    {
+                        "@id": "exH:MartinsHouse",
+                        "number": 123,
+                        "colour": "db34eb",
+                        "area": 150.5,
+                        "occupants": [
+                            {
+                                "@id": "exP:Martin",
+                                "firstName": {
+                                    "cs": "Martin"
+                                },
+                                "surname": {
+                                    "cs": "Oravec"
+                                },
+                                "middleNames": [
+                                    {
+                                        "cs": "TODO"
+                                    }
+                                ],
+                                "dateFrom": "2018-09-01",
+                                "unpaid_fees": true
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "mayor": {
+            "@id": "exP:Martin",
+            "firstName": {
+                "cs": "Martin"
+            },
+            "surname": {
+                "cs": "Oravec"
+            },
+            "middleNames": [
+                {
+                    "cs": "TODO"
+                }
+            ],
+            "startTerm": "2022-01-02",
+            "endTerm": "2026-01-02"
+        },
+        "townhall": {
+            "@id": "exH:MartinsHouse",
+            "TODO": "TODO"
+        }
+    },
+
+    {
+        "@context": {
+            "ex": "http://example.org/vocabulary/",
+            "exH": "http://example.org/houses/",
+            "exP": "http://example.org/people/",
+            "exS": "http://example.org/streets/",
+            "exT": "http://example.org/towns/",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "xsd": "http://www.w3.org/2001/XMLSchema#",
+            "dbo": "http://dbpedia.org/resource/classes/",
+            
+            "type": "@type",
+            "Town": "dbo:Town",
+            
+            "Towns": "@nest",
+
+
+            "townName": "ex:townName",
+            "hasFlag": {
+                "@id": "ex:hasFlag",
+                "@type": "xsd:boolean"
+            },
+
+            "hasBroadcast": {
+                "@id": "ex:hasBroadcast",
+                "@type": "xsd:boolean"
+            },
+
+            "streets": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "townHall": "ex:townHall",
+
+            "streetName": {
+                "@id": "ex:streetName",
+                "@container": "@language"
+            },
+
+            "hasSidewalk": {
+                "@id": "ex:hasSidewalk",
+                "@type": "xsd:boolean"
+            },
+
+            "houses": {
+                "@reverse": "ex:locatedIn"
+            },
+
+            "houseNumber": {
+                "@id": "ex:houseNumber",
+                "@type": "xsd:integer"
+            },
+
+            "colour_hex_code": {
+                "@id": "ex:colour_hex_code",
+                "@type": "xsd:string"
+            },
+
+
+
+            "dateFrom": {
+                "@id": "ex:dateFrom",
+                "@type": "xsd:date"
+            },
+
+            "upaidFees": {
+                "@id": "ex:upaidFees",
+                "@type": "xsd:boolean"
+            },
+
+            "occupants": {
+                "@reverse": "ex:livesIn"
+            },
+
+            "termStart": {
+                "@id": "ex:termStart",
+                "@type": "xsd:date"
+            },
+
+            "termEnd": {
+                "@id": "ex:termEnd",
+                "@type": "xsd:date"
+            },
+
+            "mayor": "ex:mayor",
+
+            "firstName": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            },
+            "surname": {
+                "@id": "foaf:firstName",
+                "@container":"@language"
+            }
+        },
+
+        "type": "Town",
+        "@id": "exT:Rovinka",
+        "townName": {
+            "sk": "Rovinka"
+        },
+        "hasFlag": true,
+        "hasBroadcast": true,
+        "streets": [
+            {
+                "@id": "exS:Hlavna",
+                "streetName": {
+                    "sk": "Hlavná"
+                },
+                "hasSidewalk": true,
+                "houses": [
+                    {
+                        "@id": "exH:RastosHouse",
+                        "number": 466,
+                        "colour": "000000",
+                        "area": 200.8,
+                        "occupants": [
+                            {
+                                "@id": "exP:Rasto",
+                                "firstName": {
+                                    "cs": "Rasto"
+                                },
+                                "surname": {
+                                    "cs": ""
+                                },
+                                "middleNames": [
+                                    {
+                                        "cs": "TODO"
+                                    }
+                                ],
+                                "dateFrom": "2018-09-01",
+                                "unpaid_fees": false
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "mayor": {
+            "@id": "exP:Rasto",
+            "firstName": {
+                "cs": "Rasto"
+            },
+            "surname": {
+                "cs": ""
+            },
+            "middleNames": [
+                {
+                    "cs": "TODO"
+                }
+            ],
+            "startTerm": "2018-08-01",
+            "endTerm": "2022-08-01"
+        },
+        "townhall": {
+            "@id": "exH:RastosHouse",
+            "TODO": "TODO"
+        }
+    }
+]
