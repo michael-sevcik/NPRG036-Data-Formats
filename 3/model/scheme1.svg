@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="675px" preserveAspectRatio="none" style="width:329px;height:675px;background:#FFFFFF;" version="1.1" viewBox="0 0 329 675" width="329px" zoomAndPan="magnify"><defs/><g><!--MD5=[42443b95346ec443fc0976909a527c48]
+class Town--><g id="elem_Town"><rect codeLine="5" fill="#F1F1F1" height="96.4375" id="Town" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="99" x="121" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="34" x="153.5" y="26.5332">Town</text><line style="stroke:#181818;stroke-width:0.5;" x1="122" x2="219" y1="34.6094" y2="34.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="122" x2="219" y1="42.6094" y2="42.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="65" x="127" y="61.1426">townName</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="127" y="78.752">hasFlag</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="87" x="127" y="96.3613">hasBroadcast</text></g><!--MD5=[e723117c0f41e2c24ef9f63f1be0d05e]
+class Street--><g id="elem_Street"><rect codeLine="12" fill="#F1F1F1" height="78.8281" id="Street" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="65" x="138" y="181"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="151.5" y="200.5332">Street</text><line style="stroke:#181818;stroke-width:0.5;" x1="139" x2="202" y1="208.6094" y2="208.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="139" x2="202" y1="216.6094" y2="216.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="144" y="235.1426">name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="53" x="144" y="252.752">sidewalk</text></g><!--MD5=[5005bba8c6d1dda988b0bcc8eba409f6]
+class House--><g id="elem_House"><rect codeLine="18" fill="#F1F1F1" height="96.4375" id="House" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="60" x="140.5" y="416"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="40" x="150.5" y="435.5332">House</text><line style="stroke:#181818;stroke-width:0.5;" x1="141.5" x2="199.5" y1="443.6094" y2="443.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="141.5" x2="199.5" y1="451.6094" y2="451.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="146.5" y="470.1426">number</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="146.5" y="487.752">colour</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="146.5" y="505.3613">area</text></g><!--MD5=[e437689f509b2941bd7ef5d5d6c3ce24]
+class Occupant--><g id="elem_Occupant"><rect codeLine="25" fill="#F1F1F1" height="78.8281" id="Occupant" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="68.5" y="590"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="83" y="609.5332">Occupant</text><line style="stroke:#181818;stroke-width:0.5;" x1="69.5" x2="157.5" y1="617.6094" y2="617.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="69.5" x2="157.5" y1="625.6094" y2="625.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="74.5" y="644.1426">date_from</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="78" x="74.5" y="661.752">unpaid_fees</text></g><!--MD5=[09ce52be0ee7de43c61b6e2d59bf108b]
+class Person--><g id="elem_Person"><rect codeLine="31" fill="#F1F1F1" height="96.4375" id="Person" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="121" x="7" y="290"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="45" y="309.5332">Person</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="127" y1="317.6094" y2="317.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="8" x2="127" y1="325.6094" y2="325.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="35" x="13" y="344.1426">name</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="109" x="13" y="361.752">middlename [0..*]</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="55" x="13" y="379.3613">surname</text></g><!--MD5=[8432bca54fec5c7fa475463f2b33af41]
+class Mayor--><g id="elem_Mayor"><rect codeLine="38" fill="#F1F1F1" height="78.8281" id="Mayor" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="76" x="26.5" y="181"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="39" x="45" y="200.5332">Mayor</text><line style="stroke:#181818;stroke-width:0.5;" x1="27.5" x2="101.5" y1="208.6094" y2="208.6094"/><line style="stroke:#181818;stroke-width:1.0;" x1="27.5" x2="101.5" y1="216.6094" y2="216.6094"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="32.5" y="235.1426">date_from</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="26" x="32.5" y="252.752">until</text></g><!--MD5=[3eb348d6df48ebb95910f9a1c5f43f46]
+link Town to Street--><g id="link_Town_Street"><path codeLine="44" d="M170.5,103.29 C170.5,126.08 170.5,153.24 170.5,175.57 " fill="none" id="Town-to-Street" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="170.5,180.85,174.5257,171.8615,170.5143,175.85,166.5257,171.8386,170.5,180.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="52" x="171.5" y="147.4951">locatedIn</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="146.8844" y="125.0464">1..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="148.7813" y="170.2003">0..*</text></g><!--MD5=[b008fe56768499011ab5d13c722332a5]
+link Town to House--><g id="link_Town_House"><path codeLine="45" d="M215.51,103.37 C222.23,112.62 228.29,122.67 232.5,133 C274.97,237.33 290.61,281.93 247.5,386 C238.76,407.09 221.13,425.42 204.95,438.9 " fill="none" id="Town-to-House" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="200.87,442.22,210.3774,439.6491,204.7506,439.067,205.3327,433.4402,200.87,442.22" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="49" x="272.5" y="225.9951">townHall</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="198.2927" y="124.7861">0..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="208.4976" y="434.2165">0..1</text></g><!--MD5=[17c04a156a16837aaa3b1cc45eeb2b35]
+link Street to House--><g id="link_Street_House"><path codeLine="46" d="M170.5,260.03 C170.5,300.81 170.5,365.41 170.5,410.75 " fill="none" id="Street-to-House" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="170.5,415.9,174.5,406.9,170.5,410.9,166.5,406.9,170.5,415.9" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="67" x="171.5" y="343.4951">situated_on</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="146.6781" y="281.4406">1..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="149.0313" y="405.1491">0..*</text></g><!--MD5=[1d06d96ccd510bf5025ff20007f10b13]
+link Town to Mayor--><g id="link_Town_Mayor"><path codeLine="47" d="M139.84,103.29 C124.88,126.37 107.01,153.93 92.43,176.42 " fill="none" id="Town-to-Mayor" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="89.56,180.85,97.8045,175.4622,92.2739,176.6506,91.0855,171.12,89.56,180.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="36" x="118.5" y="147.4951">mayor</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="111.7212" y="125.0464">1..1</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="22" x="69.9766" y="170.2003">1..1</text></g><!--MD5=[aa56de37e9f8bde01a7ebaa060cb5e19]
+link House to Occupant--><g id="link_House_Occupant"><path codeLine="48" d="M154.01,512.29 C146.04,535.18 136.52,562.47 128.72,584.85 " fill="none" id="House-to-Occupant" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="126.98,589.85,133.7189,582.6676,128.6254,585.1285,126.1645,580.035,126.98,589.85" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="42" x="143.5" y="556.4951">lives_in</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="130.1193" y="534.0464">1..*</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="20" x="107.5781" y="579.2003">0..*</text></g><!--MD5=[271bd92e299d19b8dc36128206c7efd1]
+reverse link Person to Occupant--><g id="link_Person_Occupant"><path codeLine="50" d="M78.15,406.01 C87.2,462.97 99.88,542.78 107.34,589.71 " fill="none" id="Person-backto-Occupant" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="71.22,407.01,74.99,386.16,85.04,404.81,71.22,407.01" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="95.5" y="469.4951"> </text></g><!--MD5=[a84efc4edcdd6bd2abb922cab21a18a4]
+link Mayor to Person--><g id="link_Mayor_Person"><path codeLine="51" d="M65.51,260.28 C65.58,263.23 65.66,266.25 65.74,269.32 " fill="none" id="Mayor-to-Person" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="none" points="72.75,269.52,66.27,289.7,58.75,269.89,72.75,269.52" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="4" x="60.74" y="283.7751"> </text></g><!--MD5=[26491122d10e5a495e27e2749211beac]
+@startuml townDiagram
+
+hide circle
+
+
+class "Town" as Town {
+  - -
+  townName
+  hasFlag
+  hasBroadcast
+}
+
+class "Street" as Street {
+  - -
+  name
+  sidewalk
+}
+
+class "House" as House{
+  - -
+  number
+  colour
+  area
+}
+
+class "Occupant" as Occupant{
+  - -
+  date_from
+  unpaid_fees
+}
+
+class "Person" as Person{
+  - -
+  name
+  middlename [0..*]
+  surname
+}
+
+class "Mayor" as Mayor{
+  - -
+  date_from
+  until
+}
+
+Town "1..1" -d-> "0..*" Street : locatedIn
+Town "0..1" -d-> "0..1" House : townHall
+Street "1..1" -d-> "0..*" House : situated_on
+Town "1..1" -d-> "1..1" Mayor : mayor
+House "1..*" -d-> "0..*" Occupant : lives_in
+
+Occupant -l-|> Person : " "
+Mayor -r-|> Person : " "
+
+@enduml
+
+PlantUML version 1.2022.7(Mon Aug 22 19:01:30 CEST 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: cs
+Country: CZ
+--></g></svg>
