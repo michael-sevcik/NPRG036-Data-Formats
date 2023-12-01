@@ -30,6 +30,8 @@
 
 <http://example.org/houses/MichaelsHouse>
         a       <http://dbpedia.org/resource/classes/Building> ;
+        <http://example.org/vocabulary/area>
+                "5.05E1"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
         <http://example.org/vocabulary/locatedIn>
                 <http://example.org/streets/Mramorova> .
 
@@ -55,11 +57,15 @@
 
 <http://example.org/houses/MartinsHouse>
         a       <http://dbpedia.org/resource/classes/Building> ;
+        <http://example.org/vocabulary/area>
+                "1.505E2"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
         <http://example.org/vocabulary/locatedIn>
                 <http://example.org/streets/Sportova> .
 
 <http://example.org/houses/RastosHouse>
         a       <http://dbpedia.org/resource/classes/Building> ;
+        <http://example.org/vocabulary/area>
+                "2.008E2"^^<http://www.w3.org/2001/XMLSchema#decimal> ;
         <http://example.org/vocabulary/locatedIn>
                 <http://example.org/streets/Hlavna> .
 
