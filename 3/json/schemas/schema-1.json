@@ -157,18 +157,18 @@
                 {
                     "type": "object",
                     "properties": {
-                        "startTerm": {
+                        "termStart": {
                             "type": "string",
                             "format": "date"
                         },
-                        "endTerm": {
+                        "termEnd": {
                             "type": "string",
                             "format": "date"
                         }
                     },
                     "required": [
-                        "startTerm",
-                        "endTerm"
+                        "termStart",
+                        "termEnd"
                     ]
                 }
             ]
