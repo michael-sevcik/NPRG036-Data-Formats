@@ -132,7 +132,7 @@
                                     }
                                 ],
                                 "dateFrom": "2018-09-01",
-                                "unpaid_fees": false,
+                                "unpaidFees": false,
                                 "startTerm": "2018-09-01",
                                 "endTerm": "2025-09-01"
                             }
@@ -159,7 +159,10 @@
         },
         "townhall": {
             "@id": "exH:MichaelsHouse",
-            "TODO": "TODO"
+            "number": 5656,
+            "colour": "FF00FF",
+            "area": 50.5,
+            "occupants": [ ]
         }
     },
 
@@ -294,7 +297,7 @@
                                     }
                                 ],
                                 "dateFrom": "2018-09-01",
-                                "unpaid_fees": true
+                                "unpaidFees": true
                             }
                         ]
                     }
@@ -319,7 +322,10 @@
         },
         "townhall": {
             "@id": "exH:MartinsHouse",
-            "TODO": "TODO"
+            "number": 123,
+            "colour": "db34eb",
+            "area": 150.5,
+            "occupants": []
         }
     },
 
@@ -454,7 +460,7 @@
                                     }
                                 ],
                                 "dateFrom": "2018-09-01",
-                                "unpaid_fees": false
+                                "unpaidFees": false
                             }
                         ]
                     }
@@ -479,7 +485,10 @@
         },
         "townhall": {
             "@id": "exH:RastosHouse",
-            "TODO": "TODO"
+            "number": 466,
+            "colour": "000000",
+            "area": 200.8,
+            "occupants": []
         }
     }
 ]
