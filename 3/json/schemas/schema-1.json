@@ -228,7 +228,6 @@
                 "sidewalk",
                 "houses"
             ],
-            "additionalProperties": false
         },
         "house": {
             "type": "object",
@@ -258,7 +257,6 @@
                 "area",
                 "occupants"
             ],
-            "additionalProperties": false
         }
     },
     "type": "array",
@@ -330,6 +328,5 @@
             "hasBroadcast",
             "mayors"
         ],
-        "additionalProperties": false
     }
 }
