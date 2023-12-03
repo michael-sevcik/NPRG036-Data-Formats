@@ -10,7 +10,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <hasBroadcast>true</hasBroadcast>
     <streets>
         <Street id="Mramorova">
-            <name xml:lang="cs">Mramorová</name>
+            <streetName xml:lang="cs">Mramorová</streetName>
             <sidewalk>true</sidewalk>
             <houses>
                 <House id="MichaelsHouse">
@@ -19,7 +19,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                     <area>50.5</area>
                     <occupants>                    
                         <Occupant id="Michael">
-                            <name xml:lang="cs">Michael</name>
+                            <firstName xml:lang="cs">Michael</firstName>
                             <surname xml:lang="cs">Ševčík</surname>
                             <middlenames>
                                 <middlename xml:lang="cs">Dobrodej</middlename>
@@ -34,14 +34,14 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         </Street>        
     </streets>
     <Mayor id="Michael">
-        <name xml:lang="cs">Michael</name>
+        <firstName xml:lang="cs">Michael</firstName>
         <surname xml:lang="cs">Ševčík</surname>
         <middlenames>
             <middlename xml:lang="cs">Dobrodej</middlename>
             <middlename xml:lang="cs">Alexander</middlename>
         </middlenames>
-        <dateFrom>2018-09-01</dateFrom>
-        <until>2025-09-01</until>
+        <termStart>2018-09-01</termStart>
+        <termEnd>2025-09-01</termEnd>
     </Mayor>
     <townhall>
         <House id="MichaelsHouse">
@@ -60,7 +60,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <hasBroadcast>false</hasBroadcast>
     <streets>
         <Street id="Sportova">
-            <name xml:lang="sk">Športová</name>
+            <streetName xml:lang="sk">Športová</streetName>
             <sidewalk>false</sidewalk>
             <houses>
                 <House id="MartinsHouse">
@@ -69,7 +69,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                     <area>150.5</area>
                     <occupants>                    
                         <Occupant id="Martin">
-                            <name xml:lang="cs">Martin</name>
+                            <firstName xml:lang="cs">Martin</firstName>
                             <surname xml:lang="cs"></surname>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>true</unpaid_fees>
@@ -80,10 +80,10 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         </Street>        
     </streets>
     <Mayor id="Martin">            
-        <name xml:lang="cs">Martin</name>
+        <firstName xml:lang="cs">Martin</firstName>
         <surname xml:lang="cs"></surname>
-        <dateFrom>2022-01-02</dateFrom>
-        <until>2026-01-02</until>
+        <termStart>2022-01-02</termStart>
+        <termEnd>2026-01-02</termEnd>
     </Mayor>
     <townhall>
         <House id="MartinsHouse">
@@ -102,7 +102,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <hasBroadcast>true</hasBroadcast>
     <streets>
         <Street id="Hlavna">
-            <name xml:lang="sk">Hlavná</name>
+            <streetName xml:lang="sk">Hlavná</streetName>
             <sidewalk>true</sidewalk>
             <houses>
                 <House id="RastosHouse">
@@ -111,7 +111,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                     <area>200.8</area>
                     <occupants>                    
                         <Occupant id="Rasto">
-                            <name xml:lang="cs">Rasto</name>
+                            <firstName xml:lang="cs">Rasto</firstName>
                             <surname xml:lang="cs"></surname>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>false</unpaid_fees>
@@ -122,10 +122,10 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         </Street>        
     </streets>
     <Mayor id="Rasto">            
-        <name xml:lang="cs">Rasto</name>
+        <firstName xml:lang="cs">Rasto</firstName>
         <surname xml:lang="cs"></surname>
-        <dateFrom>2018-08-01</dateFrom>
-        <until>2022-08-01</until>
+        <termStart>2018-08-01</termStart>
+        <termEnd>2022-08-01</termEnd>
     </Mayor>
     <townhall>
         <House id="RastosHouse">

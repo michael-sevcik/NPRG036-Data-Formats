@@ -25,7 +25,7 @@
 <xs:element name="Street">
     <xs:complexType>
         <xs:sequence>
-            <xs:element ref="name"/>
+            <xs:element ref="streetName"/>
             <xs:element ref="sidewalk"/>
             <xs:element ref="houses"/>
         </xs:sequence>
@@ -48,7 +48,7 @@
 
 <xs:complexType name="Person">
     <xs:sequence>
-        <xs:element ref="name"/>
+        <xs:element ref="firstName"/>
         <xs:element ref="surname"/>
         <xs:element ref="middlenames" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
@@ -67,20 +67,20 @@
     </xs:complexContent>
 </xs:complexType>
 
-<xs:element name="Occupant" type="Occupant"></xs:element>
+<xs:element name="Occupant" type="Occupant"/>
 
 <xs:complexType name="Mayor">
     <xs:complexContent>
         <xs:extension base="Person">
             <xs:sequence>
-                <xs:element name="dateFrom" type="xs:date" minOccurs="1"/>
-                <xs:element name="until" type="xs:date" minOccurs="1"/>
+                <xs:element name="termStart" type="xs:date" minOccurs="1"/>
+                <xs:element name="termEnd" type="xs:date" minOccurs="1"/>
             </xs:sequence>
         </xs:extension>
     </xs:complexContent>
 </xs:complexType>
 
-<xs:element name="Mayor" type="Mayor"></xs:element>
+<xs:element name="Mayor" type="Mayor"/>
 
 
 <!-- V A Z B Y  -->
@@ -148,8 +148,17 @@
     </xs:complexType>
 </xs:element>
 
+<xs:element name="streetName">
+    <xs:complexType>
+        <xs:simpleContent>
+            <xs:extension base="xs:string">
+                <xs:attribute ref="xml:lang" use="required"/>
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:element>
 
-<xs:element name="name">
+<xs:element name="firstName">
     <xs:complexType>
         <xs:simpleContent>
             <xs:extension base="xs:string">
