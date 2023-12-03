@@ -27,7 +27,7 @@
     <h2>
       <xsl:value-of select="townName"/>
     </h2>
-    <p>Mayor : <xsl:value-of select="Mayor/firstName"/>    <xsl:value-of select="Mayor/surname"/></p>
+    <p>Mayor: <xsl:value-of select="concat(Mayor/firstName, ' ', Mayor/surname)"/></p>
     <p>Term Start: <xsl:value-of select="Mayor/termStart"/></p>
     <p>Term End: <xsl:value-of select="Mayor/termEnd"/></p>
 
