@@ -1,0 +1,3 @@
+(:get streets with sidewalk and count the number of occupants living on each of those streets:)
+
+//Street[sidewalk]/sum(//Street[sidewalk]/houses/House/occupants/Occupant)
