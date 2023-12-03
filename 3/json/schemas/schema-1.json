@@ -1,8 +1,37 @@
 {
     "$schema": "https://json-schema.org/draft/2020-12/schema",
+<<<<<<< HEAD
+    "$id": "http://example.com/product.schema.json",
+    "title": "Product",
+    "description": "A product in the catalog",
+    "type": "object"
+}
+
+{
+    "$schema": "http://json-schema.org/draft/schema#",
+    "definitions": {
+      "Person": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "surname": { "type": "string" },
+          "middlenames": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "required": ["name", "surname", "middlenames"],
+        "additionalProperties": false
+      },
+      "Occupant": {
+        "allOf": [
+          { "$ref": "#/definitions/Person" },
+          {
+=======
     "$id": "http://example.com/towns.schema.json",
     "$defs": {
         "person": {
+>>>>>>> 4c732bc465f9c68f3152f20ff83effdae8168da9
             "type": "object",
             "properties": {
                 "firstName": {
