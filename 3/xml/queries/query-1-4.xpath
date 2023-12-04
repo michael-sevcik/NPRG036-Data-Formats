@@ -1,3 +1,3 @@
-(:get streets with sidewalk and count the number of occupants living on each of those streets:)
+(:get town with occupants with unpaid fees:)
 
-//Street[sidewalk]/sum(//Street[sidewalk]/houses/House/occupants/Occupant)
+/towns/Town[streets/Street/houses/House/occupants/Occupant/unpaid_fees='true']/concat(townName/text(), ': ', streets/Street/houses/House/occupants/Occupant/firstName/text(), ' ', streets/Street/houses/House/occupants/Occupant/surname/text())
