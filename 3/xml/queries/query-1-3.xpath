@@ -1,0 +1,3 @@
+(:Get streets and their Occupants:)
+
+//Street/concat(streetName, ': ', houses/House/occupants/Occupant/concat(firstName, ' ', surname))

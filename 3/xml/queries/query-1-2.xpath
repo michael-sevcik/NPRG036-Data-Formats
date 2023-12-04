@@ -1,0 +1,3 @@
+(:Get all Towns with full name of their mayor:)
+
+//Town/concat(townName/@xml:lang, ': ', townName, ' - Mayor: ', Mayor/concat(firstName, ' ', surname))
