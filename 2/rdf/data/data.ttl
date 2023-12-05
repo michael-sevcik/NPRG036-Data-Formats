@@ -131,7 +131,7 @@ exT:Zlin a dbo:Town;
 # Houses TODO
 exH:MartinsHouse a dbo:Building ;
     ex:houseNumber "123"^^xsd:integer ;
-    ex:dbocolour_hex_code "db34eb" ;
+    ex:colour_hex_code "db34eb" ;
     dbo:area "150.5"^^xsd:float . 
 
 exH:MichalsHouse a dbo:Building;
