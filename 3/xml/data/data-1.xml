@@ -13,13 +13,13 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             <streetName xml:lang="sk">Mramorová</streetName>
             <sidewalk>true</sidewalk>
             <houses>
-                <House id="MichaelsHouse">
+                <House id="MichalsHouse">
                     <number>5656</number>
                     <colour>FF00FF</colour>
                     <area>50.5</area>
                     <occupants>                    
-                        <Occupant id="Michael">
-                            <firstName xml:lang="cs">Michael</firstName>
+                        <Occupant id="Michal">
+                            <firstName xml:lang="cs">Michal</firstName>
                             <surname xml:lang="cs">Ševčík</surname>
                             <middlenames>
                                 <middlename xml:lang="sk">Dobrodej</middlename>
@@ -33,8 +33,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
             </houses>
         </Street>        
     </streets>
-    <Mayor id="Michael">
-        <firstName xml:lang="cs">Michael</firstName>
+    <Mayor id="Michal">
+        <firstName xml:lang="cs">Michal</firstName>
         <surname xml:lang="cs">Ševčík</surname>
         <middlenames>
             <middlename xml:lang="sk">Dobrodej</middlename>
@@ -44,7 +44,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         <termEnd>2025-09-01</termEnd>
     </Mayor>
     <townhall>
-        <House id="MichaelsHouse">
+        <House id="MichalsHouse">
             <number>5656</number>
             <colour>FF00FF</colour>
             <area>50.5</area>
