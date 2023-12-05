@@ -1,1 +1,0 @@
-.[].faculties[].students[] | .givenName[] + " "+ .familyName[] +": "+ if (.givenName.cs) then .givenName.cs else (if (.nicknames) then .nicknames[0][][] else .givenName[] end) end
