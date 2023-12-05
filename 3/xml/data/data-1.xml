@@ -10,7 +10,7 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
     <hasBroadcast>true</hasBroadcast>
     <streets>
         <Street id="Mramorova">
-            <streetName xml:lang="cs">Mramorová</streetName>
+            <streetName xml:lang="sk">Mramorová</streetName>
             <sidewalk>true</sidewalk>
             <houses>
                 <House id="MichaelsHouse">
@@ -22,8 +22,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                             <firstName xml:lang="cs">Michael</firstName>
                             <surname xml:lang="cs">Ševčík</surname>
                             <middlenames>
-                                <middlename xml:lang="cs">Dobrodej</middlename>
-                                <middlename xml:lang="cs">Alexander</middlename>
+                                <middlename xml:lang="sk">Dobrodej</middlename>
+                                <middlename xml:lang="sk">Alexander</middlename>
                             </middlenames>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>false</unpaid_fees>
@@ -37,8 +37,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         <firstName xml:lang="cs">Michael</firstName>
         <surname xml:lang="cs">Ševčík</surname>
         <middlenames>
-            <middlename xml:lang="cs">Dobrodej</middlename>
-            <middlename xml:lang="cs">Alexander</middlename>
+            <middlename xml:lang="sk">Dobrodej</middlename>
+            <middlename xml:lang="sk">Alexander</middlename>
         </middlenames>
         <termStart>2018-09-01</termStart>
         <termEnd>2025-09-01</termEnd>
@@ -69,8 +69,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                     <area>150.5</area>
                     <occupants>                    
                         <Occupant id="Martin">
-                            <firstName xml:lang="cs">Martin</firstName>
-                            <surname xml:lang="cs"></surname>
+                            <firstName xml:lang="sk">Martin</firstName>
+                            <surname xml:lang="sk"></surname>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>true</unpaid_fees>
                         </Occupant> 
@@ -80,8 +80,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         </Street>        
     </streets>
     <Mayor id="Martin">            
-        <firstName xml:lang="cs">Martin</firstName>
-        <surname xml:lang="cs"></surname>
+        <firstName xml:lang="sk">Martin</firstName>
+        <surname xml:lang="sk"></surname>
         <termStart>2022-01-02</termStart>
         <termEnd>2026-01-02</termEnd>
     </Mayor>
@@ -111,8 +111,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
                     <area>200.8</area>
                     <occupants>                    
                         <Occupant id="Rasto">
-                            <firstName xml:lang="cs">Rasto</firstName>
-                            <surname xml:lang="cs"></surname>
+                            <firstName xml:lang="sk">Rasto</firstName>
+                            <surname xml:lang="sk"></surname>
                             <date_from>2018-09-01</date_from>
                             <unpaid_fees>false</unpaid_fees>
                         </Occupant> 
@@ -122,8 +122,8 @@ xsi:noNamespaceSchemaLocation="./../schemas/schema-1.xsd">
         </Street>        
     </streets>
     <Mayor id="Rasto">            
-        <firstName xml:lang="cs">Rasto</firstName>
-        <surname xml:lang="cs"></surname>
+        <firstName xml:lang="sk">Rasto</firstName>
+        <surname xml:lang="sk"></surname>
         <termStart>2018-08-01</termStart>
         <termEnd>2022-08-01</termEnd>
     </Mayor>
