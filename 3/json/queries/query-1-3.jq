@@ -1,4 +1,4 @@
-.[] | . as $town | .streets[] | .streetName as $street_name | .houses[] | .number as $house_number | .occupants[] | select(."@id" == $town.mayor."@id") | {
+."@graph" | .[] | . as $town | .streets[] | .streetName as $street_name | .houses[] | .number as $house_number | .occupants[] | select(."@id" == $town.mayor."@id") | {
     firstName: .firstName,
     surname: .surname,
     address: {

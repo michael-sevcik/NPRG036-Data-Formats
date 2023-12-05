@@ -1,7 +1,8 @@
 ## Get names of mayors whose term has ended
 
 # Filter for towns
-.[]
+."@graph"
+| .[]
 | select(.type == "Town")
 
 # Filter for mayors with term end date before or equal to "2023-01-01"
