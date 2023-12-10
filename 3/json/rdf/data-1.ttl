@@ -12,6 +12,7 @@ exP:Rasto  a            ex:Mayor , ex:Occupant ;
         ex:livesIn      exH:RastosHouse ;
         ex:termEnd      "2022-08-01"^^xsd:date ;
         ex:termStart    "2018-08-01"^^xsd:date ;
+        ex:upaidFees    false ;
         foaf:firstName  "Rasto"@cs ;
         foaf:surname    ""@cs .
 
@@ -20,12 +21,15 @@ exP:Michael  a          ex:Mayor , ex:Occupant ;
         ex:livesIn      exH:MichaelsHouse ;
         ex:termEnd      "2025-09-01"^^xsd:date ;
         ex:termStart    "2018-09-01"^^xsd:date ;
+        ex:upaidFees    false ;
         foaf:firstName  "Michael"@cs ;
         foaf:surname    "Ševčík"@cs .
 
-exH:MichaelsHouse  a  dbo:Building ;
-        ex:area       "5.05E1"^^xsd:decimal ;
-        ex:locatedIn  exS:Mramorova .
+exH:MichaelsHouse  a        dbo:Building ;
+        ex:area             "5.05E1"^^xsd:decimal ;
+        ex:colour_hex_code  "FF00FF" ;
+        ex:houseNumber      5656 ;
+        ex:situatedOn       exS:Mramorova .
 
 exS:Sportova  a         dbo:Street ;
         ex:hasSidewalk  false ;
@@ -38,13 +42,17 @@ exT:Zlin  a              dbo:Town ;
         ex:mayor         exP:Michael ;
         ex:townName      "Zlín"@cs .
 
-exH:MartinsHouse  a   dbo:Building ;
-        ex:area       "1.505E2"^^xsd:decimal ;
-        ex:locatedIn  exS:Sportova .
+exH:MartinsHouse  a         dbo:Building ;
+        ex:area             "1.505E2"^^xsd:decimal ;
+        ex:colour_hex_code  "db34eb" ;
+        ex:houseNumber      123 ;
+        ex:situatedOn       exS:Sportova .
 
-exH:RastosHouse  a    dbo:Building ;
-        ex:area       "2.008E2"^^xsd:decimal ;
-        ex:locatedIn  exS:Hlavna .
+exH:RastosHouse  a          dbo:Building ;
+        ex:area             "2.008E2"^^xsd:decimal ;
+        ex:colour_hex_code  "000000" ;
+        ex:houseNumber      466 ;
+        ex:situatedOn       exS:Hlavna .
 
 exT:Rovinka  a           dbo:Town ;
         ex:hasBroadcast  true ;
@@ -67,6 +75,7 @@ exP:Martin  a           ex:Mayor , ex:Occupant ;
         ex:livesIn      exH:MartinsHouse ;
         ex:termEnd      "2026-01-02"^^xsd:date ;
         ex:termStart    "2022-01-02"^^xsd:date ;
+        ex:upaidFees    true ;
         foaf:firstName  "Martin"@cs ;
         foaf:surname    "Oravec"@cs .
 
