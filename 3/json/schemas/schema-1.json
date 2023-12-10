@@ -231,11 +231,11 @@
         "house": {
             "type": "object",
             "properties": {
-                "number": {
+                "houseNumber": {
                     "type": "integer",
                     "minimum": 1
                 },
-                "colour": {
+                "colour_hex_code": {
                     "type": "string",
                     "pattern": "^[0-9A-Fa-f]{6}$"
                 },
@@ -251,8 +251,8 @@
                 }
             },
             "required": [
-                "number",
-                "colour",
+                "houseNumber",
+                "colour_hex_code",
                 "area",
                 "occupants"
             ]

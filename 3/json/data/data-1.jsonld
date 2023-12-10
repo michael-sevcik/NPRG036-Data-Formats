@@ -61,14 +61,12 @@
             "@type": "xsd:string"
         },
 
-
-
         "dateFrom": {
             "@id": "ex:dateFrom",
             "@type": "xsd:date"
         },
 
-        "upaidFees": {
+        "unpaidFees": {
             "@id": "ex:upaidFees",
             "@type": "xsd:boolean"
         },
@@ -123,8 +121,8 @@
                         {
                             "@id": "exH:MichaelsHouse",
                             "type": "House",
-                            "number": 5656,
-                            "colour": "FF00FF",
+                            "houseNumber": 5656,
+                            "colour_hex_code": "FF00FF",
                             "area": 50.5,
                             "occupants": [
                                 {
@@ -175,8 +173,8 @@
             },
             "townhall": {
                 "@id": "exH:MichaelsHouse",
-                "number": 5656,
-                "colour": "FF00FF",
+                "houseNumber": 5656,
+                "colour_hex_code": "FF00FF",
                 "area": 50.5,
                 "occupants": [ ]
             }
@@ -201,8 +199,8 @@
                         {
                             "@id": "exH:MartinsHouse",
                             "type": "House",
-                            "number": 123,
-                            "colour": "db34eb",
+                            "houseNumber": 123,
+                            "colour_hex_code": "db34eb",
                             "area": 150.5,
                             "occupants": [
                                 {
@@ -237,8 +235,8 @@
             },
             "townhall": {
                 "@id": "exH:MartinsHouse",
-                "number": 123,
-                "colour": "db34eb",
+                "houseNumber": 123,
+                "colour_hex_code": "db34eb",
                 "area": 150.5,
                 "occupants": []
             }
@@ -263,8 +261,8 @@
                         {
                             "@id": "exH:RastosHouse",
                             "type": "House",
-                            "number": 466,
-                            "colour": "000000",
+                            "houseNumber": 466,
+                            "colour_hex_code": "000000",
                             "area": 200.8,
                             "occupants": [
                                 {
@@ -300,8 +298,8 @@
             },
             "townhall": {
                 "@id": "exH:RastosHouse",
-                "number": 466,
-                "colour": "000000",
+                "houseNumber": 466,
+                "colour_hex_code": "000000",
                 "area": 200.8,
                 "occupants": []
             }
