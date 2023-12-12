@@ -231,11 +231,11 @@
         "house": {
             "type": "object",
             "properties": {
-                "number": {
+                "houseNumber": {
                     "type": "integer",
                     "minimum": 1
                 },
-                "colour": {
+                "colour_hex_code": {
                     "type": "string",
                     "pattern": "^[0-9A-Fa-f]{6}$"
                 },
@@ -251,81 +251,92 @@
                 }
             },
             "required": [
-                "number",
-                "colour",
+                "houseNumber",
+                "colour_hex_code",
                 "area",
                 "occupants"
             ]
+        },
+        "graph": {
+            "type": "array",
+            "title": "Towns",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "title": "Town",
+                "properties": {
+                    "townName": {
+                        "anyOf": [
+                            {
+                                "type": "object",
+                                "required": [
+                                    "cs"
+                                ],
+                                "properties": {
+                                    "cs": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "required": [
+                                    "sk"
+                                ],
+                                "properties": {
+                                    "sk": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            {
+                                "type": "object",
+                                "required": [
+                                    "en"
+                                ],
+                                "properties": {
+                                    "en": {
+                                        "type": "string"
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    "hasFlag": {
+                        "type": "boolean"
+                    },
+                    "hasBroadcast": {
+                        "type": "boolean"
+                    },
+                    "streets": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "#/$defs/street"
+                        }
+                    },
+                    "mayor": {
+                        "$ref": "#/$defs/mayor"
+                    },
+                    "townhall": {
+                        "$ref": "#/$defs/house"
+                    }
+                },
+                "required": [
+                    "townName",
+                    "hasFlag",
+                    "hasBroadcast",
+                    "mayor"
+                ]
+            }
         }
     },
-    "type": "array",
-    "title": "Towns",
-    "minItems": 1,
-    "items": {
-        "type": "object",
-        "title": "Town",
-        "properties": {
-            "townName": {
-                "anyOf": [
-                    {
-                        "type": "object",
-                        "required": [
-                            "cs"
-                        ],
-                        "properties": {
-                            "cs": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    {
-                        "type": "object",
-                        "required": [
-                            "sk"
-                        ],
-                        "properties": {
-                            "sk": {
-                                "type": "string"
-                            }
-                        }
-                    },
-                    {
-                        "type": "object",
-                        "required": [
-                            "en"
-                        ],
-                        "properties": {
-                            "en": {
-                                "type": "string"
-                            }
-                        }
-                    }
-                ]
-            },
-            "hasFlag": {
-                "type": "boolean"
-            },
-            "hasBroadcast": {
-                "type": "boolean"
-            },
-            "streets": {
-                "type": "array",
-                "items": {
-                    "$ref": "#/$defs/street"
-                }
-            },
-            "mayor": {
-                "$ref": "#/$defs/mayor"
-            },
-            "townhall": {
-                "$ref": "#/$defs/house"
-            }
-        },
-        "required": [
-            "townName",
-            "hasFlag",
-            "hasBroadcast",
-            "mayor"
-        ]
-    }
+    "type": "object",
+    "properties": {
+        "@graph": {
+            "$ref": "#/$defs/graph"
+        }
+    },
+    "required": [
+        "@graph"
+    ]
 }
