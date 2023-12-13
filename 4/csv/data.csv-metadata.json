@@ -234,12 +234,12 @@
                 {
                     "@type": "Column",
                     "name": "Id",
-                    "titles": "TownId,
+                    "titles": "Id",
                     "dc:description": "unique ID of a town",
                     "datatype": "string",
                     "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
                 },
                 {
                     "@type": "Column",
@@ -296,7 +296,7 @@
                     "@type": "Column",
                     "name": "unpaidFees",
                     "titles": "unpaidFees",
-                    "dc:description": "Whether occupant has unpaid fees",
+                    "dc:description": "Whether occupant has unpaid fees.",
                     "datatype": "boolean",
                     "required": true,
                     "propertyUrl": "rdf:type"                
