@@ -3,52 +3,65 @@
 hide circle
 
 object Towns {
-  <#lightblue,#black>|= Id |= townNameCS |= townNameSK |= townNameEN  |=  hasFlag  |= hasBroadcast |= mayorId |= termStart |= termEnd |
-  <#white>| int | string - cs lang | string - sk lang | string - en lang | boolean | boolean | int | date | date |
-  <#white>| primary key \n - required | | | | required | required | foreign key to \n People - required | required | required |
+  <#lightblue,#black>|= Id |= townNameCS |= townNameSK |=  hasFlag  |= hasBroadcast |= mayorId |= termStart |= termEnd |
+  <#white>| string | string - cs lang | string - sk lang | boolean | boolean | int | date | date |
+  <#white>| primary key \n - required | | | required | required | foreign key to \n People - required | required | required |
 }
 
-' TODO: do we want to have firstNameCS, firstNameEN etc.
-' If not which lang will we choose for the RDF
 object People {
-  ' TODO: Is ok to represent middleNames as one string 
-  <#lightblue,#black>|= Id |= firstName |= surname |= middleNames |
-  <#white>| int | string | string | string |
-  <#white>| primary key \n - required | required | required | |
+  <#lightblue,#black>|= Id |= firstNameCS |= firstNameSK |= surnameCS |= surnameSK |= middleNames |
+  <#white>| string | string | string | string | string | string | 
+  <#white>| primary key \n - required | required | required | required | required | |
+}
+
+object LivesIn {
+  <#lightblue,#black>|= occupantId |= houseID |
+  <#white>| string |  string |
+  <#white>| foreign key to \n Occupants - required | foreign key to \n Houses - required |
+  <#white>| primary key consists \n of occupantId and houseID  | |
+
+}
+
+object MiddleNames {
+  <#lightblue,#black>|= Id |= middleNameCS |= middleNameSK |= personId |
+  <#white>| integer | string |  string | string |
+  <#white>| primary key \n - required | | | foreign key to \n People - required |
 }
 
 object Occupants {
-  <#lightblue,#black>|= Id |= personId |= HouseId |= dateFrom |= unpaidFees |
-  <#white>| int | int | int | date | boolean |
-  <#white>| primary key \n - required | foreign key to \n People - required | foreign key to \n Houses - required | required | required |
+  <#lightblue,#black>|= Id |= personId |= dateFrom |= unpaidFees |
+  <#white>| string | string | date | boolean |
+  <#white>| primary key \n - required | foreign key to \n People - required | required | required |
 }
 
 object TownHallMap {
   <#lightblue,#black>|= townId |= houseId |
-  <#white>| int | int |
+  <#white>| string | string |
   <#white>| primary key to \n Towns - required | primary key to \n Houses - required | date \n - required | boolean \n - required |
 }
 
 ' TODO: the same problem with streetName and langs
 object Streets {
-  <#lightblue,#black>|= Id |= townId |= streetName |= hasSidewalk |
-  <#white>| int | int | string | boolean |
-  <#white>| primary key \n - required | foreign key to \n Towns - required | required | required |
+  <#lightblue,#black>|= Id |= townId |= streetNameCS |= streetNameSK |= hasSidewalk |
+  <#white>| string | string | string | string | boolean |
+  <#white>| primary key \n - required | foreign key to \n Towns - required | required | required | required |
 }
 
 object Houses {
   <#lightblue,#black>|= Id |= streetId |= houseNumber |= colourHexCode |= area |
-  <#white>| int | int | int | string | decimal |
+  <#white>| string | string | integer | string | decimal |
   <#white>| primary key \n - required | foreign key to \n Streets - required | required |  required | required |
 }
 
-Occupants -> Houses : "Foreign key"
 Occupants -d-> People : "Foreign key"
 Houses -d-> Streets : "Foreign key"
 Streets -> Towns : "Foreign key"
 Towns -d-> People : "Foreign key"
+MiddleNames --> People : "Foreign key"
 TownHallMap -d-> Towns : "Foreign key"
 TownHallMap -d-> Houses : "Foreign key"
+LivesIn --> Occupants : "Foreign key"
+LivesIn --> Houses : "Foreign key"
 
 
 
