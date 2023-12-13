@@ -1,0 +1,108 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en",
+            "@base": "https://example.org/"
+        }
+    ],
+
+    "type": "TableGroup",
+    "id": "https://example.org/data.csv-metadata.json",
+    "tables": [{
+        "@id": "https://example.org/data2.csv-metadata.json",
+        "@type": "Table",
+        "url": "data2.csv",
+        "dc:description": "Streets",
+        "tableSchema": {
+            "@type": "Schema",
+            "aboutUrl": "http://example.org/vocabulary/{StreetsID}",
+            "columns": [
+                {
+                    "@type": "Column",
+                    "name": "TODOID",
+                    "titles": "TODOID",
+                    "dc:description": "TODO",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/TODO"
+                }
+            ],
+            "primaryKey": "TODOID",
+            "foreignKeys": [
+                {
+                    "columnReference": "TODOID",
+                    "reference": {
+                        "resource": "data-TODO.csv",
+                        "columnReference": "TODOID"
+                    }
+                }
+            ]
+        }  
+    },
+    {
+        "@id": "https://example.org/data2.csv-metadata.json",
+        "@type": "Table",
+        "url": "TODO.csv",
+        "dc:description": "TODO",
+        "tableSchema": {
+            "@type": "Schema",
+            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+            "columns": [
+                {
+                    "@type": "Column",
+                    "name": "TODOID",
+                    "titles": "TODOID",
+                    "dc:description": "TODO",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/TODO"
+                }
+            ],
+            "primaryKey": "TODOID",
+            "foreignKeys": [
+                {
+                    "columnReference": "TODOID",
+                    "reference": {
+                        "resource": "data-TODO.csv",
+                        "columnReference": "TODOID"
+                    }
+                }
+            ]
+        }  
+    },
+    {
+        "@id": "https://example.org/TODO.csv-metadata.json",
+        "@type": "Table",
+        "url": "data-1.csv",
+        "dc:description": "Towns",
+        "tableSchema": {
+            "@type": "Schema",
+            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+            "columns": [
+                {
+                    "@type": "Column",
+                    "name": "TODOID",
+                    "titles": "TODOID",
+                    "dc:description": "TODO",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/TODO"
+                }
+            ],
+            "primaryKey": "TODOID",
+            "foreignKeys": [
+                {
+                    "columnReference": "TODOID",
+                    "reference": {
+                        "resource": "data-TODO.csv",
+                        "columnReference": "TODOID"
+                    }
+                }
+            ]
+        }  
+    }]
+}
