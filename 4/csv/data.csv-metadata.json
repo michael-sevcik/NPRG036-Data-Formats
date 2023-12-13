@@ -9,38 +9,7 @@
 
     "type": "TableGroup",
     "id": "https://example.org/data.csv-metadata.json",
-    "tables": [{
-        "@id": "https://example.org/data2.csv-metadata.json",
-        "@type": "Table",
-        "url": "data2.csv",
-        "dc:description": "Streets",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{StreetsID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "TODOID",
-                    "titles": "TODOID",
-                    "dc:description": "TODO",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                }
-            ],
-            "primaryKey": "TODOID",
-            "foreignKeys": [
-                {
-                    "columnReference": "TODOID",
-                    "reference": {
-                        "resource": "data-TODO.csv",
-                        "columnReference": "TODOID"
-                    }
-                }
-            ]
-        }  
-    },
+    "tables": [
     {
         "@id": "https://example.org/data2.csv-metadata.json",
         "@type": "Table",
@@ -73,6 +42,48 @@
             ]
         }  
     },
+        {
+        "@id": "https://example.org/data2.csv-metadata.json",
+        "@type": "Table",
+        "url": "data2.csv",
+        "dc:description": "Streets",
+        "tableSchema": {
+            "@type": "Schema",
+            "aboutUrl": "http://example.org/vocabulary/{StreetsID}",
+            "columns": [
+                {
+                    "@type": "Column",
+                    "name": "StreetsID",
+                    "titles": "StreetsID",
+                    "dc:description": "Streets ID",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/Streets"
+                },
+                {
+                    "@type": "Column",
+                    "name": "TownID",
+                    "titles": "TownID",
+                    "dc:description": "Town ID",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/Towns"
+                }
+            ],
+            "primaryKey": "TODOID",
+            "foreignKeys": [
+                {
+                    "columnReference": "TODOID",
+                    "reference": {
+                        "resource": "data-TODO.csv",
+                        "columnReference": "TODOID"
+                    }
+                }
+            ]
+        }  
+    },
     {
         "@id": "https://example.org/TODO.csv-metadata.json",
         "@type": "Table",
@@ -84,16 +95,26 @@
             "columns": [
                 {
                     "@type": "Column",
-                    "name": "TODOID",
-                    "titles": "TODOID",
-                    "dc:description": "TODO",
+                    "name": "TownID",
+                    "titles": "TownID",
+                    "dc:description": "unique ID of a town",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "http://example.org/vocabulary/TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "TownID",
+                    "titles": "TownID",
+                    "dc:description": "unique ID of a town",
                     "datatype": "string",
                     "required": true,
                     "propertyUrl": "rdf:type",
                     "valueUrl": "http://example.org/vocabulary/TODO"
                 }
             ],
-            "primaryKey": "TODOID",
+            "primaryKey": "TownID",
             "foreignKeys": [
                 {
                     "columnReference": "TODOID",

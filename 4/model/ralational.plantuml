@@ -11,7 +11,7 @@ object Towns {
 object People {
   <#lightblue,#black>|= Id |= firstNameCS |= firstNameSK |= surnameCS |= surnameSK |= middleNames |
   <#white>| string | string | string | string | string | string | 
-  <#white>| primary key \n - required | required | required | required | required | |
+  <#white>| primary key \n - required | | | | | |
 }
 
 object LivesIn {
@@ -19,7 +19,6 @@ object LivesIn {
   <#white>| string |  string |
   <#white>| foreign key to \n Occupants - required | foreign key to \n Houses - required |
   <#white>| primary key consists \n of occupantId and houseID  | |
-
 }
 
 object MiddleNames {
@@ -29,9 +28,9 @@ object MiddleNames {
 }
 
 object Occupants {
-  <#lightblue,#black>|= Id |= personId |= dateFrom |= unpaidFees |
-  <#white>| string | string | date | boolean |
-  <#white>| primary key \n - required | foreign key to \n People - required | required | required |
+  <#lightblue,#black>|= personId |= dateFrom |= unpaidFees |
+  <#white>| string | date | boolean |
+  <#white>| primary key to \n People - required | required | required |
 }
 
 object TownHallMap {
