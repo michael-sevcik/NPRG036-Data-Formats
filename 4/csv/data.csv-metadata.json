@@ -243,19 +243,77 @@
                 },
                 {
                     "@type": "Column",
-                    "name": "TownID",
-                    "titles": "TownID",
-                    "dc:description": "unique ID of a town",
+                    "name": "townNameCS",
+                    "titles": "townNameCS",
+                    "dc:description": "Name of a town in czech",
+                    "datatype": "string",
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "townNameSK",
+                    "titles": "townNameSK",
+                    "dc:description": "Name of a town in slovak",
+                    "datatype": "string",
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "hasFlag",
+                    "titles": "hasFlag",
+                    "dc:description": "Whether town has a flag",
                     "datatype": "string",
                     "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "hasBroadcast",
+                    "titles": "hasBroadcast",
+                    "dc:description": "Whether town has a broadcast",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "mayorID",
+                    "titles": "mayorID",
+                    "dc:description": "ID of mayor of the town",
+                    "datatype": "string",
+                    "required": true,
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "termStart",
+                    "titles": "termStart",
+                    "dc:description": "Start of mayors term",
+                    "datatype": "date",
+                    "required": true,
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
+                },
+                {
+                    "@type": "Column",
+                    "name": "termEnd",
+                    "titles": "termEnd",
+                    "dc:description": "End of mayors term",
+                    "datatype": "date",
+                    "required": true,
+                    "propertyUrl": "TODO",
+                    "valueUrl": "TODO"
                 }
             ],
             "primaryKey": "TownID",
             "foreignKeys": [
                 {
-                    "columnReference": "TODOID",
+                    "columnReference": "mayorID",
                     "reference": {
                         "resource": "data-TODO.csv",
                         "columnReference": "TODOID"
