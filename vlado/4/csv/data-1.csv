@@ -1,0 +1,5 @@
+cafeteriaID,name_en,name_cs,name_sk,address_en,address_cs,address_sk,dormitoryID,universityID
+trojaMenza,null,Menza 17. Listopadu,null,null,"Pátkova 3, 180 00 Praha 3, Česko",null,trojaKolej,cuni
+pravnickaMenza,null,Menza Právnická,null,null,"nám. Curieových 901, 110 00 Staré Město Praha, Česko",null,null,cuni
+skutecnanka,null,Menza Skutečná,null,null,"Nikde 0, 180 00 Praha, Česko",null,null,cuni
+uFranty,null,Hostinec u Franty,null,null,"pod Lípou 17, 000 15 Frantovo, Česko",null,frantuvPokoj,funi
