@@ -302,10 +302,10 @@
             }
         },
         {
-            "@id": "https://example.org/Occupants.csv-metadata.json",
+            "@id": "https://example.org/data-4.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Occupants",
-            "url": "Occupants.csv",
+            "url": "data-4.csv",
             "tableSchema": {
                 "@type": "Schema",
                 "aboutUrl": "exP:{personId}",
