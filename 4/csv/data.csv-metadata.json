@@ -352,9 +352,9 @@
             }
         },
         {
-            "@id": "https://example.org/livesIn.csv-metadata.json",
+            "@id": "https://example.org/data-2.csv-metadata.json",
             "@type": "Table",
-            "url": "livesIn.csv",
+            "url": "data-2.csv",
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
