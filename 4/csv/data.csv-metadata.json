@@ -293,7 +293,7 @@
                     {
                         "columnReference": "mayorID",
                         "reference": {
-                            "resource": "People.csv",
+                            "resource": "data-5.csv",
                             "columnReference": "Id"
                         }
                     }
@@ -344,7 +344,7 @@
                         "columnReference": "personId",
                         "reference": {
                             "columnReference": "Id",
-                            "resource": "People.csv"
+                            "resource": "data-5.csv"
                         }
                     }
                 ],
@@ -384,7 +384,7 @@
                         "columnReference": "occupantId",
                         "reference": {
                             "columnReference": "Id",
-                            "resource": "People.csv"
+                            "resource": "data-5.csv"
                         }
                     },
                     {
