@@ -77,7 +77,7 @@
                         "columnReference": "townId",
                         "reference": {
                             "columnReference": "townId",
-                            "resource": "Towns.csv"
+                            "resource": "data-8.csv"
                         }
                     }
                 ],
@@ -117,7 +117,7 @@
                         "columnReference": "townId",
                         "reference": {
                             "columnReference": "Id",
-                            "resource": "Towns.csv"
+                            "resource": "data-8.csv"
                         }
                     },
                     {
@@ -203,9 +203,9 @@
             }
         },
         {
-            "@id": "https://example.org/Towns.csv-metadata.json",
+            "@id": "https://example.org/data-8.csv-metadata.json",
             "@type": "Table",
-            "url": "Towns.csv",
+            "url": "data-8.csv",
             "dc:description": "Towns",
             "tableSchema": {
                 "@type": "Schema",
