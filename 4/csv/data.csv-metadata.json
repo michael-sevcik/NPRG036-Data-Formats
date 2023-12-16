@@ -11,8 +11,7 @@
             "exP": "http://example.org/people/"
         }
     ],
-    "@id": "https://example.org/NAZOV_TABULKY.csv-metadata.json",
-    "dc:description": "TEMPLAAAAATEEEE",
+    "@id": "https://example.org/data.csv-metadata.json",
     "@type": "TableGroup",
     "tables": [        
         {
@@ -92,27 +91,25 @@
             "url": "TownHallMap.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID neviem ozaj}",
                 "columns": [
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "id of the town - foreign and part ot primary key, required",
                         "name": "townId",
-                        "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "townId",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "aboutUrl": "exT:{townId}",
+                        "propertyUrl": "ex:townHall",
+                        "valueUrl": "exH:{houseId}"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "id of the house - foreign and part ot primary key, required",
                         "name": "houseId",
-                        "propertyUrl": "rdf:type",
                         "required": true,
-                        "titles": "houseId",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "titles": "houseId"
                     }
                 ],
                 "foreignKeys": [
