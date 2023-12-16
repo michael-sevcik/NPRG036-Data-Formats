@@ -400,6 +400,44 @@
                     "houseId"
                 ]
             }
+        },
+        {
+            "@id": "https://example.org/middleNames.csv-metadata.json",
+            "@type": "Table",
+            "url": "middleNames.csv",
+            "dc:description": "Middle names of people",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exP:{personId}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "integer",
+                        "dc:description": "Id of the row (one person can have many same middlenames) - primary key, required",                                                
+                        "name": "Id",
+                        "required": true,
+                        "titles": "Id"
+                    },                    
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Czech middle name of the person",
+                        "name": "middleNameCS",
+                        "required": false,
+                        "titles": "middleNameCS",
+                        "propertyUrl": "ex:middleName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Slovak middle name of the person",
+                        "name": "middleNameCS",
+                        "required": false,
+                        "titles": "middleNameSK",
+                        "propertyUrl": "ex:middleName"
+                    }
+                ]
+            }
         }
     ]
 }
