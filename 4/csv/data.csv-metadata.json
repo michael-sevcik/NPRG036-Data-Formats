@@ -124,7 +124,7 @@
                         "columnReference": "houseId",
                         "reference": {
                             "columnReference": "Id",
-                            "resource": "Houses.csv"
+                            "resource": "data-1.csv"
                         }
                     }
                 ],
@@ -135,10 +135,10 @@
             }
         },
         {
-            "@id": "https://example.org/Houses.csv-metadata.json",
+            "@id": "https://example.org/data-1.csv-metadata.json",
             "@type": "Table",
             "dc:description": "All houses with their attributes",
-            "url": "Houses.csv",
+            "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
                 "aboutUrl": "http://example.org/vocabulary/{houseId}",
@@ -391,7 +391,7 @@
                         "columnReference": "houseId",
                         "reference": {
                             "columnReference": "Id",
-                            "resource": "Houses.csv"
+                            "resource": "data-1.csv"
                         }
                     }
                 ],
