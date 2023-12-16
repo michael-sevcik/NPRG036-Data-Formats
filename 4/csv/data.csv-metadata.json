@@ -85,10 +85,10 @@
             }
         },
         {
-            "@id": "https://example.org/TownHallMap.csv-metadata.json",
+            "@id": "https://example.org/data-7.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Town halls of the towns",
-            "url": "TownHallMap.csv",
+            "url": "data-7.csv",
             "tableSchema": {
                 "@type": "Schema",
                 "columns": [
