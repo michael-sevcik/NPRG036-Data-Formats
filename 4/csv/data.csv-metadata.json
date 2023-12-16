@@ -276,7 +276,7 @@
                         "required": true,
                         "titles": "termStart",
                         "aboutUrl": "exT:{mayorId}",
-                        "propertyUrl": "ex:termStart",
+                        "propertyUrl": "ex:termStart"
                     },
                     {
                         "@type": "Column",
