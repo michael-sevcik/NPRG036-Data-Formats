@@ -209,7 +209,7 @@
             "dc:description": "Towns",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{townId}",
+                "aboutUrl": "exT:{townId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -302,38 +302,39 @@
             }
         },
         {
-            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@id": "https://example.org/Occupants.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Occupants",
+            "url": "Occupants.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{personId}",
+                "aboutUrl": "exP:{personId}",
                 "columns": [
                     {
                         "@type": "Column",
                         "datatype": "string",
-                        "dc:description": "ID of a person",
+                        "dc:description": "ID of a person - required",
                         "name": "personId",
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "personId",
-                        "valueUrl": "http://example.org/vocabulary/People"
+                        "valueUrl": "ex:Occupant"
                     },
                     {
                         "@type": "Column",
                         "datatype": "date",
-                        "dc:description": "Start date of stay",
+                        "dc:description": "Start date of stay - required",
                         "name": "dateFrom",
-                        "propertyUrl": "rdf:type",
+                        "propertyUrl": "ex:date_from",
                         "required": true,
                         "titles": "dateFrom"
                     },
                     {
                         "@type": "Column",
                         "datatype": "boolean",
-                        "dc:description": "Whether occupant has unpaid fees.",
+                        "dc:description": "Whether occupant has unpaid fees - required",
                         "name": "unpaidFees",
-                        "propertyUrl": "rdf:type",
+                        "propertyUrl": "ex:unpdaid_fees",
                         "required": true,
                         "titles": "unpaidFees"
                     }
@@ -342,14 +343,13 @@
                     {
                         "columnReference": "personId",
                         "reference": {
-                            "columnReference": "personID",
+                            "columnReference": "Id",
                             "resource": "People.csv"
                         }
                     }
                 ],
                 "primaryKey": "personId"
-            },
-            "url": "Occupants.csv"
+            }
         },
         {
             "@id": "https://example.org/LivesIn.csv-metadata.json",
