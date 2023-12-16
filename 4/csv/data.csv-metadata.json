@@ -15,10 +15,10 @@
     "@type": "TableGroup",
     "tables": [        
         {
-            "@id": "https://example.org/Streets.csv-metadata.json",
+            "@id": "https://example.org/data-6.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Streets",
-            "url": "Streets.csv",
+            "url": "data-6.csv",
             "tableSchema": {
                 "@type": "Schema",
                 "aboutUrl": "exS:{streetId}",
@@ -195,7 +195,7 @@
                         "columnReference": "streetId",
                         "reference": {
                             "columnReference": "Id TODO",
-                            "resource": "Streets.csv"
+                            "resource": "data-6.csv"
                         }
                     }
                 ],
