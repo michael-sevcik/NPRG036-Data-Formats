@@ -438,6 +438,67 @@
                     }
                 ]
             }
+        },
+        {
+            "@id": "https://example.org/data-5.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "People",
+            "url": "data-5.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the person - primary key, required",
+                        "name": "Id",
+                        "required": true,
+                        "titles": "Id"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "First name of the person in czech",
+                        "name": "firstNameCS",
+                        "required": false,
+                        "titles": "firstNameCS",
+                        "lang": "cs",
+                        "propertyUrl": "foaf:firstName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "First name of the person in slovak",
+                        "name": "firstNameSK",
+                        "required": false,
+                        "titles": "firstNameSK",
+                        "lang": "sk",
+                        "propertyUrl": "foaf:firstName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Czech surname of the person",
+                        "name": "surnameCS",
+                        "required": false,
+                        "titles": "surnameCS",
+                        "lang": "cs",
+                        "propertyUrl": "foaf:surname"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Slovak surname of the person",
+                        "name": "surnameSK",
+                        "required": false,
+                        "titles": "surnameSK",
+                        "lang": "cs",
+                        "propertyUrl": "foaf:surname"
+                    } 
+                ],
+                "primaryKey": "Id"
+            }
         }
     ]
 }
