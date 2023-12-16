@@ -203,104 +203,103 @@
             }
         },
         {
-            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@id": "https://example.org/Towns.csv-metadata.json",
             "@type": "Table",
+            "url": "Towns.csv",
             "dc:description": "Towns",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "aboutUrl": "http://example.org/vocabulary/{townId}",
                 "columns": [
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "unique ID of a town",
                         "name": "Id",
-                        "propertyUrl": "TODO",
+                        "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "Id",
-                        "valueUrl": "TODO"
+                        "valueUrl": "dbo:Town"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Name of a town in czech",
                         "name": "townNameCS",
-                        "propertyUrl": "TODO",
-                        "titles": "townNameCS",
-                        "valueUrl": "TODO"
+                        "propertyUrl": "ex:townName",
+                        "required": false,
+                        "titles": "townNameCS"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Name of a town in slovak",
                         "name": "townNameSK",
-                        "propertyUrl": "TODO",
-                        "titles": "townNameSK",
-                        "valueUrl": "TODO"
+                        "propertyUrl": "ex:townName",
+                        "required": false,
+                        "titles": "townNameSK"
                     },
                     {
                         "@type": "Column",
-                        "datatype": "string",
-                        "dc:description": "Whether town has a flag",
+                        "datatype": "boolean",
+                        "dc:description": "Whether town has a flag - required",
                         "name": "hasFlag",
-                        "propertyUrl": "TODO",
+                        "propertyUrl": "ex:hasFlag",
                         "required": true,
-                        "titles": "hasFlag",
-                        "valueUrl": "TODO"
+                        "titles": "hasFlag"
                     },
                     {
                         "@type": "Column",
-                        "datatype": "string",
-                        "dc:description": "Whether town has a broadcast",
+                        "datatype": "boolean",
+                        "dc:description": "Whether town has a broadcast - required",
                         "name": "hasBroadcast",
-                        "propertyUrl": "TODO",
+                        "propertyUrl": "ex:hasBroadcast",
                         "required": true,
-                        "titles": "hasBroadcast",
-                        "valueUrl": "TODO"
+                        "titles": "hasBroadcast"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
-                        "dc:description": "ID of mayor of the town",
-                        "name": "mayorID",
-                        "propertyUrl": "TODO",
+                        "dc:description": "ID of mayor of the town - foreign key, required",
+                        "name": "mayorId",
                         "required": true,
-                        "titles": "mayorID",
-                        "valueUrl": "TODO"
+                        "titles": "mayorId",
+                        "aboutUrl": "exP:{mayorId}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "ex:Mayor"
                     },
                     {
                         "@type": "Column",
                         "datatype": "date",
-                        "dc:description": "Start of mayors term",
+                        "dc:description": "Start of mayors term - required",
                         "name": "termStart",
-                        "propertyUrl": "TODO",
                         "required": true,
                         "titles": "termStart",
-                        "valueUrl": "TODO"
+                        "aboutUrl": "exT:{mayorId}",
+                        "propertyUrl": "ex:termStart",
                     },
                     {
                         "@type": "Column",
                         "datatype": "date",
-                        "dc:description": "End of mayors term",
+                        "dc:description": "End of mayors term - required",
                         "name": "termEnd",
-                        "propertyUrl": "TODO",
                         "required": true,
                         "titles": "termEnd",
-                        "valueUrl": "TODO"
+                        "aboutUrl": "exT:{mayorId}",
+                        "propertyUrl": "ex:termEnd"
                     }
                 ],
                 "foreignKeys": [
                     {
                         "columnReference": "mayorID",
                         "reference": {
-                            "columnReference": "TODOID",
-                            "resource": "data-TODO.csv"
+                            "resource": "People.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
-                "primaryKey": "TownID"
-            },
-            "url": "data-1.csv"
+                "primaryKey": "Id"
+            }
         },
         {
             "@id": "https://example.org/TODO.csv-metadata.json",
