@@ -402,9 +402,9 @@
             }
         },
         {
-            "@id": "https://example.org/middleNames.csv-metadata.json",
+            "@id": "https://example.org/data-3.csv-metadata.json",
             "@type": "Table",
-            "url": "middleNames.csv",
+            "url": "data-3.csv",
             "dc:description": "Middle names of people",
             "tableSchema": {
                 "@type": "Schema",
