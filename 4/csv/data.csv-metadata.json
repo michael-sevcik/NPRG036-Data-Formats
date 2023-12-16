@@ -352,40 +352,39 @@
             }
         },
         {
-            "@id": "https://example.org/LivesIn.csv-metadata.json",
+            "@id": "https://example.org/livesIn.csv-metadata.json",
             "@type": "Table",
+            "url": "livesIn.csv",
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID neviem}",
                 "columns": [
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Id of the occupant - foreign key, part of primary key, required",
                         "name": "occupantId",
-                        "propertyUrl": "rdf:type",
                         "required": true,
-                        "titles": "occupantId",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "titles": "occupantId"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
                         "name": "houseId",
-                        "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "houseId",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "aboutUrl": "exP:{occupantId}",
+                        "propertyUrl": "ex:livesIn",
+                        "valueUrl": "exH:{houseId}"
                     }
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "personId TODO",
+                        "columnReference": "occupantId",
                         "reference": {
-                            "columnReference": "Id TODO",
-                            "resource": "Occupants.csv TODO"
+                            "columnReference": "Id",
+                            "resource": "People.csv"
                         }
                     },
                     {
@@ -400,8 +399,7 @@
                     "occupantId",
                     "houseId"
                 ]
-            },
-            "url": "livesIn.csv"
+            }
         }
     ]
 }
