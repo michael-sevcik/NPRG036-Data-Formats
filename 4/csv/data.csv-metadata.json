@@ -3,50 +3,26 @@
         "http://www.w3.org/ns/csvw",
         {
             "@base": "https://example.org/",
-            "@language": "en"
+            "@language": "en",
+            "ex": "http://example.org/vocabulary/",
+            "exT": "http://example.org/towns/",
+            "exH": "http://example.org/houses/",
+            "exS": "http://example.org/streets/",
+            "exP": "http://example.org/people/"
         }
     ],
-    "id": "https://example.org/data.csv-metadata.json",
-    "tables": [
-        {
-            "@id": "https://example.org/TODO.csv-metadata.json",
-            "@type": "TEMPLATE TABLE",
-            "dc:description": "TODO",
-            "tableSchema": {
-                "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-                "columns": [
-                    {
-                        "@type": "Column",
-                        "datatype": "string",
-                        "dc:description": "TODO",
-                        "name": "TODOID",
-                        "propertyUrl": "rdf:type",
-                        "required": true,
-                        "titles": "TODOID",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
-                    }
-                ],
-                "foreignKeys": [
-                    {
-                        "columnReference": "TODOID",
-                        "reference": {
-                            "columnReference": "TODOID",
-                            "resource": "data-TODO.csv"
-                        }
-                    }
-                ],
-                "primaryKey": "TODOID"
-            },
-            "url": "TODO.csv"
-        },
+    "@id": "https://example.org/NAZOV_TABULKY.csv-metadata.json",
+    "dc:description": "TEMPLAAAAATEEEE",
+    "@type": "TableGroup",
+    "tables": [        
         {
             "@id": "https://example.org/Streets.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Streets",
+            "url": "Streets.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{streetId}",
+                "aboutUrl": "exS:{streetId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -56,34 +32,35 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "streetId",
-                        "valueUrl": "http://example.org/vocabulary/Streets"
+                        "valueUrl": "http://example.org/vocabulary/Street"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Town ID",
                         "name": "townId",
-                        "propertyUrl": "rdf:type",
+                        "propertyUrl": "ex:situatedOn",
                         "required": true,
                         "titles": "townId",
-                        "valueUrl": "http://example.org/vocabulary/Towns"
+                        "valueUrl": "http://example.org/vocabulary/{townId}"
                     },
                     {
                         "@type": "Column",
-                        "datatype": "string",
                         "dc:description": "Name of a street in czech",
-                        "name": "streetNameCS",
-                        "propertyUrl": "rdf:type",
-                        "required": true,
+                        "datatype": "string",
+                        "lang": "cs",
+                        "name": "streetName",
+                        "propertyUrl": "ex:townName",
+                        "required": false,
                         "titles": "streetNameCS"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Name of a street in slovak",
-                        "name": "streetNameSK",
-                        "propertyUrl": "rdf:type",
-                        "required": true,
+                        "name": "streetName",
+                        "propertyUrl": "ex:townName",
+                        "required": false,
                         "titles": "streetNameSK"
                     },
                     {
@@ -91,7 +68,7 @@
                         "datatype": "boolean",
                         "dc:description": "Indicates whether a street has a sidewalk",
                         "name": "hasSidewalk",
-                        "propertyUrl": "rdf:type",
+                        "propertyUrl": "ex:hasSidewalk",
                         "required": true,
                         "titles": "hasSidewalk"
                     }
@@ -106,16 +83,16 @@
                     }
                 ],
                 "primaryKey": "streetId"
-            },
-            "url": "Streets.csv"
+            }
         },
         {
-            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@id": "https://example.org/TownHallMap.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Town halls of the towns",
+            "url": "TownHallMap.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID neviem ozaj}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -158,11 +135,10 @@
                     "townId",
                     "houseId"
                 ]
-            },
-            "url": "TownHallMap.csv"
+            }
         },
         {
-            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@id": "https://example.org/Houses.csv-metadata.json",
             "@type": "Table",
             "dc:description": "All houses with their attributes",
             "tableSchema": {
@@ -191,7 +167,7 @@
                     },
                     {
                         "@type": "Column",
-                        "datatype": "int TODO",
+                        "datatype": "integer",
                         "dc:description": "Address number of the house - required",
                         "name": "houseNumber",
                         "propertyUrl": "rdf:type",
@@ -329,7 +305,7 @@
             "dc:description": "Occupants",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "aboutUrl": "http://example.org/vocabulary/{personId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -374,12 +350,12 @@
             "url": "Occupants.csv"
         },
         {
-            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@id": "https://example.org/LivesIn.csv-metadata.json",
             "@type": "Table",
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID neviem}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -425,6 +401,5 @@
             },
             "url": "livesIn.csv"
         }
-    ],
-    "type": "TableGroup"
+    ]
 }
