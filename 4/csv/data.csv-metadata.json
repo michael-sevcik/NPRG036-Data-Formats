@@ -2,423 +2,429 @@
     "@context": [
         "http://www.w3.org/ns/csvw",
         {
-            "@language": "en",
-            "@base": "https://example.org/"
+            "@base": "https://example.org/",
+            "@language": "en"
         }
     ],
-
-    "type": "TableGroup",
     "id": "https://example.org/data.csv-metadata.json",
     "tables": [
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "TODO.csv",
-        "dc:description": "TODO",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "TODOID",
-                    "titles": "TODOID",
-                    "dc:description": "TODO",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                }
-            ],
-            "primaryKey": "TODOID",
-            "foreignKeys": [
-                {
-                    "columnReference": "TODOID",
-                    "reference": {
-                        "resource": "data-TODO.csv",
-                        "columnReference": "TODOID"
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "TEMPLATE TABLE",
+            "dc:description": "TODO",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "TODO",
+                        "name": "TODOID",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "TODOID",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
                     }
-                }
-            ]
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "TODOID",
+                        "reference": {
+                            "columnReference": "TODOID",
+                            "resource": "data-TODO.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "TODOID"
+            },
+            "url": "TODO.csv"
+        },
+        {
+            "@id": "https://example.org/Streets.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Streets",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{streetId}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Street ID",
+                        "name": "streetId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "streetId",
+                        "valueUrl": "http://example.org/vocabulary/Streets"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Town ID",
+                        "name": "townId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "townId",
+                        "valueUrl": "http://example.org/vocabulary/Towns"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a street in czech",
+                        "name": "streetNameCS",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "streetNameCS"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a street in slovak",
+                        "name": "streetNameSK",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "streetNameSK"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Indicates whether a street has a sidewalk",
+                        "name": "hasSidewalk",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "hasSidewalk"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "townId",
+                        "reference": {
+                            "columnReference": "townId",
+                            "resource": "Towns.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "streetId"
+            },
+            "url": "Streets.csv"
+        },
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Town halls of the towns",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "id of the town - foreign and part ot primary key, required",
+                        "name": "townId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "townId",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "id of the house - foreign and part ot primary key, required",
+                        "name": "houseId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "houseId",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "townId",
+                        "reference": {
+                            "columnReference": "Id",
+                            "resource": "Towns.csv"
+                        }
+                    },
+                    {
+                        "columnReference": "houseId",
+                        "reference": {
+                            "columnReference": "Id",
+                            "resource": "Houses.csv"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "townId",
+                    "houseId"
+                ]
+            },
+            "url": "TownHallMap.csv"
+        },
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "All houses with their attributes",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{houseId}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of the house - primary key, required",
+                        "name": "Id",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "Id",
+                        "valueUrl": "http://example.org/vocabulary/houseId"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of street the house is located on - foreign key, required",
+                        "name": "streetId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "streetId",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "int TODO",
+                        "dc:description": "Address number of the house - required",
+                        "name": "houseNumber",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "houseNumber",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "hexadecimal color code of the house - required",
+                        "name": "colourHexCode",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "colourHexCode",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "streetId",
+                        "reference": {
+                            "columnReference": "Id TODO",
+                            "resource": "Streets.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "Id"
+            },
+            "url": "Houses.csv"
+        },
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Towns",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "unique ID of a town",
+                        "name": "Id",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "Id",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a town in czech",
+                        "name": "townNameCS",
+                        "propertyUrl": "TODO",
+                        "titles": "townNameCS",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a town in slovak",
+                        "name": "townNameSK",
+                        "propertyUrl": "TODO",
+                        "titles": "townNameSK",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Whether town has a flag",
+                        "name": "hasFlag",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "hasFlag",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Whether town has a broadcast",
+                        "name": "hasBroadcast",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "hasBroadcast",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of mayor of the town",
+                        "name": "mayorID",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "mayorID",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "Start of mayors term",
+                        "name": "termStart",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "termStart",
+                        "valueUrl": "TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "End of mayors term",
+                        "name": "termEnd",
+                        "propertyUrl": "TODO",
+                        "required": true,
+                        "titles": "termEnd",
+                        "valueUrl": "TODO"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "mayorID",
+                        "reference": {
+                            "columnReference": "TODOID",
+                            "resource": "data-TODO.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "TownID"
+            },
+            "url": "data-1.csv"
+        },
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Occupants",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of a person",
+                        "name": "personId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "personId",
+                        "valueUrl": "http://example.org/vocabulary/People"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "Start date of stay",
+                        "name": "dateFrom",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "dateFrom"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Whether occupant has unpaid fees.",
+                        "name": "unpaidFees",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "unpaidFees"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "personId",
+                        "reference": {
+                            "columnReference": "personID",
+                            "resource": "People.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "personId"
+            },
+            "url": "Occupants.csv"
+        },
+        {
+            "@id": "https://example.org/TODO.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Pairs of occupants and houses they live in",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "http://example.org/vocabulary/{TODOID}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the occupant - foreign key, part of primary key, required",
+                        "name": "occupantId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "occupantId",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
+                        "name": "houseId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "houseId",
+                        "valueUrl": "http://example.org/vocabulary/TODO"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "personId TODO",
+                        "reference": {
+                            "columnReference": "Id TODO",
+                            "resource": "Occupants.csv TODO"
+                        }
+                    },
+                    {
+                        "columnReference": "houseId",
+                        "reference": {
+                            "columnReference": "Id",
+                            "resource": "Houses.csv"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "occupantId",
+                    "houseId"
+                ]
+            },
+            "url": "livesIn.csv"
         }
-    },
-    {
-        "@id": "https://example.org/Streets.csv-metadata.json",
-        "@type": "Table",
-        "url": "Streets.csv",
-        "dc:description": "Streets",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{streetId}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "streetId",
-                    "titles": "streetId",
-                    "dc:description": "Street ID",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/Streets"
-                },
-                {
-                    "@type": "Column",
-                    "name": "townId",
-                    "titles": "townId",
-                    "dc:description": "Town ID",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/Towns"
-                },
-                {
-                    "@type": "Column",
-                    "name": "streetNameCS",
-                    "titles": "streetNameCS",
-                    "dc:description": "Name of a street in czech",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type"
-                },
-                {
-                    "@type": "Column",
-                    "name": "streetNameSK",
-                    "titles": "streetNameSK",
-                    "dc:description": "Name of a street in slovak",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type"
-                },
-                {
-                    "@type": "Column",
-                    "name": "hasSidewalk",
-                    "titles": "hasSidewalk",
-                    "dc:description": "Indicates whether a street has a sidewalk",
-                    "datatype": "boolean",
-                    "required": true,
-                    "propertyUrl": "rdf:type"
-                }
-            ],
-            "primaryKey": "streetId",
-            "foreignKeys": [
-                {
-                    "columnReference": "townId",
-                    "reference": {
-                        "resource": "Towns.csv",
-                        "columnReference": "townId"
-                    }
-                }
-            ]
-        }  
-    },
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "TownHallMap.csv",
-        "dc:description": "Town halls of the towns",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "townId",
-                    "titles": "townId",
-                    "dc:description": "id of the town - foreign and part ot primary key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "houseId",
-                    "titles": "houseId",
-                    "dc:description": "id of the house - foreign and part ot primary key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                }
-            ],
-            "primaryKey": ["townId", "houseId"],
-            "foreignKeys": [
-                {
-                    "columnReference": "townId",
-                    "reference": {
-                        "resource": "Towns.csv",
-                        "columnReference": "Id"
-                    }
-                },
-                {
-                    "columnReference": "houseId",
-                    "reference": {
-                        "resource": "Houses.csv",
-                        "columnReference": "Id"
-                    }
-                }
-            ]
-        }
-    },
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "Houses.csv",
-        "dc:description": "All houses with their attributes",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{houseId}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "Id",
-                    "titles": "Id",
-                    "dc:description": "ID of the house - primary key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/houseId"
-                },
-                {
-                    "@type": "Column",
-                    "name": "streetId",
-                    "titles": "streetId",
-                    "dc:description": "ID of street the house is located on - foreign key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "houseNumber",
-                    "titles": "houseNumber",
-                    "dc:description": "Address number of the house - required",
-                    "datatype": "int TODO",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "colourHexCode",
-                    "titles": "colourHexCode",
-                    "dc:description": "hexadecimal color code of the house - required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                }
-            ],
-            "primaryKey": "Id",
-            "foreignKeys": [
-                {
-                    "columnReference": "streetId",
-                    "reference": {
-                        "resource": "Streets.csv",
-                        "columnReference": "Id TODO"
-                    }
-                }
-            ]
-        }
-    },
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "data-1.csv",
-        "dc:description": "Towns",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "Id",
-                    "titles": "Id",
-                    "dc:description": "unique ID of a town",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "townNameCS",
-                    "titles": "townNameCS",
-                    "dc:description": "Name of a town in czech",
-                    "datatype": "string",
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "townNameSK",
-                    "titles": "townNameSK",
-                    "dc:description": "Name of a town in slovak",
-                    "datatype": "string",
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "hasFlag",
-                    "titles": "hasFlag",
-                    "dc:description": "Whether town has a flag",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "hasBroadcast",
-                    "titles": "hasBroadcast",
-                    "dc:description": "Whether town has a broadcast",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "mayorID",
-                    "titles": "mayorID",
-                    "dc:description": "ID of mayor of the town",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "termStart",
-                    "titles": "termStart",
-                    "dc:description": "Start of mayors term",
-                    "datatype": "date",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "termEnd",
-                    "titles": "termEnd",
-                    "dc:description": "End of mayors term",
-                    "datatype": "date",
-                    "required": true,
-                    "propertyUrl": "TODO",
-                    "valueUrl": "TODO"
-                }
-            ],
-            "primaryKey": "TownID",
-            "foreignKeys": [
-                {
-                    "columnReference": "mayorID",
-                    "reference": {
-                        "resource": "data-TODO.csv",
-                        "columnReference": "TODOID"
-                    }
-                }
-            ]
-        }  
-    },
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "Occupants.csv",
-        "dc:description": "Occupants",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "personId",
-                    "titles": "personId",
-                    "dc:description": "ID of a person",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/People"
-                },
-                {
-                    "@type": "Column",
-                    "name": "dateFrom",
-                    "titles": "dateFrom",
-                    "dc:description": "Start date of stay",
-                    "datatype": "date",
-                    "required": true,
-                    "propertyUrl": "rdf:type"                
-                },
-                {
-                    "@type": "Column",
-                    "name": "unpaidFees",
-                    "titles": "unpaidFees",
-                    "dc:description": "Whether occupant has unpaid fees.",
-                    "datatype": "boolean",
-                    "required": true,
-                    "propertyUrl": "rdf:type"                
-                }
-            ],
-            "primaryKey": "TODO",
-            "foreignKeys": [
-                {
-                    "columnReference": "personId",
-                    "reference": {
-                        "resource": "People.csv",
-                        "columnReference": "personID"
-                    }
-                }
-            ]
-        }  
-    },
-    {
-        "@id": "https://example.org/TODO.csv-metadata.json",
-        "@type": "Table",
-        "url": "livesIn.csv",
-        "dc:description": "Pairs of occupants and houses they live in",
-        "tableSchema": {
-            "@type": "Schema",
-            "aboutUrl": "http://example.org/vocabulary/{TODOID}",
-            "columns": [
-                {
-                    "@type": "Column",
-                    "name": "occupantId",
-                    "titles": "occupantId",
-                    "dc:description": "Id of the occupant - foreign key, part of primary key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                },
-                {
-                    "@type": "Column",
-                    "name": "houseId",
-                    "titles": "houseId",
-                    "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
-                    "datatype": "string",
-                    "required": true,
-                    "propertyUrl": "rdf:type",
-                    "valueUrl": "http://example.org/vocabulary/TODO"
-                }            
-            ],
-            "primaryKey": ["occupantId", "houseId"],
-            "foreignKeys": [
-                {
-                    "columnReference": "personId TODO",
-                    "reference": {
-                        "resource": "Occupants.csv TODO",
-                        "columnReference": "Id TODO"
-                    }
-                },
-                {
-                    "columnReference": "houseId",
-                    "reference": {
-                        "resource": "Houses.csv",
-                        "columnReference": "Id"
-                    }
-                }
-            ]
-        }
-    }]
+    ],
+    "type": "TableGroup"
 }
