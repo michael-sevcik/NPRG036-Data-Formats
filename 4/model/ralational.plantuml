@@ -9,9 +9,9 @@ object Towns {
 }
 
 object People {
-  <#lightblue,#black>|= Id |= firstNameCS |= firstNameSK |= surnameCS |= surnameSK |= middleNames |
-  <#white>| string | string | string | string | string | string | 
-  <#white>| primary key \n - required | required | required | required | required | |
+  <#lightblue,#black>|= Id |= firstNameCS |= firstNameSK |= surnameCS |= surnameSK |
+  <#white>| string | string | string | string | string |
+  <#white>| primary key \n - required | | | | |
 }
 
 object LivesIn {
@@ -19,7 +19,6 @@ object LivesIn {
   <#white>| string |  string |
   <#white>| foreign key to \n Occupants - required | foreign key to \n Houses - required |
   <#white>| primary key consists \n of occupantId and houseID  | |
-
 }
 
 object MiddleNames {
@@ -29,9 +28,9 @@ object MiddleNames {
 }
 
 object Occupants {
-  <#lightblue,#black>|= Id |= personId |= dateFrom |= unpaidFees |
-  <#white>| string | string | date | boolean |
-  <#white>| primary key \n - required | foreign key to \n People - required | required | required |
+  <#lightblue,#black>|= personId |= dateFrom |= unpaidFees |
+  <#white>| string | date | boolean |
+  <#white>| primary key to \n People - required | required | required |
 }
 
 object TownHallMap {
@@ -44,22 +43,22 @@ object TownHallMap {
 object Streets {
   <#lightblue,#black>|= Id |= townId |= streetNameCS |= streetNameSK |= hasSidewalk |
   <#white>| string | string | string | string | boolean |
-  <#white>| primary key \n - required | foreign key to \n Towns - required | required | required | required |
+  <#white>| primary key \n - required | foreign key to \n Towns - required | | | required |
 }
 
 object Houses {
   <#lightblue,#black>|= Id |= streetId |= houseNumber |= colourHexCode |= area |
   <#white>| string | string | integer | string | decimal |
-  <#white>| primary key \n - required | foreign key to \n Streets - required | required |  required | required |
+  <#white>| primary key \n - required | foreign key to \n Streets - required | required | | |
 }
 
 Occupants -d-> People : "Foreign key"
 Houses -d-> Streets : "Foreign key"
 Streets -> Towns : "Foreign key"
 Towns -d-> People : "Foreign key"
-MiddleNames --> People : "Foreign key"
-TownHallMap -d-> Towns : "Foreign key"
-TownHallMap -d-> Houses : "Foreign key"
+MiddleNames -u-> People : "Foreign key"
+TownHallMap --> Towns : "Foreign key"
+TownHallMap -u-> Houses : "Foreign key"
 LivesIn --> Occupants : "Foreign key"
 LivesIn --> Houses : "Foreign key"
 
