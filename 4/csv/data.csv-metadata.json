@@ -138,6 +138,7 @@
             "@id": "https://example.org/Houses.csv-metadata.json",
             "@type": "Table",
             "dc:description": "All houses with their attributes",
+            "url": "Houses.csv",
             "tableSchema": {
                 "@type": "Schema",
                 "aboutUrl": "http://example.org/vocabulary/{houseId}",
@@ -150,37 +151,43 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "Id",
-                        "valueUrl": "http://example.org/vocabulary/houseId"
+                        "valueUrl": "dbo:Building"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "ID of street the house is located on - foreign key, required",
+                        "propertyUrl": "ex:situatedOn",
                         "name": "streetId",
-                        "propertyUrl": "rdf:type",
                         "required": true,
-                        "titles": "streetId",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "titles": "streetId"
                     },
                     {
                         "@type": "Column",
                         "datatype": "integer",
                         "dc:description": "Address number of the house - required",
                         "name": "houseNumber",
-                        "propertyUrl": "rdf:type",
+                        "propertyUrl": "ex:HouseHumber",
                         "required": true,
-                        "titles": "houseNumber",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "titles": "houseNumber"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
-                        "dc:description": "hexadecimal color code of the house - required",
+                        "dc:description": "hexadecimal color code of the house",
                         "name": "colourHexCode",
-                        "propertyUrl": "rdf:type",
-                        "required": true,
-                        "titles": "colourHexCode",
-                        "valueUrl": "http://example.org/vocabulary/TODO"
+                        "propertyUrl": "ex:colour_hex_code",
+                        "required": false,
+                        "titles": "colourHexCode"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "decimal",
+                        "dc:description": "area of the house in acres",
+                        "name": "area",
+                        "propertyUrl": "dbo:area",
+                        "required": false,
+                        "titles": "area"
                     }
                 ],
                 "foreignKeys": [
@@ -193,8 +200,7 @@
                     }
                 ],
                 "primaryKey": "Id"
-            },
-            "url": "Houses.csv"
+            }
         },
         {
             "@id": "https://example.org/TODO.csv-metadata.json",
