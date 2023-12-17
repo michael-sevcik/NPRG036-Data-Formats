@@ -8,7 +8,10 @@
   <ex:livesIn> <exH:MartinsHouse>;
   <ex:termEnd> "2026-01-02"^^xsd:date;
   <ex:termStart> "2022-01-02"^^xsd:date;
-  <ex:unpdaid_fees> true .
+  <ex:unpdaid_fees> true;
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Martin";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Martin";
+  foaf:firstName "Martin"@sk .
 
 <exP:Michael> a <ex:Mayor>,
     <ex:Occupant>;
@@ -19,9 +22,10 @@
   <ex:termEnd> "2025-09-01"^^xsd:date;
   <ex:termStart> "2018-09-01"^^xsd:date;
   <ex:unpdaid_fees> false;
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#Id> "1",
-    "2";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael" .
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Michael";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Michael";
+  foaf:firstName "Michael"@cs;
+  foaf:surname "Ševčík"@cs .
 
 <exP:Rasto> a <ex:Mayor>,
     <ex:Occupant>;
@@ -29,48 +33,46 @@
   <ex:livesIn> <exH:RastosHouse>;
   <ex:termEnd> "2022-08-01"^^xsd:date;
   <ex:termStart> "2018-08-01"^^xsd:date;
-  <ex:unpdaid_fees> false .
-
-<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv> <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Rasto",
-    "Michael",
-    "Martin";
-  foaf:firstName "Rasťo"@sk,
-    "Michael"@cs,
-    "Martin"@sk;
-  foaf:surname "Ševčík"@cs .
+  <ex:unpdaid_fees> false;
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Rasto";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Rasto";
+  foaf:firstName "Rasťo"@sk .
 
 <exS:Hlavna> a <dbo:Street>;
   <ex:hasSidewalk> true;
   <ex:locatedIn> <exT:Rovinka>;
-  <ex:townName> "Hlavná"@sk .
+  <ex:streetName> "Hlavná"@sk .
 
 <exS:Mramorova> a <dbo:Street>;
   <ex:hasSidewalk> true;
   <ex:locatedIn> <exT:Zlin>;
-  <ex:townName> "Mramorová"@cs .
+  <ex:streetName> "Mramorová"@cs .
 
 <exS:Sportova> a <dbo:Street>;
   <ex:hasSidewalk> false;
   <ex:locatedIn> <exT:SvatyJur>;
-  <ex:townName> "Športová"@sk .
+  <ex:streetName> "Športová"@sk .
 
 <exT:Rovinka> a <dbo:Town>;
   <ex:hasBroadcast> true;
   <ex:hasFlag> true;
   <ex:townHall> <exH:RastosHouse>;
-  <ex:townName> "Rovinka" .
+  <ex:townName> "Rovinka";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "Rovinka" .
 
 <exT:SvatyJur> a <dbo:Town>;
   <ex:hasBroadcast> false;
   <ex:hasFlag> false;
   <ex:townHall> <exH:MartinsHouse>;
-  <ex:townName> "Svätý Jur" .
+  <ex:townName> "Svätý Jur";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "SvatyJur" .
 
 <exT:Zlin> a <dbo:Town>;
   <ex:hasBroadcast> true;
   <ex:hasFlag> true;
   <ex:townHall> <exH:MichaelsHouse>;
-  <ex:townName> "Zlín" .
+  <ex:townName> "Zlín";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "Zlin" .
 
 <exH:MartinsHouse> a <dbo:Building>;
   <dbo:area> 150.5;
@@ -90,14 +92,12 @@
   <ex:colour_hex_code> "000000";
   <ex:situatedOn> <exS:Hlavna> .
 
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#houseId> "MichaelsHouse"] .
+ [
+    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#Id> "1";
+    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael"
+  ] .
 
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#houseId> "RastosHouse"] .
-
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#houseId> "MartinsHouse"] .
-
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Martin"] .
-
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Rasto"] .
-
- [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Michael"] .
+ [
+    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#Id> "2";
+    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael"
+  ] .
