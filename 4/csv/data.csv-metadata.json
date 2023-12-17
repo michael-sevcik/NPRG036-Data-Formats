@@ -26,17 +26,17 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "streetId",
-                        "valueUrl": "http://example.org/vocabulary/Street"
+                        "valueUrl": "dbo:Street"
                     },
                     {
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Town ID",
                         "name": "townId",
-                        "propertyUrl": "ex:situatedOn",
+                        "propertyUrl": "ex:locatedIn",
                         "required": true,
                         "titles": "townId",
-                        "valueUrl": "http://example.org/vocabulary/{townId}"
+                        "valueUrl": "ext:{townId}"
                     },
                     {
                         "@type": "Column",
