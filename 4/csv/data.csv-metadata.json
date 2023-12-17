@@ -42,8 +42,8 @@
                         "dc:description": "Name of a street in czech",
                         "datatype": "string",
                         "lang": "cs",
-                        "name": "streetNameCZ",
-                        "propertyUrl": "ex:townName",
+                        "name": "streetNameCS",
+                        "propertyUrl": "ex:streetName",
                         "required": false,
                         "titles": "streetNameCS"
                     },
@@ -52,7 +52,7 @@
                         "datatype": "string",
                         "dc:description": "Name of a street in slovak",
                         "name": "streetNameSK",
-                        "propertyUrl": "ex:townName",
+                        "propertyUrl": "ex:streetName",
                         "lang": "sk",
                         "required": false,
                         "titles": "streetNameSK"
@@ -86,6 +86,7 @@
             "url": "data-7.csv",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "exT:{townId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -93,10 +94,7 @@
                         "dc:description": "id of the town - foreign and part ot primary key, required",
                         "name": "townId",
                         "required": true,
-                        "titles": "townId",
-                        "aboutUrl": "exT:{townId}",
-                        "propertyUrl": "ex:townHall",
-                        "valueUrl": "exH:{houseId}"
+                        "titles": "townId"
                     },
                     {
                         "@type": "Column",
@@ -104,7 +102,9 @@
                         "dc:description": "id of the house - foreign and part ot primary key, required",
                         "name": "houseId",
                         "required": true,
-                        "titles": "houseId"
+                        "titles": "houseId",
+                        "propertyUrl": "ex:townHall",
+                        "valueUrl": "exH:{houseId}"
                     }
                 ],
                 "foreignKeys": [
@@ -354,6 +354,7 @@
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "exP:{occupantId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -370,7 +371,6 @@
                         "name": "houseId",
                         "required": true,
                         "titles": "houseId",
-                        "aboutUrl": "exP:{occupantId}",
                         "propertyUrl": "ex:livesIn",
                         "valueUrl": "exH:{houseId}"
                     }
@@ -403,8 +403,7 @@
             "url": "data-3.csv",
             "dc:description": "Middle names of people",
             "tableSchema": {
-                "@type": "Schema",
-                "aboutUrl": "exP:{personId}",
+                "@type": "Schema",                
                 "columns": [
                     {
                         "@type": "Column",
@@ -421,6 +420,7 @@
                         "name": "middleNameCS",
                         "lang": "cs",
                         "required": false,
+                        "aboutUrl": "exP:{personId}",
                         "titles": "middleNameCS",
                         "propertyUrl": "ex:middleName"
                     },
@@ -432,7 +432,8 @@
                         "lang": "sk",
                         "required": false,
                         "titles": "middleNameSK",
-                        "propertyUrl": "ex:middleName"                        
+                        "aboutUrl": "exP:{personId}",
+                        "propertyUrl": "ex:middleName"
                     },
                     {
                         "@type": "Column",
@@ -440,7 +441,7 @@
                         "dc:description": "Id of the person - foreign key, required",
                         "name": "personId",
                         "required": true,
-                        "titles": "personId"                        
+                        "titles": "personId"
                     }
                 ],
                 "primaryKey": "Id",
@@ -462,7 +463,7 @@
             "url": "data-5.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "",
+                "aboutUrl": "exP:{Id}",
                 "columns": [
                     {
                         "@type": "Column",
