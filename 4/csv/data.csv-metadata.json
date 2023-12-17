@@ -43,7 +43,7 @@
                         "dc:description": "Name of a street in czech",
                         "datatype": "string",
                         "lang": "cs",
-                        "name": "streetName",
+                        "name": "streetNameCZ",
                         "propertyUrl": "ex:townName",
                         "required": false,
                         "titles": "streetNameCS"
@@ -52,7 +52,7 @@
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Name of a street in slovak",
-                        "name": "streetName",
+                        "name": "streetNameSK",
                         "propertyUrl": "ex:townName",
                         "lang": "sk",
                         "required": false,
@@ -72,7 +72,7 @@
                     {
                         "columnReference": "townId",
                         "reference": {
-                            "columnReference": "townId",
+                            "columnReference": "Id",
                             "resource": "data-8.csv"
                         }
                     }
@@ -190,7 +190,7 @@
                     {
                         "columnReference": "streetId",
                         "reference": {
-                            "columnReference": "Id TODO",
+                            "columnReference": "Id",
                             "resource": "data-6.csv"
                         }
                     }
@@ -287,7 +287,7 @@
                 ],
                 "foreignKeys": [
                     {
-                        "columnReference": "mayorID",
+                        "columnReference": "mayorId",
                         "reference": {
                             "resource": "data-5.csv",
                             "columnReference": "Id"
@@ -431,6 +431,14 @@
                         "required": false,
                         "titles": "middleNameSK",
                         "propertyUrl": "ex:middleName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "integer",
+                        "dc:description": "Id of the person - foreign key, required",
+                        "name": "personId",
+                        "required": true,
+                        "titles": "Id"                        
                     }
                 ]
             }
