@@ -59,6 +59,7 @@
                         "dc:description": "Name of a street in slovak",
                         "name": "streetName",
                         "propertyUrl": "ex:townName",
+                        "lang": "sk",
                         "required": false,
                         "titles": "streetNameSK"
                     },
