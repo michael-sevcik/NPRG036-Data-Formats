@@ -427,7 +427,7 @@
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Slovak middle name of the person",
-                        "name": "middleNameCS",
+                        "name": "middleNameSK",
                         "required": false,
                         "titles": "middleNameSK",
                         "propertyUrl": "ex:middleName"
@@ -497,7 +497,7 @@
                         "name": "surnameSK",
                         "required": false,
                         "titles": "surnameSK",
-                        "lang": "cs",
+                        "lang": "sk",
                         "propertyUrl": "foaf:surname"
                     } 
                 ],
