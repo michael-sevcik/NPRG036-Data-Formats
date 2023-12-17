@@ -22,10 +22,10 @@
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "Street ID",
-                        "name": "streetId",
+                        "name": "Id",
                         "propertyUrl": "rdf:type",
                         "required": true,
-                        "titles": "streetId",
+                        "titles": "Id",
                         "valueUrl": "dbo:Street"
                     },
                     {
@@ -77,7 +77,7 @@
                         }
                     }
                 ],
-                "primaryKey": "streetId"
+                "primaryKey": "Id"
             }
         },
         {
@@ -152,11 +152,12 @@
                     {
                         "@type": "Column",
                         "datatype": "string",
-                        "dc:description": "ID of street the house is located on - foreign key, required",
+                        "dc:description": "ID of street the house is situated on - foreign key, required",
                         "propertyUrl": "ex:situatedOn",
                         "name": "streetId",
                         "required": true,
-                        "titles": "streetId"
+                        "titles": "streetId",
+                        "valueUrl": "exS:{streetId}"
                     },
                     {
                         "@type": "Column",
