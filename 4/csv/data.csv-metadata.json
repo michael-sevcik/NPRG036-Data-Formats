@@ -137,7 +137,7 @@
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "http://example.org/vocabulary/{houseId}",
+                "aboutUrl": "exH:{houseId}",
                 "columns": [
                     {
                         "@type": "Column",
