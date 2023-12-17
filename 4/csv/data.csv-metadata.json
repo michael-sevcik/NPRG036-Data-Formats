@@ -3,7 +3,6 @@
     "@context": [
         "http://www.w3.org/ns/csvw",
         {
-            "@base": "https://example.org/",
             "@language": "en"
         }
     ],
@@ -16,7 +15,7 @@
             "url": "data-6.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exS:{streetId}",
+                "aboutUrl": "exS:{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -36,7 +35,7 @@
                         "propertyUrl": "ex:locatedIn",
                         "required": true,
                         "titles": "townId",
-                        "valueUrl": "ext:{townId}"
+                        "valueUrl": "exT:{townId}"
                     },
                     {
                         "@type": "Column",
@@ -83,7 +82,7 @@
         {
             "@id": "https://example.org/data-7.csv-metadata.json",
             "@type": "Table",
-            "dc:description": "Town halls of the towns",
+            "dc:description": "Townhalls of the towns",
             "url": "data-7.csv",
             "tableSchema": {
                 "@type": "Schema",
@@ -137,7 +136,7 @@
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exH:{houseId}",
+                "aboutUrl": "exH:{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -206,7 +205,7 @@
             "dc:description": "Towns",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exT:{townId}",
+                "aboutUrl": "exT:{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -272,7 +271,7 @@
                         "name": "termStart",
                         "required": true,
                         "titles": "termStart",
-                        "aboutUrl": "exT:{mayorId}",
+                        "aboutUrl": "exP:{mayorId}",
                         "propertyUrl": "ex:termStart"
                     },
                     {
@@ -282,7 +281,7 @@
                         "name": "termEnd",
                         "required": true,
                         "titles": "termEnd",
-                        "aboutUrl": "exT:{mayorId}",
+                        "aboutUrl": "exP:{mayorId}",
                         "propertyUrl": "ex:termEnd"
                     }
                 ],
@@ -409,7 +408,7 @@
                 "columns": [
                     {
                         "@type": "Column",
-                        "datatype": "integer",
+                        "datatype": "string",
                         "dc:description": "Id of the row (one person can have many same middlenames) - primary key, required",                                                
                         "name": "Id",
                         "required": true,
@@ -420,6 +419,7 @@
                         "datatype": "string",
                         "dc:description": "Czech middle name of the person",
                         "name": "middleNameCS",
+                        "lang": "cs",
                         "required": false,
                         "titles": "middleNameCS",
                         "propertyUrl": "ex:middleName"
@@ -429,17 +429,28 @@
                         "datatype": "string",
                         "dc:description": "Slovak middle name of the person",
                         "name": "middleNameSK",
+                        "lang": "sk",
                         "required": false,
                         "titles": "middleNameSK",
-                        "propertyUrl": "ex:middleName"
+                        "propertyUrl": "ex:middleName"                        
                     },
                     {
                         "@type": "Column",
-                        "datatype": "integer",
+                        "datatype": "string",
                         "dc:description": "Id of the person - foreign key, required",
                         "name": "personId",
                         "required": true,
-                        "titles": "Id"                        
+                        "titles": "personId"                        
+                    }
+                ],
+                "primaryKey": "Id",
+                "foreignKeys": [
+                    {
+                        "columnReference": "personId",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
+                        }
                     }
                 ]
             }
@@ -486,9 +497,9 @@
                         "datatype": "string",
                         "dc:description": "Czech surname of the person",
                         "name": "surnameCS",
+                        "lang": "cs",
                         "required": false,
                         "titles": "surnameCS",
-                        "lang": "cs",
                         "propertyUrl": "foaf:surname"
                     },
                     {
@@ -496,9 +507,9 @@
                         "datatype": "string",
                         "dc:description": "Slovak surname of the person",
                         "name": "surnameSK",
+                        "lang": "sk",
                         "required": false,
                         "titles": "surnameSK",
-                        "lang": "sk",
                         "propertyUrl": "foaf:surname"
                     } 
                 ],
