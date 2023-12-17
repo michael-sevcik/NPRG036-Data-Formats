@@ -72,8 +72,8 @@
                     {
                         "columnReference": "townId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-8.csv"
+                            "resource": "data-8.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
@@ -112,15 +112,15 @@
                     {
                         "columnReference": "townId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-8.csv"
+                            "resource": "data-8.csv",
+                            "columnReference": "Id"
                         }
                     },
                     {
                         "columnReference": "houseId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-1.csv"
+                            "resource": "data-1.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
@@ -190,8 +190,8 @@
                     {
                         "columnReference": "streetId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-6.csv"
+                            "resource": "data-6.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
@@ -339,8 +339,8 @@
                     {
                         "columnReference": "personId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-5.csv"
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
@@ -379,15 +379,15 @@
                     {
                         "columnReference": "occupantId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-5.csv"
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
                         }
                     },
                     {
                         "columnReference": "houseId",
                         "reference": {
-                            "columnReference": "Id",
-                            "resource": "data-1.csv"
+                            "resource": "data-1.csv",
+                            "columnReference": "Id"
                         }
                     }
                 ],
