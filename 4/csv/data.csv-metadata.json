@@ -3,12 +3,7 @@
         "http://www.w3.org/ns/csvw",
         {
             "@base": "https://example.org/",
-            "@language": "en",
-            "ex": "http://example.org/vocabulary/",
-            "exT": "http://example.org/towns/",
-            "exH": "http://example.org/houses/",
-            "exS": "http://example.org/streets/",
-            "exP": "http://example.org/people/"
+            "@language": "en"
         }
     ],
     "@id": "https://example.org/data.csv-metadata.json",
