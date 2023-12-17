@@ -3,18 +3,18 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <exP:Martin> a <ex:Mayor>,
-    <ex:Occupant>;
+    <ex:Occupant>,
+    <dbo:Person>;
   <ex:date_from> "2022-01-02"^^xsd:date;
   <ex:livesIn> <exH:MartinsHouse>;
   <ex:termEnd> "2026-01-02"^^xsd:date;
   <ex:termStart> "2022-01-02"^^xsd:date;
   <ex:unpdaid_fees> true;
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Martin";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Martin";
   foaf:firstName "Martin"@sk .
 
 <exP:Michael> a <ex:Mayor>,
-    <ex:Occupant>;
+    <ex:Occupant>,
+    <dbo:Person>;
   <ex:date_from> "2018-09-01"^^xsd:date;
   <ex:livesIn> <exH:MichaelsHouse>;
   <ex:middleName> "Dorbrodej"@sk,
@@ -22,20 +22,18 @@
   <ex:termEnd> "2025-09-01"^^xsd:date;
   <ex:termStart> "2018-09-01"^^xsd:date;
   <ex:unpdaid_fees> false;
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Michael";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Michael";
+  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael";
   foaf:firstName "Michael"@cs;
   foaf:surname "Ševčík"@cs .
 
 <exP:Rasto> a <ex:Mayor>,
-    <ex:Occupant>;
+    <ex:Occupant>,
+    <dbo:Person>;
   <ex:date_from> "2018-09-01"^^xsd:date;
   <ex:livesIn> <exH:RastosHouse>;
   <ex:termEnd> "2022-08-01"^^xsd:date;
   <ex:termStart> "2018-08-01"^^xsd:date;
   <ex:unpdaid_fees> false;
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#occupantId> "Rasto";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-5.csv#Id> "Rasto";
   foaf:firstName "Rasťo"@sk .
 
 <exS:Hlavna> a <dbo:Street>;
@@ -57,22 +55,19 @@
   <ex:hasBroadcast> true;
   <ex:hasFlag> true;
   <ex:townHall> <exH:RastosHouse>;
-  <ex:townName> "Rovinka";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "Rovinka" .
+  <ex:townName> "Rovinka" .
 
 <exT:SvatyJur> a <dbo:Town>;
   <ex:hasBroadcast> false;
   <ex:hasFlag> false;
   <ex:townHall> <exH:MartinsHouse>;
-  <ex:townName> "Svätý Jur";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "SvatyJur" .
+  <ex:townName> "Svätý Jur" .
 
 <exT:Zlin> a <dbo:Town>;
   <ex:hasBroadcast> true;
   <ex:hasFlag> true;
   <ex:townHall> <exH:MichaelsHouse>;
-  <ex:townName> "Zlín";
-  <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-7.csv#townId> "Zlin" .
+  <ex:townName> "Zlín" .
 
 <exH:MartinsHouse> a <dbo:Building>;
   <dbo:area> 150.5;
@@ -92,12 +87,8 @@
   <ex:colour_hex_code> "000000";
   <ex:situatedOn> <exS:Hlavna> .
 
- [
-    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#Id> "1";
-    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael"
-  ] .
+ [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#houseId> "MartinsHouse"] .
 
- [
-    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#Id> "2";
-    <file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-3.csv#personId> "Michael"
-  ] .
+ [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#houseId> "RastosHouse"] .
+
+ [<file:/home/patrik/Documents/datove_formaty/NPRG036-Data-Formats/4/csv/data-2.csv#houseId> "MichaelsHouse"] .

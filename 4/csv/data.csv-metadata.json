@@ -89,11 +89,12 @@
                 "aboutUrl": "exT:{townId}",
                 "columns": [
                     {
-                        "@type": "Column",
                         "datatype": "string",
                         "dc:description": "id of the town - foreign and part ot primary key, required",
                         "name": "townId",
                         "required": true,
+                        "propertyUrl": "ex:townHall",
+                        "valueUrl": "exH:{houseId}",
                         "titles": "townId"
                     },
                     {
@@ -354,7 +355,6 @@
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exP:{occupantId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -362,7 +362,10 @@
                         "dc:description": "Id of the occupant - foreign key, part of primary key, required",
                         "name": "occupantId",
                         "required": true,
-                        "titles": "occupantId"
+                        "titles": "occupantId",
+                        "aboutUrl": "exP:{occupantId}",
+                        "propertyUrl": "ex:livesIn",
+                        "valueUrl": "exH:{houseId}"
                     },
                     {
                         "@type": "Column",
@@ -370,9 +373,7 @@
                         "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
                         "name": "houseId",
                         "required": true,
-                        "titles": "houseId",
-                        "propertyUrl": "ex:livesIn",
-                        "valueUrl": "exH:{houseId}"
+                        "titles": "houseId"
                     }
                 ],
                 "foreignKeys": [
@@ -403,16 +404,19 @@
             "url": "data-3.csv",
             "dc:description": "Middle names of people",
             "tableSchema": {
-                "@type": "Schema",                
+                "@type": "Schema",
+                "aboutUrl": "exP:{personId}",                
                 "columns": [
                     {
                         "@type": "Column",
                         "datatype": "string",
-                        "dc:description": "Id of the row (one person can have many same middlenames) - primary key, required",                                                
-                        "name": "Id",
+                        "dc:description": "Id of the person - foreign key, required",
+                        "name": "personId",
                         "required": true,
-                        "titles": "Id"
-                    },                    
+                        "titles": "personId",
+                        "propertyUrl": "rdf:tyype",
+                        "valueUrl": ni
+                    },
                     {
                         "@type": "Column",
                         "datatype": "string",
@@ -420,7 +424,6 @@
                         "name": "middleNameCS",
                         "lang": "cs",
                         "required": false,
-                        "aboutUrl": "exP:{personId}",
                         "titles": "middleNameCS",
                         "propertyUrl": "ex:middleName"
                     },
@@ -432,19 +435,10 @@
                         "lang": "sk",
                         "required": false,
                         "titles": "middleNameSK",
-                        "aboutUrl": "exP:{personId}",
                         "propertyUrl": "ex:middleName"
-                    },
-                    {
-                        "@type": "Column",
-                        "datatype": "string",
-                        "dc:description": "Id of the person - foreign key, required",
-                        "name": "personId",
-                        "required": true,
-                        "titles": "personId"
                     }
                 ],
-                "primaryKey": "Id",
+                "primaryKey": ["personId","middleNameSK", "middleNameCS"],
                 "foreignKeys": [
                     {
                         "columnReference": "personId",
@@ -471,7 +465,9 @@
                         "dc:description": "Id of the person - primary key, required",
                         "name": "Id",
                         "required": true,
-                        "titles": "Id"
+                        "titles": "Id",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "dbo:Person"
                     },
                     {
                         "@type": "Column",
