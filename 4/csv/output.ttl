@@ -1,0 +1,87 @@
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<exP:Martin> a <ex:Mayor>,
+    <ex:Occupant>,
+    foaf:Person;
+  <ex:date_from> "2022-01-02"^^xsd:date;
+  <ex:livesIn> <exH:MartinsHouse>;
+  <ex:termEnd> "2026-01-02"^^xsd:date;
+  <ex:termStart> "2022-01-02"^^xsd:date;
+  <ex:unpdaid_fees> true;
+  foaf:firstName "Martin"@sk .
+
+<exP:Michael> a <ex:Mayor>,
+    <ex:Occupant>,
+    foaf:Person;
+  <ex:date_from> "2018-09-01"^^xsd:date;
+  <ex:livesIn> <exH:MichaelsHouse>;
+  <ex:middleName> "Dorbrodej"@sk,
+    "Alexander"@sk;
+  <ex:termEnd> "2025-09-01"^^xsd:date;
+  <ex:termStart> "2018-09-01"^^xsd:date;
+  <ex:unpdaid_fees> false;
+  foaf:firstName "Michael"@cs;
+  foaf:surname "Ševčík"@cs .
+
+<exP:Rasto> a <ex:Mayor>,
+    <ex:Occupant>,
+    foaf:Person;
+  <ex:date_from> "2018-09-01"^^xsd:date;
+  <ex:livesIn> <exH:RastosHouse>;
+  <ex:termEnd> "2022-08-01"^^xsd:date;
+  <ex:termStart> "2018-08-01"^^xsd:date;
+  <ex:unpdaid_fees> false;
+  foaf:firstName "Rasťo"@sk .
+
+<exS:Hlavna> a <dbo:Street>;
+  <ex:hasSidewalk> true;
+  <ex:locatedIn> <exT:Rovinka>;
+  <ex:streetName> "Hlavná"@sk .
+
+<exS:Mramorova> a <dbo:Street>;
+  <ex:hasSidewalk> true;
+  <ex:locatedIn> <exT:Zlin>;
+  <ex:streetName> "Mramorová"@cs .
+
+<exS:Sportova> a <dbo:Street>;
+  <ex:hasSidewalk> false;
+  <ex:locatedIn> <exT:SvatyJur>;
+  <ex:streetName> "Športová"@sk .
+
+<exT:Rovinka> a <dbo:Town>;
+  <ex:hasBroadcast> true;
+  <ex:hasFlag> true;
+  <ex:townHall> <exH:RastosHouse>;
+  <ex:townName> "Rovinka" .
+
+<exT:SvatyJur> a <dbo:Town>;
+  <ex:hasBroadcast> false;
+  <ex:hasFlag> false;
+  <ex:townHall> <exH:MartinsHouse>;
+  <ex:townName> "Svätý Jur" .
+
+<exT:Zlin> a <dbo:Town>;
+  <ex:hasBroadcast> true;
+  <ex:hasFlag> true;
+  <ex:townHall> <exH:MichaelsHouse>;
+  <ex:townName> "Zlín" .
+
+<exH:MartinsHouse> a <dbo:Building>;
+  <dbo:area> 150.5;
+  <ex:HouseHumber> 123;
+  <ex:colour_hex_code> "db34eb";
+  <ex:situatedOn> <exS:Sportova> .
+
+<exH:MichaelsHouse> a <dbo:Building>;
+  <dbo:area> 50.5;
+  <ex:HouseHumber> 5656;
+  <ex:colour_hex_code> "FF00FF";
+  <ex:situatedOn> <exS:Mramorova> .
+
+<exH:RastosHouse> a <dbo:Building>;
+  <dbo:area> 200.8;
+  <ex:HouseHumber> 466;
+  <ex:colour_hex_code> "000000";
+  <ex:situatedOn> <exS:Hlavna> .

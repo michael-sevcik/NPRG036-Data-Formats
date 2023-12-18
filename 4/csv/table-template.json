@@ -1,0 +1,51 @@
+{
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@base": "https://example.org/",
+            "@language": "en",
+            "ex": "http://example.org/vocabulary/",
+            "exT": "http://example.org/towns/",
+            "exH": "http://example.org/houses/",
+            "exS": "http://example.org/streets/",
+            "exP": "http://example.org/people/"
+        }
+    ],
+    "@id": "https://example.org/NAZOV_TABULKY.csv-metadata.json",
+    "dc:description": "TEMPLAAAAATEEEE sem si napíš čo chceš",
+    "@type": "TableGroup",
+    "tables": [
+        {
+            "@id": "https://example.org/NAZOV_SUBORU.csv-metadata.json",
+            "@type": "TEMPLATE TABLE",
+            "dc:description": "si opäť napíš čo chceš",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "co sem das bude rdf subjekt",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "TODO",
+                        "name": "TODOID",
+                        "propertyUrl": "co sem das bude namiesto rdf predicate",
+                        "required": true,
+                        "titles": "optional iba pre ludi",
+                        "valueUrl": "rdf objekt"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "TODOID",
+                        "reference": {
+                            "columnReference": "TODOID",
+                            "resource": "data-TODO.csv"
+                        }
+                    }
+                ],
+                "primaryKey": "TODOID"
+            },
+            "url": "TODO.csv"
+        }
+    ]
+}
