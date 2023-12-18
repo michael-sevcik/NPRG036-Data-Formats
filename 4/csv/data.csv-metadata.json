@@ -15,7 +15,7 @@
             "url": "data-6.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exS:{Id}",
+                "aboutUrl": "http://example.org/streets/{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -32,10 +32,10 @@
                         "datatype": "string",
                         "dc:description": "Town ID",
                         "name": "townId",
-                        "propertyUrl": "ex:locatedIn",
+                        "propertyUrl": "http://example.org/vocabulary/locatedIn",
                         "required": true,
                         "titles": "townId",
-                        "valueUrl": "exT:{townId}"
+                        "valueUrl": "http://example.org/towns/{townId}"
                     },
                     {
                         "@type": "Column",
@@ -43,7 +43,7 @@
                         "datatype": "string",
                         "lang": "cs",
                         "name": "streetNameCS",
-                        "propertyUrl": "ex:streetName",
+                        "propertyUrl": "http://example.org/vocabulary/streetName",
                         "required": false,
                         "titles": "streetNameCS"
                     },
@@ -52,7 +52,7 @@
                         "datatype": "string",
                         "dc:description": "Name of a street in slovak",
                         "name": "streetNameSK",
-                        "propertyUrl": "ex:streetName",
+                        "propertyUrl": "http://example.org/vocabulary/streetName",
                         "lang": "sk",
                         "required": false,
                         "titles": "streetNameSK"
@@ -62,7 +62,7 @@
                         "datatype": "boolean",
                         "dc:description": "Indicates whether a street has a sidewalk",
                         "name": "hasSidewalk",
-                        "propertyUrl": "ex:hasSidewalk",
+                        "propertyUrl": "http://example.org/vocabulary/hasSidewalk",
                         "required": true,
                         "titles": "hasSidewalk"
                     }
@@ -86,15 +86,15 @@
             "url": "data-7.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exT:{townId}",
+                "aboutUrl": "http://example.org/towns/{townId}",
                 "columns": [
                     {
                         "datatype": "string",
                         "dc:description": "id of the town - foreign and part ot primary key, required",
                         "name": "townId",
                         "required": true,
-                        "propertyUrl": "ex:townHall",
-                        "valueUrl": "exH:{houseId}",
+                        "propertyUrl": "http://example.org/vocabulary/townHall",
+                        "valueUrl": "http://example.org/houses/{houseId}",
                         "titles": "townId"
                     },
                     {
@@ -104,8 +104,8 @@
                         "name": "houseId",
                         "required": true,
                         "titles": "houseId",
-                        "propertyUrl": "ex:townHall",
-                        "valueUrl": "exH:{houseId}"
+                        "propertyUrl": "http://example.org/vocabulary/townHall",
+                        "valueUrl": "http://example.org/houses/{houseId}"
                     }
                 ],
                 "foreignKeys": [
@@ -137,7 +137,7 @@
             "url": "data-1.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exH:{Id}",
+                "aboutUrl": "http://example.org/houses/{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -153,18 +153,18 @@
                         "@type": "Column",
                         "datatype": "string",
                         "dc:description": "ID of street the house is situated on - foreign key, required",
-                        "propertyUrl": "ex:situatedOn",
+                        "propertyUrl": "http://example.org/vocabulary/situatedOn",
                         "name": "streetId",
                         "required": true,
                         "titles": "streetId",
-                        "valueUrl": "exS:{streetId}"
+                        "valueUrl": "http://example.org/streets/{streetId}"
                     },
                     {
                         "@type": "Column",
                         "datatype": "integer",
                         "dc:description": "Address number of the house - required",
                         "name": "houseNumber",
-                        "propertyUrl": "ex:HouseHumber",
+                        "propertyUrl": "http://example.org/vocabulary/HouseHumber",
                         "required": true,
                         "titles": "houseNumber"
                     },
@@ -173,7 +173,7 @@
                         "datatype": "string",
                         "dc:description": "hexadecimal color code of the house",
                         "name": "colourHexCode",
-                        "propertyUrl": "ex:colour_hex_code",
+                        "propertyUrl": "http://example.org/vocabulary/colour_hex_code",
                         "required": false,
                         "titles": "colourHexCode"
                     },
@@ -206,7 +206,7 @@
             "dc:description": "Towns",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exT:{Id}",
+                "aboutUrl": "http://example.org/towns/{Id}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -223,7 +223,7 @@
                         "datatype": "string",
                         "dc:description": "Name of a town in czech",
                         "name": "townNameCS",
-                        "propertyUrl": "ex:townName",
+                        "propertyUrl": "http://example.org/vocabulary/townName",
                         "required": false,
                         "titles": "townNameCS"
                     },
@@ -232,7 +232,7 @@
                         "datatype": "string",
                         "dc:description": "Name of a town in slovak",
                         "name": "townNameSK",
-                        "propertyUrl": "ex:townName",
+                        "propertyUrl": "http://example.org/vocabulary/townName",
                         "required": false,
                         "titles": "townNameSK"
                     },
@@ -241,7 +241,7 @@
                         "datatype": "boolean",
                         "dc:description": "Whether town has a flag - required",
                         "name": "hasFlag",
-                        "propertyUrl": "ex:hasFlag",
+                        "propertyUrl": "http://example.org/vocabulary/hasFlag",
                         "required": true,
                         "titles": "hasFlag"
                     },
@@ -250,7 +250,7 @@
                         "datatype": "boolean",
                         "dc:description": "Whether town has a broadcast - required",
                         "name": "hasBroadcast",
-                        "propertyUrl": "ex:hasBroadcast",
+                        "propertyUrl": "http://example.org/vocabulary/hasBroadcast",
                         "required": true,
                         "titles": "hasBroadcast"
                     },
@@ -261,9 +261,9 @@
                         "name": "mayorId",
                         "required": true,
                         "titles": "mayorId",
-                        "aboutUrl": "exP:{mayorId}",
+                        "aboutUrl": "http://example.org/people/{mayorId}",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "ex:Mayor"
+                        "valueUrl": "http://example.org/vocabulary/Mayor"
                     },
                     {
                         "@type": "Column",
@@ -272,8 +272,8 @@
                         "name": "termStart",
                         "required": true,
                         "titles": "termStart",
-                        "aboutUrl": "exP:{mayorId}",
-                        "propertyUrl": "ex:termStart"
+                        "aboutUrl": "http://example.org/people/{mayorId}",
+                        "propertyUrl": "http://example.org/vocabulary/termStart"
                     },
                     {
                         "@type": "Column",
@@ -282,8 +282,8 @@
                         "name": "termEnd",
                         "required": true,
                         "titles": "termEnd",
-                        "aboutUrl": "exP:{mayorId}",
-                        "propertyUrl": "ex:termEnd"
+                        "aboutUrl": "http://example.org/people/{mayorId}",
+                        "propertyUrl": "http://example.org/vocabulary/termEnd"
                     }
                 ],
                 "foreignKeys": [
@@ -305,7 +305,7 @@
             "url": "data-4.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exP:{personId}",
+                "aboutUrl": "http://example.org/people/{personId}",
                 "columns": [
                     {
                         "@type": "Column",
@@ -315,14 +315,14 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "personId",
-                        "valueUrl": "ex:Occupant"
+                        "valueUrl": "http://example.org/vocabulary/Occupant"
                     },
                     {
                         "@type": "Column",
                         "datatype": "date",
                         "dc:description": "Start date of stay - required",
                         "name": "dateFrom",
-                        "propertyUrl": "ex:date_from",
+                        "propertyUrl": "http://example.org/vocabulary/date_from",
                         "required": true,
                         "titles": "dateFrom"
                     },
@@ -331,7 +331,7 @@
                         "datatype": "boolean",
                         "dc:description": "Whether occupant has unpaid fees - required",
                         "name": "unpaidFees",
-                        "propertyUrl": "ex:unpdaid_fees",
+                        "propertyUrl": "http://example.org/vocabulary/unpdaid_fees",
                         "required": true,
                         "titles": "unpaidFees"
                     }
@@ -355,6 +355,8 @@
             "dc:description": "Pairs of occupants and houses they live in",
             "tableSchema": {
                 "@type": "Schema",
+                "aboutUrl": "http://example.org/people/{occupantId}",
+                "propertyUrl": "http://example.org/vocabulary/livesIn",
                 "columns": [
                     {
                         "@type": "Column",
@@ -363,9 +365,7 @@
                         "name": "occupantId",
                         "required": true,
                         "titles": "occupantId",
-                        "aboutUrl": "exP:{occupantId}",
-                        "propertyUrl": "ex:livesIn",
-                        "valueUrl": "exH:{houseId}"
+                        "valueUrl": "http://example.org/houses/{houseId}"
                     },
                     {
                         "@type": "Column",
@@ -374,9 +374,7 @@
                         "name": "houseId",
                         "required": true,
                         "titles": "houseId",
-                        "aboutUrl": "exP:{occupantId}",
-                        "propertyUrl": "ex:livesIn",
-                        "valueUrl": "exH:{houseId}"
+                        "valueUrl": "http://example.org/houses/{houseId}"
                     }
                 ],
                 "foreignKeys": [
@@ -408,7 +406,7 @@
             "dc:description": "Middle names of people",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exP:{personId}",                
+                "aboutUrl": "http://example.org/people/{personId}",                
                 "columns": [
                     {
                         "@type": "Column",
@@ -428,7 +426,7 @@
                         "lang": "cs",
                         "required": false,
                         "titles": "middleNameCS",
-                        "propertyUrl": "ex:middleName"
+                        "propertyUrl": "http://example.org/vocabulary/middleName"
                     },
                     {
                         "@type": "Column",
@@ -438,7 +436,7 @@
                         "lang": "sk",
                         "required": false,
                         "titles": "middleNameSK",
-                        "propertyUrl": "ex:middleName"
+                        "propertyUrl": "http://example.org/vocabulary/middleName"
                     }
                 ],
                 "primaryKey": ["personId","middleNameSK", "middleNameCS"],
@@ -460,7 +458,7 @@
             "url": "data-5.csv",
             "tableSchema": {
                 "@type": "Schema",
-                "aboutUrl": "exP:{Id}",
+                "aboutUrl": "http://example.org/people/{Id}",
                 "columns": [
                     {
                         "@type": "Column",
