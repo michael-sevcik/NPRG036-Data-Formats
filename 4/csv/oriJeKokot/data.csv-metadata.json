@@ -1,0 +1,517 @@
+{
+    "@id": "https://example.org/data.csv-metadata.json",
+    "@context": [
+        "http://www.w3.org/ns/csvw",
+        {
+            "@language": "en"
+        }
+    ],
+    "@type": "TableGroup",
+    "tables": [        
+        {
+            "@id": "https://example.org/data-6.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Streets",
+            "url": "data-6.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exS:{Id}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Street ID",
+                        "name": "Id",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "Id",
+                        "valueUrl": "dbo:Street"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Town ID",
+                        "name": "townId",
+                        "propertyUrl": "ex:locatedIn",
+                        "required": true,
+                        "titles": "townId",
+                        "valueUrl": "exT:{townId}"
+                    },
+                    {
+                        "@type": "Column",
+                        "dc:description": "Name of a street in czech",
+                        "datatype": "string",
+                        "lang": "cs",
+                        "name": "streetNameCS",
+                        "propertyUrl": "ex:streetName",
+                        "required": false,
+                        "titles": "streetNameCS"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a street in slovak",
+                        "name": "streetNameSK",
+                        "propertyUrl": "ex:streetName",
+                        "lang": "sk",
+                        "required": false,
+                        "titles": "streetNameSK"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Indicates whether a street has a sidewalk",
+                        "name": "hasSidewalk",
+                        "propertyUrl": "ex:hasSidewalk",
+                        "required": true,
+                        "titles": "hasSidewalk"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "townId",
+                        "reference": {
+                            "resource": "data-8.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": "Id"
+            }
+        },
+        {
+            "@id": "https://example.org/data-7.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Townhalls of the towns",
+            "url": "data-7.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exT:{townId}",
+                "columns": [
+                    {
+                        "datatype": "string",
+                        "dc:description": "id of the town - foreign and part ot primary key, required",
+                        "name": "townId",
+                        "required": true,
+                        "propertyUrl": "ex:townHall",
+                        "valueUrl": "exH:{houseId}",
+                        "titles": "townId"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "id of the house - foreign and part ot primary key, required",
+                        "name": "houseId",
+                        "required": true,
+                        "titles": "houseId",
+                        "propertyUrl": "ex:townHall",
+                        "valueUrl": "exH:{houseId}"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "townId",
+                        "reference": {
+                            "resource": "data-8.csv",
+                            "columnReference": "Id"
+                        }
+                    },
+                    {
+                        "columnReference": "houseId",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "townId",
+                    "houseId"
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/data-1.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "All houses with their attributes",
+            "url": "data-1.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exH:{Id}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of the house - primary key, required",
+                        "name": "Id",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "Id",
+                        "valueUrl": "dbo:Building"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of street the house is situated on - foreign key, required",
+                        "propertyUrl": "ex:situatedOn",
+                        "name": "streetId",
+                        "required": true,
+                        "titles": "streetId",
+                        "valueUrl": "exS:{streetId}"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "integer",
+                        "dc:description": "Address number of the house - required",
+                        "name": "houseNumber",
+                        "propertyUrl": "ex:HouseHumber",
+                        "required": true,
+                        "titles": "houseNumber"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "hexadecimal color code of the house",
+                        "name": "colourHexCode",
+                        "propertyUrl": "ex:colour_hex_code",
+                        "required": false,
+                        "titles": "colourHexCode"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "decimal",
+                        "dc:description": "area of the house in acres",
+                        "name": "area",
+                        "propertyUrl": "dbo:area",
+                        "required": false,
+                        "titles": "area"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "streetId",
+                        "reference": {
+                            "resource": "data-6.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": "Id"
+            }
+        },
+        {
+            "@id": "https://example.org/data-8.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-8.csv",
+            "dc:description": "Towns",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exT:{Id}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "unique ID of a town",
+                        "name": "Id",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "Id",
+                        "valueUrl": "dbo:Town"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a town in czech",
+                        "name": "townNameCS",
+                        "propertyUrl": "ex:townName",
+                        "required": false,
+                        "titles": "townNameCS"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Name of a town in slovak",
+                        "name": "townNameSK",
+                        "propertyUrl": "ex:townName",
+                        "required": false,
+                        "titles": "townNameSK"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Whether town has a flag - required",
+                        "name": "hasFlag",
+                        "propertyUrl": "ex:hasFlag",
+                        "required": true,
+                        "titles": "hasFlag"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Whether town has a broadcast - required",
+                        "name": "hasBroadcast",
+                        "propertyUrl": "ex:hasBroadcast",
+                        "required": true,
+                        "titles": "hasBroadcast"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of mayor of the town - foreign key, required",
+                        "name": "mayorId",
+                        "required": true,
+                        "titles": "mayorId",
+                        "aboutUrl": "exP:{mayorId}",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "ex:Mayor"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "Start of mayors term - required",
+                        "name": "termStart",
+                        "required": true,
+                        "titles": "termStart",
+                        "aboutUrl": "exP:{mayorId}",
+                        "propertyUrl": "ex:termStart"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "End of mayors term - required",
+                        "name": "termEnd",
+                        "required": true,
+                        "titles": "termEnd",
+                        "aboutUrl": "exP:{mayorId}",
+                        "propertyUrl": "ex:termEnd"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "mayorId",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": "Id"
+            }
+        },
+        {
+            "@id": "https://example.org/data-4.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "Occupants",
+            "url": "data-4.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exP:{personId}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "ID of a person - required",
+                        "name": "personId",
+                        "propertyUrl": "rdf:type",
+                        "required": true,
+                        "titles": "personId",
+                        "valueUrl": "ex:Occupant"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "date",
+                        "dc:description": "Start date of stay - required",
+                        "name": "dateFrom",
+                        "propertyUrl": "ex:date_from",
+                        "required": true,
+                        "titles": "dateFrom"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "boolean",
+                        "dc:description": "Whether occupant has unpaid fees - required",
+                        "name": "unpaidFees",
+                        "propertyUrl": "ex:unpdaid_fees",
+                        "required": true,
+                        "titles": "unpaidFees"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "personId",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": "personId"
+            }
+        },
+        {
+            "@id": "https://example.org/data-2.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-2.csv",
+            "dc:description": "Pairs of occupants and houses they live in",
+            "tableSchema": {
+                "@type": "Schema",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the occupant - foreign key, part of primary key, required",
+                        "name": "occupantId",
+                        "required": true,
+                        "titles": "occupantId",
+                        "aboutUrl": "exP:{occupantId}",
+                        "propertyUrl": "ex:livesIn",
+                        "valueUrl": "exH:{houseId}"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
+                        "name": "houseId",
+                        "required": true,
+                        "titles": "houseId"
+                    }
+                ],
+                "foreignKeys": [
+                    {
+                        "columnReference": "occupantId",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
+                        }
+                    },
+                    {
+                        "columnReference": "houseId",
+                        "reference": {
+                            "resource": "data-1.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ],
+                "primaryKey": [
+                    "occupantId",
+                    "houseId"
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/data-3.csv-metadata.json",
+            "@type": "Table",
+            "url": "data-3.csv",
+            "dc:description": "Middle names of people",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exP:{personId}",                
+                "columns": [                    
+                {
+                    "@type": "Column",
+                    "datatype": "string",
+                    "dc:description": "Id of the person - foreign key, required",
+                    "name": "personId",
+                    "required": true,
+                    "titles": "personId",
+                    "propertyUrl": "rdf:type",
+                    "valueUrl": "foaf:Person"
+                },
+                {
+                    "@type": "Column",
+                    "datatype": "string",
+                    "dc:description": "Czech middle name of the person",
+                    "name": "middleNameCS",
+                    "lang": "cs",
+                    "required": false,
+                    "titles": "middleNameCS",
+                    "propertyUrl": "ex:middleName"
+                },
+                {
+                    "@type": "Column",
+                    "datatype": "string",
+                    "dc:description": "Slovak middle name of the person",
+                    "name": "middleNameSK",
+                    "lang": "sk",
+                    "required": false,
+                    "titles": "middleNameSK",
+                    "propertyUrl": "ex:middleName"
+                }
+                ],
+                "primaryKey": ["personId","middleNameSK", "middleNameCS"],
+                "foreignKeys": [
+                    {
+                        "columnReference": "personId",
+                        "reference": {
+                            "resource": "data-5.csv",
+                            "columnReference": "Id"
+                        }
+                    }
+                ]
+            }
+        },
+        {
+            "@id": "https://example.org/data-5.csv-metadata.json",
+            "@type": "Table",
+            "dc:description": "People",
+            "url": "data-5.csv",
+            "tableSchema": {
+                "@type": "Schema",
+                "aboutUrl": "exP:{Id}",
+                "columns": [
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Id of the person - primary key, required",
+                        "name": "Id",
+                        "required": true,
+                        "titles": "Id",
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "foaf:Person"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "First name of the person in czech",
+                        "name": "firstNameCS",
+                        "required": false,
+                        "titles": "firstNameCS",
+                        "lang": "cs",
+                        "propertyUrl": "foaf:firstName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "First name of the person in slovak",
+                        "name": "firstNameSK",
+                        "required": false,
+                        "titles": "firstNameSK",
+                        "lang": "sk",
+                        "propertyUrl": "foaf:firstName"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Czech surname of the person",
+                        "name": "surnameCS",
+                        "lang": "cs",
+                        "required": false,
+                        "titles": "surnameCS",
+                        "propertyUrl": "foaf:surname"
+                    },
+                    {
+                        "@type": "Column",
+                        "datatype": "string",
+                        "dc:description": "Slovak surname of the person",
+                        "name": "surnameSK",
+                        "lang": "sk",
+                        "required": false,
+                        "titles": "surnameSK",
+                        "propertyUrl": "foaf:surname"
+                    } 
+                ],
+                "primaryKey": "Id"
+            }
+        }
+    ]
+}
