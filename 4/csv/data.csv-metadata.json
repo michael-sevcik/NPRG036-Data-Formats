@@ -373,7 +373,10 @@
                         "dc:description": "Id of the house where occupant lives - foreign key, part of primary key, required",
                         "name": "houseId",
                         "required": true,
-                        "titles": "houseId"
+                        "titles": "houseId",
+                        "aboutUrl": "exP:{occupantId}",
+                        "propertyUrl": "ex:livesIn",
+                        "valueUrl": "exH:{houseId}"
                     }
                 ],
                 "foreignKeys": [
@@ -414,8 +417,8 @@
                         "name": "personId",
                         "required": true,
                         "titles": "personId",
-                        "propertyUrl": "rdf:tyype",
-                        "valueUrl": ni
+                        "propertyUrl": "rdf:type",
+                        "valueUrl": "foaf:Person"
                     },
                     {
                         "@type": "Column",
@@ -467,7 +470,7 @@
                         "required": true,
                         "titles": "Id",
                         "propertyUrl": "rdf:type",
-                        "valueUrl": "dbo:Person"
+                        "valueUrl": "foaf:Person"
                     },
                     {
                         "@type": "Column",
