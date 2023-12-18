@@ -25,7 +25,7 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "Id",
-                        "valueUrl": "dbo:Street"
+                        "valueUrl": "http://dbpedia.org/resource/classes/Street"
                     },
                     {
                         "@type": "Column",
@@ -147,7 +147,7 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "Id",
-                        "valueUrl": "dbo:Building"
+                        "valueUrl": "http://dbpedia.org/resource/classes/Building"
                     },
                     {
                         "@type": "Column",
@@ -182,7 +182,7 @@
                         "datatype": "decimal",
                         "dc:description": "area of the house in acres",
                         "name": "area",
-                        "propertyUrl": "dbo:area",
+                        "propertyUrl": "http://dbpedia.org/resource/classes/area",
                         "required": false,
                         "titles": "area"
                     }
@@ -216,7 +216,7 @@
                         "propertyUrl": "rdf:type",
                         "required": true,
                         "titles": "Id",
-                        "valueUrl": "dbo:Town"
+                        "valueUrl": "http://dbpedia.org/resource/classes/Town"
                     },
                     {
                         "@type": "Column",
