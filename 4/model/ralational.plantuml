@@ -22,9 +22,9 @@ object LivesIn {
 }
 
 object MiddleNames {
-  <#lightblue,#black>|= Id |= middleNameCS |= middleNameSK |= personId |
-  <#white>| integer | string |  string | string |
-  <#white>| primary key \n - required | | | foreign key to \n People - required |
+  <#lightblue,#black>|= middleNameCS |= middleNameSK |= personId |
+  <#white>| string |  string | string |
+  <#white>| primary key  | primary key | primary key \n foreign key to \n People - required |
 }
 
 object Occupants {
