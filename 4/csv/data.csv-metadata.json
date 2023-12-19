@@ -1,6 +1,6 @@
 {
     "@id": "https://example.org/data.csv-metadata.json",
-    "@context": [
+    "@context": [ 
         "http://www.w3.org/ns/csvw",
         {
             "@language": "en"
