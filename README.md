@@ -1,5 +1,5 @@
 # NPRG036-Data-Formats
-Repository for collaborating on team assignments from MFF NPRG036 Data Formats course.
+Repository for collaborating on team assignments from MFF NPRG036 Data Formats course...
 
 ## How to generate Turtle with prefixes from N-Triples?
 
